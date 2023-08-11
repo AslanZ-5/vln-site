@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [2, { "ignore": ["inside-parens"] }],
+    "selector-class-pattern": null,
+    "property-no-unknown": null,
+
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["export", "global"]
+      }
+    ]
+  }
+}

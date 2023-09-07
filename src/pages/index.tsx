@@ -1,14 +1,11 @@
-import Text from '@/modules/shared/ui-kit/Heading'
-import { Box } from '@mantine/core'
+import { Header } from "@/widgets/headeer";
 
 const Index = () => {
   return (
-    <Box>
-      <header>Header</header>
-      <div>Banner</div>
-      <Text>123</Text>
-    </Box>
-  )
-}
+    <div>
+      <Header />
+    </div>
+  );
+};
 
-export default Index
+export default Index;

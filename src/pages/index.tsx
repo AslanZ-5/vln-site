@@ -1,11 +1,7 @@
-import { Header } from "@/widgets/headeer";
+import { Layout } from "@/layout/layout";
 
 const Index = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <Layout><h1>'</h1></Layout>;
 };
 
 export default Index;

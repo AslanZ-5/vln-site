@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  cursor: pointer;
+  transition: 0.2s background-color ease-in;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+}
+
+.hiddenContent {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: width height 0.2s linear;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.visibalityContent {
+  width: auto;
+  height: auto;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.withArrow {
+  display: flex;
+  gap: 35px;
+}

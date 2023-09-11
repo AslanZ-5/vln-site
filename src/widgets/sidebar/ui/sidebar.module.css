@@ -1,0 +1,53 @@
+.wrapper {
+  flex-direction: column;
+  height: 100vh;
+  grid-area: sidebar;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.opened {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #ffffff;
+  transition: 0.2s ease-in-out;
+  border-radius: 0 0 30px 0;
+  overflow: hidden;
+}
+
+.openBackground {
+  width: 100%;
+  background-color: #07020267;
+}
+
+.footer {
+}
+
+.controllBlock {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.categoryWrapper {
+  display: flex;
+  height: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.contentVisible {
+  border-top: 1px solid rgba(0, 0, 0, 0.39);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.397);
+}
+
+.hoverIcon:hover {
+  background-color: #e8edff;
+}

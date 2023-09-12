@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/reset.css";
 import "../styles/global.css";
+import { Layout } from "@/layout/layout";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -25,7 +26,9 @@ export default function App(props: AppProps) {
           colorScheme: "light",
         }}
       >
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </MantineProvider>
     </>
   );

@@ -1,0 +1,14 @@
+export { default as LogoIcon } from "./logoIcon.svg";
+export { default as PackIcon } from "./pack.svg";
+export { default as SearchIcon } from "./search.svg";
+export { default as Logo_2 } from "./logoIcon_2.svg";
+export { default as Comment } from "./comment.svg";
+export { default as Currency } from "./currency.svg";
+export { default as Dialpad } from "./dialpad.svg";
+export { default as Pin } from "./pin.svg";
+export { default as Search } from "./search.svg";
+export { default as Sketch } from "./sketch.svg";
+export { default as New } from "./new.svg";
+export { default as BackArrow } from "./backArrow.svg";
+export { default as ArrowRight } from "./arrowRight.svg";
+export { default as Pin_2 } from "./pin_2.svg";

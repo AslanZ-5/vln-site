@@ -19,3 +19,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+h1 {
+  margin: 0;
+  padding: 0;
+}

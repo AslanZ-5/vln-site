@@ -1,10 +1,11 @@
-import { Carousel } from "@mantine/carousel";
+import { Carousel as MantineCarousel } from "@mantine/carousel";
 import Image from "next/image";
-import styles from "./slider.module.css";
-export function Slider() {
+import styles from "./carousel.module.css";
+
+export function Carousel() {
   return (
     <div className={styles.wrapper}>
-      <Carousel
+      <MantineCarousel
         withIndicators
         className={styles.image}
         w={"100%"}
@@ -28,18 +29,18 @@ export function Slider() {
           },
         }}
       >
-        <Carousel.Slide>
+        <MantineCarousel.Slide>
           <Image
             width={16}
             height={9}
             layout="responsive"
-            src={"/img/image1.png"}
+            src={"/img/image1.jpg"}
             alt={"image"}
           />
-        </Carousel.Slide>
-        <Carousel.Slide bg={"yellow"}></Carousel.Slide>
-        <Carousel.Slide bg={"green"}></Carousel.Slide>
-      </Carousel>
+        </MantineCarousel.Slide>
+        <MantineCarousel.Slide bg={"yellow"}></MantineCarousel.Slide>
+        <MantineCarousel.Slide bg={"green"}></MantineCarousel.Slide>
+      </MantineCarousel>
     </div>
   );
 }

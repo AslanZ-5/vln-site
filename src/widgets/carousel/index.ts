@@ -1,1 +1,1 @@
-export { Slider } from "./ui/slider";
+export { Carousel } from "./ui/carousel";

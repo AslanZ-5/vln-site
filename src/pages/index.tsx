@@ -1,12 +1,19 @@
-import { Carousel } from "@/widgets/carousel/ui/carousel";
+import { 
+  Wrapper,
+  CarouselWrapper,
+  Tariffs,
+  Banners,
+  News
+} from "./mainPage.styles";
 
 function MainPage() {
   return (
-    <div>
-      <div style={{ paddingRight: "70px" }}>
-        <Carousel />
-      </div>
-    </div>
+    <Wrapper>
+      <CarouselWrapper />
+      <Tariffs />
+      <Banners />
+      <News />
+    </Wrapper>
   );
 }
 

@@ -5,14 +5,18 @@ const br = 'border: 1px solid lightgray;';
 
 export const Wrapper = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 64px;
   margin-bottom: 64px;
+  width: 1440px;
   ${mq[0]} {
+    width: 768px;
     gap: 48px;
     margin-bottom: 48px;
   };
   ${mq[1]} {
+    width: 375px;
     gap: 32px;
     margin-bottom: 32px;
   };
@@ -20,6 +24,7 @@ export const Wrapper = styled.div`
 
 export const CarouselWrapper = styled.div`
   ${br}
+  width: 100%;
   height: 356px;
   ${mq[0]} {
     height: 258px;
@@ -34,6 +39,7 @@ export const CarouselWrapper = styled.div`
 
 export const Tariffs = styled.div`
   ${br}
+  width: 100%;
   height: 420px;
   ${mq[1]} {
     height: 528px;
@@ -41,18 +47,23 @@ export const Tariffs = styled.div`
 `;
 
 export const Banners = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
   ${br}
-  height: 692px;
+  width: 1440px;
   ${mq[0]} {
-    height: 1260px;
+    width: 768px; 
   };
   ${mq[1]} {
-    height: 1675px;
+    width: 375px;
+    flex-direction: column;
   };
 `;
 
 export const News = styled.div`
   ${br}
+  width: 100%;
   height: 536px;
   ${mq[0]} {
     height: 588px;

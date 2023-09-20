@@ -38,6 +38,9 @@ export const StyledHeader = styled.div`
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const FooterWrapper = styled.div`

@@ -23,6 +23,13 @@ const nextConfig = {
 
     return config;
   },
+  compiler: {
+    emotion: {
+      sourceMap: true,
+      autoLabel: 'dev-only',
+      labelFormat: '[local]',
+    }
+  }
 };
 
 module.exports = nextConfig;

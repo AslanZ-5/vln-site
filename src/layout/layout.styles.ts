@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
     padding-bottom: 96px;
   };
 `;
+
 export const StyledHeader = styled.div`
   height: 84px;
   ${mq[0]} {
@@ -35,6 +36,7 @@ export const StyledHeader = styled.div`
     background-color: #fff;
   };
 `;
+
 export const Content = styled.div`
 `;
 
@@ -50,6 +52,7 @@ export const FooterWrapper = styled.div`
     gap: 24px;
   };
 `
+
 export const FooterCards = styled.div`
   height: 204px;
   border: 1px solid gray;
@@ -60,6 +63,7 @@ export const FooterCards = styled.div`
     height: 630px;
   }
 `;
+
 export const StyledFooter = styled.div`
   border: 1px solid grey;
   border-top: 1px solid #E5E8EB;

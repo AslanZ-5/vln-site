@@ -1,20 +1,7 @@
-import { 
-  Wrapper,
-  CarouselWrapper,
-  Tariffs,
-  Banners,
-  News
-} from "./mainPage.styles";
+import MainPage from './main/main-page';
 
-function MainPage() {
+export default function Index() {
   return (
-    <Wrapper>
-      <CarouselWrapper />
-      <Tariffs />
-      <Banners />
-      <News />
-    </Wrapper>
+    <MainPage />
   );
 }
-
-export default MainPage;

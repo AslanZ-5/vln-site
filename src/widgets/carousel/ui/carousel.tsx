@@ -1,8 +1,8 @@
+import { memo } from "react";
 import { Carousel as MantineCarousel } from "@mantine/carousel";
 import Image from "next/image";
-import styles from "./carousel.module.css";
 import { Slide } from "./constants";
-import { memo } from "react";
+import styles from "./carousel.module.scss";
 
 export const Carousel = memo(({ images }: { images: Slide[] }) => {
   return (
@@ -40,3 +40,5 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
     </div>
   );
 });
+
+Carousel.displayName = 'Carousel';

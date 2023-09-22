@@ -1,12 +1,12 @@
 import React from "react";
-import { Burger } from "@mantine/core";
-import styles from "./sidebar.module.css";
 import cn from "classnames";
+import { Burger } from "@mantine/core";
 import { BackArrow, LogoIcon, Pin_2 } from "@/shared/assets/svg";
-import IconButton from "./partials/IconButton/IconButton";
-import CategoryBtn from "./partials/CategoryBtn/CategoryButton";
+import IconButton from "./partials/icon-button/icon-button";
+import CategoryBtn from "./partials/category-btn/category-button";
 import { categoryBtn } from "./partials/constants";
-import { useSidebar } from "./useSidebar";
+import { useSidebar } from "./use-sidebar";
+import styles from "./sidebar.module.scss";
 
 const Sidebar = React.memo(() => {
   const {

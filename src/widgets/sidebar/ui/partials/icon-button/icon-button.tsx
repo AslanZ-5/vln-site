@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./IconButton.module.css";
 import cn from "classnames";
 import { SideBarOption } from "../constants";
 import { ArrowRight } from "@/shared/assets/svg";
+import styles from "./icon-button.module.scss";
 
 interface IconBtnProps {
   children?: React.ReactNode;

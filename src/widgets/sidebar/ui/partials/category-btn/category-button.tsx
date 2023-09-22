@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./CategoryButton.module.css";
 import cn from "classnames";
+import styles from "./category-button.module.scss";
+
 function CategoryButton({
   title,
   onClick,

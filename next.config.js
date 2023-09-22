@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -29,7 +31,10 @@ const nextConfig = {
       autoLabel: 'dev-only',
       labelFormat: '[local]',
     }
-  }
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'src/styles')],
+  },
 };
 
 module.exports = nextConfig;

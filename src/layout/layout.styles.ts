@@ -55,10 +55,22 @@ export const FooterWrapper = styled.div`
 `
 
 export const FooterCards = styled.div`
-  border: 1px solid gray;
+  height: 204px;
+  ${mq[0]} {
+    height: 428px;
+  };
+  ${mq[1]} {
+    height: 630px;
+  }
 `;
 
 export const StyledFooter = styled.div`
-  border: 1px solid grey;
   border-top: 1px solid #E5E8EB;
+  height: 82px;
+  ${mq[0]} {
+    height: 76px;
+  };
+  ${mq[1]} {
+    height: 86px;
+  };
 `;

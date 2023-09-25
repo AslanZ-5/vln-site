@@ -32,7 +32,9 @@
     "react-dom": "18.2.0",
     "react-imask": "^7.1.3",
     "sass": "^1.68.0",
-    "typescript": "5.1.6"
+    "styled-components": "^6.0.8",
+    "typescript": "5.1.6",
+    "ui-kit-volna": "^0.0.1-test"
   },
   "devDependencies": {
     "@emotion/server": "^11.11.0",

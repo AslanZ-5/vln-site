@@ -1,6 +1,7 @@
 import Card from '@/shared/ui-kit/card/card';
 import { Carousel } from '@/widgets/carousel';
 import { Slide } from '@/widgets/carousel/ui/constants';
+import { Button } from 'ui-kit-volna';
 import {
   Wrapper,
   CarouselWrapper,
@@ -31,6 +32,9 @@ function MainPage() {
       <Banners>
         <Card>
           Красивые номера
+          <Button size={'m'}>
+            КНОПКА
+          </Button>
         </Card>
         <Card>
           Волна Sale

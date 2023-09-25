@@ -35,6 +35,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
   },
+  transpilePackages: ['ui-kit-volna'],
 };
 
 module.exports = nextConfig;

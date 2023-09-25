@@ -13,3 +13,4 @@ export { default as BackArrow } from "./backArrow.svg";
 export { default as ArrowRight } from "./arrowRight.svg";
 export { default as Pin_2 } from "./pin_2.svg";
 export { default as UserIcon } from "./user.svg";
+export { CloseBtn } from "./CloseBtn";

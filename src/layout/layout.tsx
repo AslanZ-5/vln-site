@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "@/widgets/header";
 import { Sidebar } from "@/widgets/sidebar";
+import { Footer } from "@/widgets/footer/footer";
 
 import { Wrapper, StyledHeader, Content, FooterWrapper, FooterCards, StyledFooter } from "./layout.styles";
 
@@ -15,7 +16,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <Content>{children}</Content>
       <FooterWrapper>
         <FooterCards>footerCards</FooterCards>
-        <StyledFooter>footer</StyledFooter>        
+        <StyledFooter><Footer /></StyledFooter>        
       </FooterWrapper>
     </Wrapper>
   );

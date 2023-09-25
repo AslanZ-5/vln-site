@@ -20,9 +20,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledHeader = styled.div`
-  height: 84px;
   ${mq[0]} {
-    height: 44px;
     padding-left: 32px;
   }
   ${mq[1]} {
@@ -57,24 +55,10 @@ export const FooterWrapper = styled.div`
 `
 
 export const FooterCards = styled.div`
-  height: 204px;
   border: 1px solid gray;
-  ${mq[0]} {
-    height: 428px;
-  };
-  ${mq[1]} {
-    height: 630px;
-  }
 `;
 
 export const StyledFooter = styled.div`
   border: 1px solid grey;
   border-top: 1px solid #E5E8EB;
-  height: 82px;
-  ${mq[0]} {
-    height: 76px;
-  };
-  ${mq[1]} {
-    height: 86px;
-  };
 `;

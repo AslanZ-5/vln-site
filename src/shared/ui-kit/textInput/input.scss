@@ -1,0 +1,151 @@
+@import '../../../styles/variables';
+
+.storybook-input--container {
+  display: flex;
+  width: 331px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.storybook-input--label {
+  color: $base-900;
+
+  /* Label/L5 */
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  align-self: stretch;
+}
+
+.storybook-input--label-disabled {
+  color: $base-400;
+
+  /* Label/L5 */
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+}
+
+.storybook-input--default-wrapper-default {
+  display: flex;
+  height: 48px;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--other-input, 12px);
+  background: $base-100;
+}
+
+.storybook-input--default-wrapper-invalid {
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: var(--other-input, 12px);
+  border: 1px solid $error-fire;
+  background: $base-100;
+}
+
+.storybook-input--default-wrapper-disabled {
+  display: flex;
+  height: 48px;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--other-input, 12px);
+  background: $base-100;
+}
+
+.storybook-input--outlined-wrapper-default {
+  display: flex;
+  height: 48px;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--other-input, 12px);
+  border: 1px solid $base-400;
+  background: $base-0;
+}
+
+.storybook-input--outlined-wrapper-invalid {
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: var(--other-input, 12px);
+  border: 1px solid $error-fire;
+  background: $base-0;
+}
+
+.storybook-input--outlined-wrapper-disabled {
+  display: flex;
+  height: 48px;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--other-input, 12px);
+  border: 1px solid $base-200;
+  background: $base-0;
+}
+
+.storybook-input--field {
+  background-color: transparent;
+  color: $base-900;
+
+  /* Label/L4 [m] */
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.14px;
+  flex: 1 0 0;
+}
+
+.storybook-input--field::placeholder {
+  color: $base-700;
+}
+
+.storybook-input--field-disabled {
+  background-color: transparent;
+  color: $base-900;
+
+  /* Label/L4 [m] */
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.14px;
+  flex: 1 0 0;
+}
+
+.storybook-input--field-disabled::placeholder {
+  color: $base-400;
+}
+
+.storybook-input--error {
+  align-self: stretch;
+  color: $error-fire;
+
+  /* Label/L5 */
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+}

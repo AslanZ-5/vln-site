@@ -1,0 +1,7 @@
+.tag {
+  display: inline-flex;
+  padding: 6px 12px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 12px;
+}

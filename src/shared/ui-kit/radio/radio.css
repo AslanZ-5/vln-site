@@ -1,0 +1,22 @@
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.14px;
+  accent-color: #184bff;
+}
+
+.radio .medium {
+  width: 16px;
+  height: 16px;
+}
+
+.radio .large {
+  width: 24px;
+  height: 24px;
+}

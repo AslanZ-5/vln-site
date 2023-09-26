@@ -2,7 +2,7 @@ import { LinkProps } from './link.types';
 import NextLink from 'next/link'
 import { Typography } from '../typography/typography';
 import styled from '@emotion/styled';
-import { volnaTheme as theme } from '@/shared/constants/theme';
+import { volnaTheme as theme } from '../../constants/theme';
 
 const StyledTitleLight = styled.div<{ disabled: boolean }>`
   color: ${({ disabled }) =>

@@ -9,7 +9,7 @@ import {
 import { PhoneInputProps } from './phone-input.types';
 import { CloseBtn } from '@/shared/assets/svg';
 import { useIMask } from 'react-imask';
-import { COLORS } from '@/shared/constants/colors';
+import { volnaTheme as theme } from '../../constants/theme';
 import cn from 'classnames';
 import styles from './phone-input.module.scss';
 
@@ -85,8 +85,8 @@ export const PhoneInput: FC<PhoneInputProps> = ({
         {isActive && value && 
           <button type='button' onClick={onClearInput} className={styles.closeBtn}>
             <CloseBtn color={isError ? 
-              (darkBackground ? COLORS.OPTION.DANCE : COLORS.ERROR.FIRE) :
-              (darkBackground ? COLORS.BASE[200] : COLORS.BASE[400])} 
+              (darkBackground ? theme.colors.option.dance : theme.colors.error.fire) :
+              (darkBackground ? theme.colors.base[200] : theme.colors.base[400])}
             />
           </button>
         }

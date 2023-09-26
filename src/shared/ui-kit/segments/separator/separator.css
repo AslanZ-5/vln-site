@@ -1,0 +1,6 @@
+.separator {
+  display: inline-block;
+  width: 1px;
+  height: 36px;
+  border-radius: 0.5px;
+}

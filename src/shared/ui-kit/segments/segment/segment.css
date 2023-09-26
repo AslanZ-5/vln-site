@@ -1,0 +1,17 @@
+.segment {
+  cursor: pointer;
+  display: inline-flex;
+  height: 36px;
+  padding: 2px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.segment:disabled {
+  border-radius: 8px;
+  cursor: default;
+  padding: 12px 24px;
+  flex-shrink: 0;
+}

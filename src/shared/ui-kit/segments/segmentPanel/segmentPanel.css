@@ -1,0 +1,7 @@
+.segment-panel {
+  display: none;
+}
+
+.segment-panel-active {
+  display: block;
+}

@@ -1,0 +1,19 @@
+.storybook-tabs-list--small {
+  display: inline-flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.storybook-tabs-list--large {
+  display: inline-flex;
+  height: 48px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.storybook-tabs-list--pills {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+}

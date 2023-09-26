@@ -1,0 +1,347 @@
+.storybook-typography--heading-medium-1 {
+
+  /* Heading_Волна/H1 */
+  font-family: 'TT Norms Pro';
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px; /* 114.286% */
+  letter-spacing: -0.84px;
+}
+
+.storybook-typography--heading-medium-2 {
+
+  /* Heading_Волна/H2 */
+  font-family: 'TT Norms Pro';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; /* 120% */
+  letter-spacing: -0.4px;
+}
+
+.storybook-typography--heading-medium-3 {
+
+  /* Heading_Волна/H3 */
+  font-family: 'TT Norms Pro';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 112.5% */
+  letter-spacing: -0.32px;
+}
+
+.storybook-typography--heading-medium-4 {
+
+  /* Heading_Волна/H4 */
+  font-family: 'TT Norms Pro';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.24px;
+}
+
+.storybook-typography--heading-medium-5 {
+
+  /* Heading_Волна/H5 */
+  font-family: 'TT Norms Pro';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.2px;
+}
+
+.storybook-typography--heading-medium-6 {
+
+  /* Heading_Волна/H6 */
+  font-family: 'TT Norms Pro';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+  letter-spacing: -0.16px;
+}
+
+.storybook-typography--lable-regular-1 {
+
+  /* Label/L1 */
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.24px;
+}
+
+.storybook-typography--lable-regular-2 {
+
+  /* Label/L2 */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: -0.2px;
+}
+
+.storybook-typography--lable-regular-3 {
+
+  /* Label/L3 */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
+  letter-spacing: -0.16px;
+}
+
+.storybook-typography--lable-regular-4 {
+
+  /* Label/L4 */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.14px;
+}
+
+.storybook-typography--lable-regular-5 {
+
+  /* Label/L5 */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+}
+
+.storybook-typography--lable-regular-6 {
+
+  /* Label/L6 */
+  font-family: Roboto;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 109.091% */
+}
+
+.storybook-typography--lable-medium-1 {
+
+  /* Label/L1 [m] */
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.24px;
+}
+
+.storybook-typography--lable-medium-2 {
+
+  /* Label/L2 [m] */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 100% */
+  letter-spacing: -0.2px;
+}
+
+.storybook-typography--lable-medium-3 {
+
+  /* Label/L3 [m] */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 100% */
+  letter-spacing: -0.16px;
+}
+
+.storybook-typography--lable-medium-4 {
+
+  /* Label/L4 [m] */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.14px;
+}
+
+.storybook-typography--lable-medium-5 {
+
+  /* Label/L5 [m] */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 100% */
+}
+
+.storybook-typography--lable-medium-6 {
+
+  /* Label/L6 [m] */
+  font-family: Roboto;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px; /* 109.091% */
+}
+
+.storybook-typography--shorttext-regular-1 {
+
+  /* Short Text/T1 */
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 112.5% */
+  letter-spacing: -0.32px;
+
+  width: 266px;
+}
+
+.storybook-typography--shorttext-regular-2 {
+
+  /* Short Text/T2 */
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.24px;
+
+  width: 230px;
+}
+
+.storybook-typography--shorttext-regular-3 {
+
+  /* Short Text/T3 */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.2px;
+
+  width: 211px;
+}
+
+.storybook-typography--shorttext-regular-4 {
+
+  /* Short Text/T3 */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.2px;
+
+  width: 192px;
+}
+
+.storybook-typography--shorttext-regular-5 {
+
+  /* Short Text/T5 */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.14px;
+
+  width: 183px;
+}
+
+.storybook-typography--shorttext-regular-6 {
+
+  /* Short Text/T6 */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+
+  width: 172px;
+}
+
+.storybook-typography--paragraph-regular-1 {
+
+  /* Paragraph/P1 */
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px; /* 137.5% */
+  letter-spacing: -0.32px;
+
+  width: 266px;
+}
+
+.storybook-typography--paragraph-regular-2 {
+
+  /* Paragraph/P2 */
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px; /* 141.667% */
+  letter-spacing: -0.24px;
+
+  width: 230px;
+}
+
+.storybook-typography--paragraph-regular-3 {
+
+  /* Paragraph/P3 */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  letter-spacing: -0.2px;
+
+  width: 211px;
+}
+
+.storybook-typography--paragraph-regular-4 {
+
+  /* Paragraph/P4 */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.16px;
+
+  width: 192px;
+}
+
+.storybook-typography--paragraph-regular-5 {
+
+  /* Paragraph/P5 */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.14px;
+
+  width: 183px;
+}
+
+.storybook-typography--paragraph-regular-6 {
+
+  /* Paragraph/P6 */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+
+  width: 172px;
+}

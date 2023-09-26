@@ -1,0 +1,9 @@
+.segments-list {
+  border-radius: 8px;
+  display: inline-flex;
+  height: 40px;
+  padding: 2px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+}

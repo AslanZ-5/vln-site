@@ -1,0 +1,23 @@
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/roboto/400.woff2') format('woff2'), url('/assets/fonts/roboto/400.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/roboto/500.woff2') format('woff2'), url('/assets/fonts/roboto/500.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  font-weight: 400;
+  font-style: normal;
+  src: local('TT Norms Pro');
+  src: url('/assets/fonts/TTNORMSPROREGULAR.TTF') format('truetype');
+}

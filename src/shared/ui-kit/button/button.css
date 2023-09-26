@@ -1,0 +1,83 @@
+.storybook-button--default-m {
+  display: inline-flex;
+  padding: 17px 32px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+
+.storybook-button--default-s {
+  display: inline-flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+
+.storybook-button--default-xs {
+  display: inline-flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+
+.storybook-button--with_icon-m {
+  display: inline-flex;
+  padding: 17px 32px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.storybook-button--with_icon-s {
+  display: inline-flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.storybook-button--with_icon-xs {
+  display: inline-flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.storybook-button--inverted-m {
+  display: inline-flex;
+  padding: 17px 32px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+
+.storybook-button--inverted-s {
+  display: inline-flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}
+
+.storybook-button--inverted-xs {
+  display: inline-flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 12px;
+}

@@ -1,6 +1,6 @@
 import { TypographyProps, Weight } from './typography.types';
 import { volnaTheme as theme } from '../../constants/theme';
-import './typography.css';
+import './typography.module.scss';
 
 export const Typography = ({
   children,

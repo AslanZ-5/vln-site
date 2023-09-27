@@ -2,13 +2,8 @@ import Card from '@/shared/ui-kit/card/card';
 import { Carousel } from '@/widgets/carousel';
 import { Slide } from '@/widgets/carousel/ui/constants';
 // import { Button } from 'ui-kit-volna';
-import {
-  Wrapper,
-  CarouselWrapper,
-  Tariffs,
-  Banners,
-  News
-} from "./main-page.styles";
+// import { BeautifulNumbers } from './beautiful-numbers/beautiful-numbers';
+import styles from './main-page.module.scss';
 
 // TODO убрать это туда, где ему место
 const images: Slide[] = [
@@ -24,24 +19,26 @@ const images: Slide[] = [
 
 function MainPage() {
   return (
-    <Wrapper>
-      <CarouselWrapper>
+    <div className={styles.wrapper}>
+      <div className={styles.carouselWrapper}>
         <Carousel images={images} />
-      </CarouselWrapper>
-      <Tariffs />
-      <Banners>
-        <Card>
-          Красивые номера
-        </Card>
-        <Card>
+      </div>
+      <div className={styles.tariffs}>
+        Тарифы
+      </div>
+      <div className={styles.banners}>
+        {/*<BeautifulNumbers />*/}
+        <Card withBorder>
           Волна Sale
         </Card>
-        <Card>
+        <Card withBorder>
           Подключи eSIM
         </Card>
-      </Banners>
-      <News />
-    </Wrapper>
+      </div>
+      <div className={styles.news}>
+        Новости
+      </div>
+    </div>
   );
 }
 

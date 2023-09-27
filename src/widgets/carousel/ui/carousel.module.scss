@@ -1,4 +1,4 @@
-@import 'media-queries';
+@import '../../../styles/media-queries';
 
 .wrapper {
   width: 100%;
@@ -7,19 +7,6 @@
   align-items: center;
   overflow: hidden;
   border-radius: 0.5rem;
-
-  @include only-mobile {
-    border: 5px solid red;
-  }
-
-  @include tablet-sm {
-    border: 3px solid blue;
-  }
-
-  @include desktop {
-    border: 1px solid green;
-  }
-
 }
 
 .image {

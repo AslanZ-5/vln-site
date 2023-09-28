@@ -1,15 +1,29 @@
 import React from "react";
 import cn from "classnames";
 import { Burger } from "@mantine/core";
-import { BackArrow, LogoIcon, Pin_2 } from "@/shared/assets/svg";
+import {
+  BackArrow,
+  Frame,
+  Home,
+  LogoIcon,
+  MenuIcon,
+  Phone,
+  Pin_2,
+  Simcard,
+} from "@/shared/assets/svg";
 import IconButton from "./partials/icon-button/icon-button";
 import CategoryBtn from "./partials/category-btn/category-button";
 import { categoryBtn } from "./partials/constants";
 import { useSidebar } from "./use-sidebar";
 import styles from "./sidebar.module.scss";
+import { useMobile } from "@/shared/lib/useMobile";
+import { BottomSheet } from "react-spring-bottom-sheet";
+import "react-spring-bottom-sheet/dist/style.css";
 
 const Sidebar = React.memo(() => {
+  const { isMobile } = useMobile();
   const {
+    activeItem,
     sidebarOpen,
     activeCategory,
     prevSidebarState,
@@ -22,14 +36,17 @@ const Sidebar = React.memo(() => {
     handleGoInto,
   } = useSidebar();
 
-  const renderedOptions = sidebarOptions.map((el, ind) => {
+  const renderOptions = sidebarOptions.map((el, ind) => {
+    const isActive = el.id === activeItem;
     return (
       <IconButton
-        onClick={handleGoInto(el.Title, el.childrens)}
+        onClick={handleGoInto(el.Title, el.childrens, el.id)}
         nestedOptions={el.childrens}
         classname={styles.hoverIcon}
         key={ind}
+        active={isActive}
         visibleChildren={sidebarOpen}
+        showActiveLine={isActive}
         Icon={el.Icon && (() => <el.Icon />)}
       >
         {el.Title}
@@ -37,7 +54,7 @@ const Sidebar = React.memo(() => {
     );
   });
 
-  const renderedCategoryBtns = categoryBtn.map((el, ind) => (
+  const renderCategoryBtns = categoryBtn.map((el, ind) => (
     <CategoryBtn
       onClick={handleChangeCategory(ind)}
       key={ind}
@@ -46,6 +63,58 @@ const Sidebar = React.memo(() => {
     />
   ));
 
+  const renderBackButton = (
+    <IconButton
+      onClick={handleBackPrevState}
+      classname={styles.hoverIcon}
+      visibleChildren={sidebarOpen}
+      Icon={() => <BackArrow />}
+    >
+      {prevSidebarState.current.at(-1)?.name}
+    </IconButton>
+  );
+
+  if (isMobile) {
+    return (
+      <>
+        <div
+          onClick={handleCloseSideBar}
+          className={cn(sidebarOpen && styles.openBackground)}
+        ></div>
+        <div className={styles.mobile}>
+          <div className={styles.mobileIconsWrapper}>
+            <IconButton
+              innerLabel="Меню"
+              onClick={handleToggleSidebar}
+              Icon={MenuIcon}
+              active={sidebarOpen}
+            />
+            <IconButton innerLabel="Связь" Icon={Phone} />
+            <IconButton innerLabel="Интенет" Icon={Home} />
+            <IconButton innerLabel="Волна Sale" Icon={Frame} />
+            <IconButton innerLabel="eSIM" Icon={Simcard} />
+          </div>
+          <BottomSheet
+            blocking={false}
+            onDismiss={handleCloseSideBar}
+            open={sidebarOpen}
+          >
+            <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
+            <div
+              className={cn(
+                styles.contentMobile,
+                sidebarOpen && styles.contentVisible
+              )}
+            >
+              {Boolean(prevSidebarState.current.length) && renderBackButton}
+              {renderOptions}
+            </div>
+          </BottomSheet>
+        </div>
+      </>
+    );
+  }
+
   return (
     <div
       onClick={handleCloseSideBar}
@@ -53,7 +122,7 @@ const Sidebar = React.memo(() => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={cn(sidebarOpen && styles.opened)}
+        className={cn(styles.closed, sidebarOpen && styles.opened)}
       >
         <div className={styles.controllBlock}>
           <IconButton
@@ -61,27 +130,20 @@ const Sidebar = React.memo(() => {
             onClick={handleToggleSidebar}
             Icon={() => <Burger opened={sidebarOpen} />}
           >
-            <LogoIcon />
+            <div className={styles.logoIcon}>
+              <LogoIcon />
+            </div>
           </IconButton>
         </div>
         {isFullSidebar && (
-          <div className={styles.categoryWrapper}>{renderedCategoryBtns}</div>
+          <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
         )}
 
         <div
           className={cn(styles.content, sidebarOpen && styles.contentVisible)}
         >
-          {Boolean(prevSidebarState.current.length) && (
-            <IconButton
-              onClick={handleBackPrevState}
-              classname={styles.hoverIcon}
-              visibleChildren={sidebarOpen}
-              Icon={() => <BackArrow />}
-            >
-              {prevSidebarState.current.at(-1)!.name}
-            </IconButton>
-          )}
-          {renderedOptions}
+          {Boolean(prevSidebarState.current.length) && renderBackButton}
+          {renderOptions}
         </div>
 
         {isFullSidebar && (

@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Header } from "@/widgets/header";
 import { Sidebar } from "@/widgets/sidebar";
 import { Footer } from "@/widgets/footer/footer";
+import { FooterCardsBlock } from "@/widgets/footer-cards/footer-cards";
 
 import {
   Wrapper,
@@ -21,8 +22,8 @@ export function Layout({ children }: { children: ReactNode }) {
       </StyledHeader>
       <Content>{children}</Content>
       <FooterWrapper>
-        <FooterCards>footerCards</FooterCards>
-        <StyledFooter><Footer /></StyledFooter>
+        <FooterCards>< FooterCardsBlock /></FooterCards>
+        <StyledFooter><Footer /></StyledFooter>        
       </FooterWrapper>
     </Wrapper>
   );

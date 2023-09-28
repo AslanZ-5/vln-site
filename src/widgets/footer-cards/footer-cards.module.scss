@@ -1,0 +1,297 @@
+@import 'media-queries';
+
+.wrapper {
+  width: 100%;
+  min-height: 204px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  @include only-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include tablet-sm {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include desktop {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.btn {
+  width: fit-content;
+  background: #184BFF;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 14px;
+  word-wrap: break-word;
+
+  @include only-mobile {
+    width: 100%;
+  }
+}
+
+.cardKate {
+  padding: 20px;
+  border-radius: 24px;
+  min-width: 310px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('/assets/img/KateKnows.png')  ;
+  background-size: cover;
+
+  @include only-mobile {
+    order: 3;
+    background-size: cover;
+    width: 100%;
+  };
+
+  @include tablet-sm {
+    width: 45%;
+  }
+}
+
+.topRowKate {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.titleKate {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  word-wrap: break-word;
+
+  @include only-mobile {
+    font-size: 26px;
+  };
+
+  @include tablet-sm {
+    font-size: 24px;
+  }
+}
+
+.textKate {
+  width: 150px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word;
+
+  @include only-mobile {
+    width: 200px;
+  };
+}
+
+.btnKate {
+  width: fit-content;
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 14px;
+  word-wrap: break-word
+}
+
+.title {
+  color: #122B3D;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  word-wrap: break-word;
+
+  @include only-mobile {
+    display: none;
+  };
+
+  @include tablet-sm {
+    font-size: 24px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word
+}
+
+.italicsText {
+  font-size: 24px;
+  font-family: Caveat;
+  font-weight: 400;
+  line-height: 40px;
+  word-wrap: break-word
+}
+
+.questionAnswerCard {
+  padding: 20px;
+  border-radius: 24px;
+  min-width: 310px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #F4F6FB;
+
+  @include only-mobile {
+    margin-top: -20px;
+    width: 110%;
+    height: fit-content;
+    gap: 16px;
+    border-radius: 0;
+    order: 2;
+  };
+
+  @include tablet-sm {
+    width: 45%;
+  }
+}
+
+.questionAnswerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.socialBlock {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  @include only-mobile {
+    flex-direction: row;
+    order: 4;
+  };
+
+  @include tablet-sm {
+    order: 4;
+    width: 30%;
+  }
+
+  @include desktop {
+    order: 1;
+  }
+}
+
+.socialRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobAppCard {
+  padding: 20px;
+  border-radius: 24px;
+  height: 204px;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgb(32, 3, 183);
+  background: linear-gradient(90deg, rgba(32, 3, 183, 1) 0%, rgba(125, 13, 185, 1) 50%, rgba(32, 3, 183, 1) 100%);
+  order: 1;
+
+  @include only-mobile {
+    order: 1;
+    border-radius: 0;
+    width: 110%;
+  };
+
+  @include tablet-sm {
+    width: 60%;
+  }
+}
+
+.mobAppTitle {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  word-wrap: break-word
+}
+
+.mobAppMainText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobAppTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #fff;
+
+  @include only-mobile {
+    justify-content: space-between;
+  }
+}
+
+.label {
+  font-size: 16px;
+  font-family: TT Norms Pro;
+  font-weight: 500;
+  line-height: 16px;
+  word-wrap: break-word
+}
+
+.textWithArrow {
+  display: flex;
+  gap: 8px;
+}
+
+.rightArrow {
+  margin-top: -10px;
+
+  @include only-mobile {
+    display: none;
+  }
+}
+
+.mobAppRow {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+}
+
+.mobAppIcon {
+  width: fit-content;
+
+  @include only-mobile {
+    display: none;
+  };
+}
+
+.mobAppIcon2 {
+  display: none;
+
+  @include only-mobile {
+    display: flex
+  };
+}

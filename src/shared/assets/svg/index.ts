@@ -20,4 +20,15 @@ export { default as Phone } from "./phone.svg";
 export { default as Home } from "./home-3.svg";
 export { default as Frame } from "./frame-mobile.svg";
 export { default as Simcard } from "./simcard2.svg";
-export { default as MenuIcon} from "./menu.svg"
+export { default as MenuIcon} from "./menu.svg";
+export { default as VkIcon } from "./vk.svg";
+export { default as TelegramIcon } from "./telegram.svg";
+export { default as YouTubeIcon } from "./youtube.svg";
+export { default as DzenIcon } from "./dzen.svg";
+export { default as QRCode } from "./qrCode.svg";
+export { default as AppStore } from "./appStore.svg";
+export { default as GooglePlay } from "./googlePlay.svg";
+export { default as RightArrow } from "./rightArrow.svg";
+export { default as RuStore } from "./ruStore.svg";
+export { default as AppStore_2 } from "./appStore_2.svg";
+export { default as GooglePlay_2 } from "./googlePlay_2.svg";

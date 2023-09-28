@@ -7,7 +7,7 @@
   background-color: #fff;
   justify-content: space-between;
   align-items: center;
-  gap: 32px;
+  gap: 75px;
 
   @include only-mobile {
     padding: 50px 0;
@@ -30,7 +30,7 @@
 }
 
 .tagline {
-  width: 200px;
+  width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,31 +65,16 @@
 }
 
 .notice {
-  display: flex;
-  flex-wrap: wrap;
   gap: 4px;
   color: #8C94A8;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   word-wrap: break-word;
-
-  @include only-mobile {
-    display: flex;
-    flex-wrap: wrap;
-    word-wrap: break-word
-  }
 }
 
 .agreement {
-  display: flex;
-  width: auto;
   color: #184BFF;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  cursor: pointer;
-  word-wrap: break-word
 }
 
 .telecom2023 {

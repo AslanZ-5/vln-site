@@ -90,7 +90,7 @@ const Sidebar = React.memo(() => {
               active={sidebarOpen}
             />
             <IconButton innerLabel="Связь" Icon={Phone} />
-            <IconButton innerLabel="Интенет" Icon={Home} />
+            <IconButton innerLabel="Интернет" Icon={Home} />
             <IconButton innerLabel="Волна Sale" Icon={Frame} />
             <IconButton innerLabel="eSIM" Icon={Simcard} />
           </div>

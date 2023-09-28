@@ -7,10 +7,13 @@ import styles from "./icon-button.module.scss";
 interface IconBtnProps {
   children?: React.ReactNode;
   onClick?: () => void;
-  visibleChildren: boolean;
-  Icon: null | (() => JSX.Element);
+  visibleChildren?: boolean;
+  Icon: null | (({ className }: { className?: string }) => JSX.Element);
   classname?: string;
   nestedOptions?: SideBarOption[] | null;
+  active?: boolean;
+  innerLabel?: string;
+  showActiveLine?: boolean;
 }
 
 function IconButton({
@@ -20,10 +23,27 @@ function IconButton({
   Icon,
   classname,
   nestedOptions,
+  active,
+  showActiveLine,
+  innerLabel,
 }: IconBtnProps) {
   return (
     <div onClick={onClick} className={cn(styles.wrapper, classname)}>
-      <div className={styles.iconWrapper}>{Icon !== null && <Icon />}</div>
+      <div
+        className={cn(
+          styles.iconWrapper,
+          active && showActiveLine && styles.active
+        )}
+      >
+        {Icon !== null && (
+          <Icon className={cn(active && styles.iconActiveColor)} />
+        )}
+        <div
+          className={cn(styles.innerLabel, active && styles.innerLabelActive)}
+        >
+          {innerLabel}
+        </div>
+      </div>
       <span
         className={cn(
           styles.hiddenContent,

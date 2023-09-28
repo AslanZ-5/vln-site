@@ -12,6 +12,7 @@ export const useSidebar = () => {
 
   const [sidebarOptions, setSidebarOptions] = useState(sideBarBtns);
   const prevSidebarState = useRef<PrevOptions[]>([]);
+  const [activeItem, setActibeItem] = useState<null | number>(null);
 
   const handleChangeCategory = useCallback(
     (ind: number) => () => {
@@ -24,8 +25,8 @@ export const useSidebar = () => {
     setSidebarOpen((val) => !val);
   }, []);
 
-  const handleCloseSideBar = useCallback((e: React.SyntheticEvent) => {
-    e.stopPropagation();
+  const handleCloseSideBar = useCallback((e?: React.SyntheticEvent) => {
+    e?.stopPropagation();
     setSidebarOpen(false);
   }, []);
 
@@ -36,11 +37,12 @@ export const useSidebar = () => {
   }, []);
 
   const handleGoInto = useCallback(
-    (name: string, childrens: SideBarOption[] | null) => () => {
-      if (!childrens) return;
-
-      prevSidebarState.current.push({ name, options: sidebarOptions });
-      setSidebarOptions(childrens);
+    (name: string, childrens: SideBarOption[] | null, id: number) => () => {
+      if (childrens) {
+        prevSidebarState.current.push({ name, options: sidebarOptions });
+        setSidebarOptions(childrens);
+      }
+      setActibeItem(id);
     },
     [prevSidebarState.current, sidebarOptions]
   );
@@ -69,6 +71,7 @@ export const useSidebar = () => {
 
   return {
     sidebarOpen,
+    activeItem,
     activeCategory,
     prevSidebarState,
     sidebarOptions,

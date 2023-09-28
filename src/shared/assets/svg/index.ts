@@ -15,3 +15,9 @@ export { default as Pin_2 } from "./pin_2.svg";
 export { default as UserIcon } from "./user.svg";
 export { CloseBtn } from "./CloseBtn";
 export { default as Logo_3 } from "./logoIcon_3.svg";
+export { default as Box_2 } from "./box_2.svg";
+export { default as Phone } from "./phone.svg";
+export { default as Home } from "./home-3.svg";
+export { default as Frame } from "./frame-mobile.svg";
+export { default as Simcard } from "./simcard2.svg";
+export { default as MenuIcon} from "./menu.svg"

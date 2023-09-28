@@ -1,11 +1,14 @@
 .wrapper {
   flex-direction: column;
   height: 100vh;
-  grid-area: sidebar;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99999999;
+}
+
+.logoIcon {
+  padding-bottom: 4px;
 }
 
 .opened {
@@ -16,14 +19,21 @@
   transition: 0.2s ease-in-out;
   border-radius: 0 0 30px 0;
   overflow: hidden;
+  padding-top: 13px;
+}
+
+.closed {
+  padding-top: 13px;
 }
 
 .openBackground {
-  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  position: absolute;
   background-color: #07020267;
-}
-
-.footer {
 }
 
 .controllBlock {
@@ -51,4 +61,29 @@
 
 .hoverIcon:hover {
   background-color: #e8edff;
+}
+
+.mobile {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgb(27, 8, 8);
+  padding: 0 5px 10px;
+  background-color: #f6f1f1;
+}
+
+.mobileIconsWrapper {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 190, 0.15);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentMobile {
+  margin-bottom: 78px;
 }

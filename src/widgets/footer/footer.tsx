@@ -15,10 +15,11 @@ export function Footer() {
       </div>
 
       <div className={styles.rightSide}>
-        <div className={styles.notice}> Посещая сайт, вы предоставляете
-          <div className={styles.agreement}> согласие на обработку данных </div>
+        <p className={styles.notice}>
+          Посещая сайт, вы предоставляете 
+          <span className={styles.agreement}> согласие на обработку данных </span>
           в соответствии с политикой конфиденциальности.
-        </div>
+        </p>
         <div className={styles.telecom2023}>© 2023 ООО «КТК Телеком»</div>
       </div>
     </div>

@@ -47,7 +47,7 @@ export const FooterWrapper = styled.div`
   gap: 64px;
   margin-top: auto;
   ${mq[0]} {
-    gap: 48px;
+    gap: 24px;
   };
   ${mq[1]} {
     gap: 24px;
@@ -56,8 +56,11 @@ export const FooterWrapper = styled.div`
 
 export const FooterCards = styled.div`
   height: 204px;
+  display: flex;
+  align-items: center;
+  height: fit-content;
   ${mq[0]} {
-    height: 428px;
+    height: fit-content;
   };
   ${mq[1]} {
     height: 630px;

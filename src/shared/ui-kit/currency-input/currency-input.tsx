@@ -7,15 +7,16 @@ import {
     useState
 } from 'react';
 import { CurrencyInputProps } from './currency-input.types';
-import { CloseBtn } from '@/shared/assets/svg';
+import { CloseBtn } from '@/shared/assets/icons';
 import { useIMask } from 'react-imask';
-import { COLORS } from '@/shared/constants/colors';
+import { volnaTheme as theme } from '@/shared/constants/theme';
 import cn from 'classnames';
 import styles from './currency-input.module.scss';
   
 export const CurrencyInput: FC<CurrencyInputProps> = ({
   changeHandler,
   clearHandler,
+  className,
   containerWidth,
   darkBackground,
   errorMessage,
@@ -76,7 +77,7 @@ export const CurrencyInput: FC<CurrencyInputProps> = ({
   };
 
   return (
-    <div className={cn(styles.container, darkBackground && styles.dark)} style={{width: containerWidth}}>
+    <div className={cn(styles.container, darkBackground && styles.dark, className && className)} style={{width: containerWidth}}>
     {label && 
       <label className={styles.label} htmlFor={id || inputId}>{label}</label>
     }
@@ -96,8 +97,8 @@ export const CurrencyInput: FC<CurrencyInputProps> = ({
       {isActive && value && 
         <button type='button' onClick={onClearInput} className={styles.closeBtn}>
           <CloseBtn color={isError ? 
-          (darkBackground ? COLORS.OPTION.DANCE : COLORS.ERROR.FIRE) :
-          (darkBackground ? COLORS.BASE[200] : COLORS.BASE[400])} 
+          (darkBackground ? theme.colors.option.dance : theme.colors.error.fire) :
+          (darkBackground ? theme.colors.base[200] : theme.colors.base[400])} 
           />
         </button>
       }

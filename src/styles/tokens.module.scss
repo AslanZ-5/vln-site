@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+:export {
+    breakpointMobile: $breakpoint-mobile;
+    breakpointTablet: $breakpoint-tablet;
+    breakpointTabletSm: $breakpoint-tablet-sm;
+    breakpointDesktop: $breakpoint-desktop;
+    breakpointMin: $breakpoint-min;
+    breakpointMax: $breakpoint-max;
+    retinaDpi: $retina-dpi;
+    retinaDppx: $retina-dppx;
+    colorPrimary900: $color-primary-900;
+    colorPrimary800: $color-primary-800;
+    colorPrimary700: $color-primary-700;
+    colorPrimary600: $color-primary-600;
+    colorPrimary500: $color-primary-500;
+    colorPrimary400: $color-primary-400;
+    colorPrimary300: $color-primary-300;
+    colorPrimary200: $color-primary-200;
+    colorPrimary100: $color-primary-100;
+    colorPrimary0: $color-primary-0;
+    colorBase900: $color-base-900;
+    colorBase800: $color-base-800;
+    colorBase700: $color-base-700;
+    colorBase600: $color-base-600;
+    colorBase500: $color-base-500;
+    colorBase400: $color-base-400;
+    colorBase300: $color-base-300;
+    colorBase200: $color-base-200;
+    colorBase100: $color-base-100;
+    colorBase0: $color-base-0;
+    colorAcceptGarden: $color-accept-garden;
+    colorErrorFire: $color-error-fire;
+    colorOptionDance: $color-option-dance;
+    colorOptionIce: $color-option-ice;
+    colorOptionLime: $color-option-lime;
+    colorOptionFlower: $color-option-flower;
+    colorOptionBerrie: $color-option-berrie;
+    colorOptionLima: $color-option-lima;
+    colorOptionAcai: $color-option-acai;
+    colorOptionSun: $color-option-sun;
+    colorOptionSteel: $color-option-steel;
+    colorOptionCrayola: $color-option-crayola;
+    colorMagenta0: $color-magenta-0;
+    colorMagenta100: $color-magenta-100;
+    colorMagenta200: $color-magenta-200;
+    colorBlack: $color-black;
+}

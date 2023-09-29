@@ -3,6 +3,7 @@ import { ChangeEvent, InputHTMLAttributes, MutableRefObject } from "react";
 export interface CurrencyInputProps extends InputHTMLAttributes<HTMLInputElement> {
     changeHandler?: (value: string, unmaskedValue?: string, event?: ChangeEvent<HTMLInputElement>) => void
     clearHandler?: VoidFunction
+    className?: string
     containerWidth?: string
     darkBackground?: boolean
     errorMessage?: string

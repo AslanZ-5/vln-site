@@ -4,6 +4,7 @@ import { MantineProvider } from '@mantine/core';
 import { Layout } from '@/layout/layout';
 import '../styles/reset.scss';
 import '../styles/global.scss';
+import { theme } from '@/shared/constants';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -22,10 +23,7 @@ export default function App(props: AppProps) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{
-          /** Put your mantine theme override here */
-          colorScheme: "light",
-        }}
+        theme={theme}
       >
         <Layout>
           <Component {...pageProps} />

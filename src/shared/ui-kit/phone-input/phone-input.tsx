@@ -7,15 +7,16 @@ import {
   useState
 } from 'react';
 import { PhoneInputProps } from './phone-input.types';
-import { CloseBtn } from '@/shared/assets/svg';
+import { CloseBtn } from '@/shared/assets/icons';
 import { useIMask } from 'react-imask';
-import { volnaTheme as theme } from '../../constants/theme';
+import { volnaTheme as theme } from '@/shared/constants/theme';
 import cn from 'classnames';
 import styles from './phone-input.module.scss';
 
 export const PhoneInput: FC<PhoneInputProps> = ({
   changeHandler,
   clearHandler,
+  className,
   containerWidth,
   darkBackground,
   errorMessage,
@@ -23,7 +24,7 @@ export const PhoneInput: FC<PhoneInputProps> = ({
   isError,
   label,
   name,
-  placeholder='+7 (978) 000 - 00 - 00',
+  placeholder='+7 (___) ___ - __ - __',
   ref: nativeRef,
   value: initialValue,
 }) => {
@@ -33,9 +34,16 @@ export const PhoneInput: FC<PhoneInputProps> = ({
     unmaskedValue,
     setValue
   } = useIMask({
-    mask: '+7 (000) 000 - 00 - 00',
-    lazy: true,
-    placeholderChar: '_',
+    mask: [
+      {
+        mask: '',
+      },
+      {
+        mask: '+7 (000) 000 - 00 - 00',
+        lazy: false,
+        placeholderChar: '_',
+      }
+    ]
   });
 
   const [isActive, setIsActive] = useState(false);
@@ -65,7 +73,7 @@ export const PhoneInput: FC<PhoneInputProps> = ({
   };
 
   return (
-    <div className={cn(styles.container, darkBackground && styles.dark)} style={{width: containerWidth}}>
+    <div className={cn(styles.container, darkBackground && styles.dark, className && className)} style={{width: containerWidth}}>
       {label && 
         <label className={styles.label} htmlFor={id || inputId}>{label}</label>
       }
@@ -86,7 +94,7 @@ export const PhoneInput: FC<PhoneInputProps> = ({
           <button type='button' onClick={onClearInput} className={styles.closeBtn}>
             <CloseBtn color={isError ? 
               (darkBackground ? theme.colors.option.dance : theme.colors.error.fire) :
-              (darkBackground ? theme.colors.base[200] : theme.colors.base[400])}
+              (darkBackground ? theme.colors.base[200] : theme.colors.base[400])} 
             />
           </button>
         }

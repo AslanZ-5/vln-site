@@ -19,11 +19,12 @@
   transition: 0.2s ease-in-out;
   border-radius: 0 0 30px 0;
   overflow: hidden;
-  padding-top: 13px;
+  //padding-top: 13px;
+  box-shadow: 25px 25px 40px 0px rgba(26, 2, 186, 0.15);
 }
 
 .closed {
-  padding-top: 13px;
+  //padding-top: 13px;
 }
 
 .openBackground {
@@ -33,10 +34,10 @@
   right: 0;
   z-index: 3;
   position: absolute;
-  background-color: #07020267;
+  //background-color: #07020267;
 }
 
-.controllBlock {
+.controlBlock {
   display: flex;
   align-items: center;
   width: 100%;

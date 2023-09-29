@@ -14,7 +14,6 @@
   }
 
   @include tablet-sm {
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -155,7 +154,7 @@
 
   @include only-mobile {
     margin-top: -20px;
-    width: 110%;
+    width: 100%;
     height: fit-content;
     gap: 16px;
     border-radius: 0;
@@ -204,9 +203,9 @@
 }
 
 .mobAppCard {
-  padding: 20px;
+  padding: 20px 0;
   border-radius: 24px;
-  height: 204px;
+  height: 210px;
   min-width: fit-content;
   display: flex;
   flex-direction: column;
@@ -219,7 +218,7 @@
   @include only-mobile {
     order: 1;
     border-radius: 0;
-    width: 110%;
+    width: 100%;
   };
 
   @include tablet-sm {

@@ -21,7 +21,7 @@ import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 
 const Sidebar = React.memo(() => {
-  const { isMobile } = useMobile();
+  const { isMobile, isTablet } = useMobile();
   const {
     activeItem,
     sidebarOpen,
@@ -80,7 +80,7 @@ const Sidebar = React.memo(() => {
         <div
           onClick={handleCloseSideBar}
           className={cn(sidebarOpen && styles.openBackground)}
-        ></div>
+        />
         <div className={styles.mobile}>
           <div className={styles.mobileIconsWrapper}>
             <IconButton
@@ -124,7 +124,7 @@ const Sidebar = React.memo(() => {
         onClick={(e) => e.stopPropagation()}
         className={cn(styles.closed, sidebarOpen && styles.opened)}
       >
-        <div className={styles.controllBlock}>
+        <div className={styles.controlBlock}>
           <IconButton
             visibleChildren={sidebarOpen}
             onClick={handleToggleSidebar}
@@ -143,7 +143,7 @@ const Sidebar = React.memo(() => {
           className={cn(styles.content, sidebarOpen && styles.contentVisible)}
         >
           {Boolean(prevSidebarState.current.length) && renderBackButton}
-          {renderOptions}
+          {!isTablet || isTablet && sidebarOpen ? renderOptions : null}
         </div>
 
         {isFullSidebar && (

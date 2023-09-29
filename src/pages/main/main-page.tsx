@@ -1,41 +1,80 @@
 import Card from '@/shared/ui-kit/card/card';
 import { Carousel } from '@/widgets/carousel';
-import { Slide } from '@/widgets/carousel/ui/constants';
-// import { Button } from 'ui-kit-volna';
+import { slidesMock } from '@/widgets/carousel/ui/constants';
 // import { BeautifulNumbers } from './beautiful-numbers/beautiful-numbers';
 import { Esim } from '@/widgets/eSim/eSim';
-import { Refill } from '@/widgets/refill';
+import { Replenishment } from '@/widgets/replenishment/replenishment';
 import { HomeInternet } from '@/widgets/home-internet';
 import styles from './main-page.module.scss';
-
-// TODO убрать это туда, где ему место
-const images: Slide[] = [
-  {
-    path: '/img/image1.jpg',
-    alt: 'picture1',
-  },
-  {
-    path: '/img/image1.jpg',
-    alt: 'picture2',
-  }
-];
+import { Carousel as MantineCarousel } from "@mantine/carousel";
 
 function MainPage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.carouselWrapper}>
-        <Carousel images={images} />
+        <Carousel images={slidesMock} />
       </div>
       <div className={styles.tariffs}>
-        Тарифы
+        <MantineCarousel
+          initialSlide={1}
+          withIndicators
+          height={"100%"}
+          loop
+          w={"100%"}
+          slidesToScroll={1}
+          slideGap={10}
+          slideSize={'25%'}
+          styles={{
+            indicator: {
+              width: "12px",
+              height: "4px",
+              transition: "width 250ms ease",
+              "&[data-active]": {
+                width: "40px",
+                height: "4px",
+              },
+            },
+          }}
+        >
+          <MantineCarousel.Slide>
+            <Card withBorder header={'Загорай'} className={styles.tariffCard}>
+              Безлимит
+            </Card>
+          </MantineCarousel.Slide>
+          <MantineCarousel.Slide>
+            <Card withBorder header={'Отдыхай'} className={styles.tariffCard}>
+              Почасовая тарификация
+            </Card>
+          </MantineCarousel.Slide>
+          <MantineCarousel.Slide>
+            <Card withBorder header={'Работай'} className={styles.tariffCard}>
+              Поминутная тарификация
+            </Card>
+          </MantineCarousel.Slide>
+          <MantineCarousel.Slide>
+            <Card withBorder header={'Терпи'} className={styles.tariffCard}>
+              Посекундная тарификация
+            </Card>
+          </MantineCarousel.Slide>
+          <MantineCarousel.Slide>
+            <Card withBorder header={'Страдай'} className={styles.tariffCard}>
+              Помиллисекундная тарификация, и ты всегда должен в итоге
+            </Card>
+          </MantineCarousel.Slide>
+        </MantineCarousel>
       </div>
       <div className={styles.banners}>
         {/*<BeautifulNumbers />*/}
-        <Card withBorder>
+        <Card withBorder className={styles.bannerCard}>
+          Красивые номера
+        </Card>
+        <Card withBorder className={styles.bannerCard}>
           Волна Sale
         </Card>
         <Esim />
-        <Refill />
+      </div>
+      <div className={styles.replenishmentAndInternet}>
+        <Replenishment />
         <HomeInternet />
       </div>
       <div className={styles.news}>

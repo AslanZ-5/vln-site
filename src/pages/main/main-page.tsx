@@ -8,6 +8,7 @@ import { Replenishment } from '@/widgets/replenishment/replenishment';
 import { HomeInternet } from '@/widgets/home-internet';
 import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
 import { BeautifulNumbers } from '@/widgets/beautiful-numbers/beautiful-numbers';
+import { News } from "@/widgets/news/ui/news";
 import styles from './main-page.module.scss';
 
 function MainPage() {
@@ -75,7 +76,7 @@ function MainPage() {
         <HomeInternet />
       </div>
       <div className={styles.news}>
-        Новости
+        <News />
       </div>
     </div>
   );

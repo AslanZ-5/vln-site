@@ -1,0 +1,141 @@
+@import '@/styles/media-queries.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(270deg, #9D009D 0%, #EB008C 100%);
+  box-shadow: 0px 15px 30px 0px rgba(235, 0, 140, 0.15);
+
+  @include desktop-max {
+    max-width: 530px;
+  }
+}
+
+.card:hover {
+  border-radius: 24px 24px 24px 0;
+  box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
+}
+
+.link {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  height: 28px;
+  margin-bottom: 12px;
+
+  @include desktop-max {
+    height: 36px;
+  }
+
+  &__text {
+    display: block;
+    font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 500;
+    color: $color-base-0;
+    font-size: 24px;
+    line-height: 28px;
+
+    @include desktop-max {
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: -0.32px;
+    }
+  }
+
+  &__chevron {
+    padding-top: 5px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.foregroundGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 295px;
+  height: 112px;
+  //background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.40) 25%, #000 50%, rgba(255, 255, 255, 0.40) 75%, rgba(0, 0, 0, 0.00) 50%);
+}
+
+.description {
+  color: $color-base-0;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.numbers {
+  text-align: right;
+}
+
+.phoneNumber {
+  cursor: pointer;
+  text-align: right;
+  color: $color-base-0;
+  text-shadow: 0px 4px 4px rgba(47, 14, 63, 0.25);
+
+  font-family: TT Norms Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+
+  &:hover {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.85);
+  }
+}
+
+.phoneNumber:nth-child(1), .phoneNumber:nth-child(3) {
+  color: rgba(255, 255, 255, 0.50)
+}
+
+.button {
+  &__root {
+    margin-top: auto;
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: $color-base-0;
+    color: $color-black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    outline: none;
+
+    &:hover {
+      background-color: $color-base-200;
+    }
+    &:active {
+      background-color: $color-base-300;
+    }
+
+    &[data-disabled] {
+      background-color: $color-base-200;
+      color: $color-base-500;
+    }
+
+    @include tablet {
+      width: 233px;
+    }
+
+    @include desktop-max {
+      height: 40px;
+    }
+  }
+}

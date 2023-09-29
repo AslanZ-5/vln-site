@@ -1,3 +1,4 @@
+import { Carousel as MantineCarousel } from "@mantine/carousel";
 import Card from '@/shared/ui-kit/card/card';
 import { Carousel } from '@/widgets/carousel';
 import { slidesMock } from '@/widgets/carousel/ui/constants';
@@ -6,8 +7,8 @@ import { Esim } from '@/widgets/eSim/eSim';
 import { Replenishment } from '@/widgets/replenishment/replenishment';
 import { HomeInternet } from '@/widgets/home-internet';
 import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
+import { BeautifulNumbers } from '@/widgets/beautiful-numbers/beautiful-numbers';
 import styles from './main-page.module.scss';
-import { Carousel as MantineCarousel } from "@mantine/carousel";
 
 function MainPage() {
   return (
@@ -65,10 +66,7 @@ function MainPage() {
         </MantineCarousel>
       </div>
       <div className={styles.banners}>
-        {/*<BeautifulNumbers />*/}
-        <Card withBorder className={styles.bannerCard}>
-          Красивые номера
-        </Card>
+        <BeautifulNumbers />
         <VolnaSale />
         <Esim />
       </div>

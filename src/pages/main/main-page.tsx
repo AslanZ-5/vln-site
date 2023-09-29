@@ -5,6 +5,7 @@ import { Slide } from '@/widgets/carousel/ui/constants';
 // import { BeautifulNumbers } from './beautiful-numbers/beautiful-numbers';
 import { Esim } from '@/widgets/eSim/eSim';
 import { Refill } from '@/widgets/refill';
+import { HomeInternet } from '@/widgets/home-internet';
 import styles from './main-page.module.scss';
 
 // TODO убрать это туда, где ему место
@@ -34,8 +35,8 @@ function MainPage() {
           Волна Sale
         </Card>
         <Esim />
-
         <Refill />
+        <HomeInternet />
       </div>
       <div className={styles.news}>
         Новости

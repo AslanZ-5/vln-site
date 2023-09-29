@@ -23,9 +23,25 @@
 }
 
 @font-face {
+  font-family: 'TT Norms Pro';
+  font-weight: 500;
+  font-style: normal;
+  src: local('TT Norms Pro');
+  src: url('/assets/fonts/TTNORMSPROREGULAR.TTF') format('truetype');
+}
+
+@font-face {
   font-family: 'Caveat';
   font-weight: 400;
   font-style: normal;
   src: local('Caveat');
   src: url('/assets/fonts/Caveat.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Manrope');
+  src: url('/assets/fonts/Manrope.ttf') format('truetype');
 }

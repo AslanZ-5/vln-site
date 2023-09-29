@@ -55,6 +55,7 @@
 
   @include only-mobile {
     flex-direction: column;
+    gap: 20px;
   }
 
   @include desktop {

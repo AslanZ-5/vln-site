@@ -1,0 +1,25 @@
+@import '@/styles/global.scss';
+
+.container {
+  display: flex;
+  height: 40px;
+  padding: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px 8px 8px 0px;
+  background: $color-magenta-100;
+  width: max-content;
+}
+.possible {
+  background-color: $color-primary-500;
+}
+
+.text {
+  color: $color-base-0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}

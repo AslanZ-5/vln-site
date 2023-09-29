@@ -1,0 +1,150 @@
+@import '@/styles/global.scss';
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 24px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 24px;
+  background: var(--gradient-blue, linear-gradient(90deg, #0000be 0%, #4e00ad 100%));
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 182, 0.15);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+}
+.link {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  height: 28px;
+
+  @include desktop-max {
+    height: 36px;
+  }
+
+  &__text {
+    display: block;
+    font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 500;
+    color: $color-base-0;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.24px;
+
+    @include desktop-max {
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: -0.32px;
+    }
+  }
+
+  &__chevron {
+    padding-top: 5px;
+  }
+}
+
+.input {
+  &__root {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__label {
+    color: $color-base-0;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+  }
+  &__input {
+    height: 48px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border-radius: 12px;
+    border: 1px solid $color-base-200;
+    background: transparent;
+    outline: none;
+
+    color: $color-base-0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.14px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-base-200;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-base-500;
+    }
+  }
+  &__right_section {
+    width: auto;
+    right: 2px;
+
+    @include only-mobile {
+      display: none;
+    }
+  }
+}
+.description {
+  color: $color-base-0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}
+
+.button {
+  &__root {
+    margin-top: auto;
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: $color-base-0;
+    color: $color-black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.14px;
+    outline: none;
+
+    &:hover {
+      background-color: $color-base-200;
+    }
+    &:active {
+      background-color: $color-base-300;
+    }
+
+    &[data-disabled] {
+      background-color: $color-base-200;
+      color: $color-base-500;
+    }
+
+    @include tablet {
+      width: 233px;
+    }
+
+    @include desktop-max {
+      height: 40px;
+    }
+  }
+}

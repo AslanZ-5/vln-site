@@ -36,3 +36,5 @@ export { default as Visa } from './visa-payment.svg';
 export { default as VisaBlack } from './visa-payment-black.svg';
 export { default as Mastercard } from './mastercard-payment.svg';
 export { default as Sbp } from './sbp-payment.svg';
+export { default as MinusOctagon } from './minus-octagon.svg';
+export { default as CheckboxRec } from './checkbox-rec.svg';

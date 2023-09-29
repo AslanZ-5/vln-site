@@ -1,113 +1,111 @@
 @import '@/styles/global.scss';
 
 .container {
-    border-radius: 24px;
-    background: linear-gradient(90deg, #580EB1 0%, #6701A9 100%);
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 190, 0.15);
-    display: flex;
-    padding: 24px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    flex: 1 0 0;
-    width: 100%;
-    height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #580eb1 0%, #6701a9 100%);
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 190, 0.15);
+  display: flex;
+  padding: 24px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+  width: 100%;
 }
 .light {
-    background: $color-base-100;
+  background: $color-base-100;
 }
 .link {
-    display: flex;
-    gap: 4px;
-    align-items: baseline;
-    height: 28px;
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  height: 28px;
+
+  @include desktop-max {
+    height: 36px;
+  }
+
+  &__text {
+    display: block;
+    font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: 500;
+    color: $color-base-0;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.24px;
 
     @include desktop-max {
-        height: 36px;
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: -0.32px;
     }
+  }
 
-    &__text {
-        display: block;
-        font-family: "TT Norms Pro";
-        font-style: normal;
-        font-weight: 500;
-        color: $color-base-0;
-        font-size: 24px;
-        line-height: 28px;
-        letter-spacing: -0.24px;
-    
-        @include desktop-max { 
-            font-size: 32px;
-            line-height: 36px;
-            letter-spacing: -0.32px;
-        }
-    }
-
-    &__chevron {
-        padding-top: 5px;
-    }
+  &__chevron {
+    padding-top: 5px;
+  }
 }
 
 .tabs {
-    &__root {
-        width: 100%;
-        height: 100%;
-    }
+  &__root {
+    width: 100%;
+    height: 100%;
+  }
 
-    &__tabsList {
-        width: fit-content;
-        height: 34px;
-        border: none;
-        flex-wrap: nowrap;
-        max-width: 100%;
-    }
-    
-    &__tab {
-        color: $color-base-400;
-        text-align: center;
-        font-size: 14px;
-        line-height: 14px;
-        letter-spacing: -0.14px;
-        padding: 10px 16px;
-        border-color: $color-base-400;
-        border-width: 1px;
-    
-        &[data-active] {
-          color: $color-base-0;
-          border-color: $color-base-0;
-          border-width: 3px;
-          &:hover {
-            border-color: $color-base-0;
-            color: $color-base-0;
-          }
-        }
-        &:active {
-          border-color: $color-base-0;
-        };
-        &:hover {
-          background: transparent
-        }
-    }
+  &__tabsList {
+    width: fit-content;
+    height: 34px;
+    border: none;
+    flex-wrap: nowrap;
+    max-width: 100%;
+  }
 
-    &__panel {
-        height: calc(100% - 34px);
-    }
-}
-
-
-.light .tabs__tab {
-    color: $color-base-700;
+  &__tab {
+    color: $color-base-400;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.14px;
+    padding: 10px 16px;
     border-color: $color-base-400;
+    border-width: 1px;
 
     &[data-active] {
-        color: $color-base-900;
-        border-color: $color-primary-500;
-        &:hover {
-            color: $color-base-900;
-            border-color: $color-primary-500;
-        }
+      color: $color-base-0;
+      border-color: $color-base-0;
+      border-width: 3px;
+      &:hover {
+        border-color: $color-base-0;
+        color: $color-base-0;
+      }
     }
     &:active {
-        border-color: $color-primary-600;
+      border-color: $color-base-0;
     }
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &__panel {
+    height: calc(100% - 34px);
+  }
+}
+
+.light .tabs__tab {
+  color: $color-base-700;
+  border-color: $color-base-400;
+
+  &[data-active] {
+    color: $color-base-900;
+    border-color: $color-primary-500;
+    &:hover {
+      color: $color-base-900;
+      border-color: $color-primary-500;
+    }
+  }
+  &:active {
+    border-color: $color-primary-600;
+  }
 }

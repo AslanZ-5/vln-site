@@ -42,7 +42,7 @@ const SwitchStyles = styled.div<SwitchStylesProps>`
     border-radius: 35px;
     top: 50%;
     left: 2px;
-    background: #ffffff;
+    background: $color-base-0;
     transform: translate(0, -50%);
     width: ${({ sizeStyles }) => sizeStyles.beforeWidth};
     height: ${({ sizeStyles }) => sizeStyles.beforeHeight};

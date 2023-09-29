@@ -6,12 +6,12 @@ import { PhoneInput } from '@/shared/ui-kit/phone-input';
 import { CurrencyInput } from '@/shared/ui-kit/currency-input';
 import { Mir, Visa, VisaBlack, Mastercard, Sbp } from '@/shared/assets/svg';
 
-import { REFILL_CONSTANTS } from './constants';
-import { RefillProps } from './refill.types';
+import { REPLENISHMENT_CONSTANTS } from './constants';
+import { ReplenishmentProps } from './replenishment.types';
 
 import styles from './content.module.scss';
 
-export const RefilContent: FC<RefillProps> = ({ lightMode }) => {
+export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode }) => {
   return (
     <div className={cn(styles.container, lightMode && styles.light)}>
       <div className={styles.payment}>
@@ -30,7 +30,7 @@ export const RefilContent: FC<RefillProps> = ({ lightMode }) => {
             label: styles.segment__label,
             indicator: styles.segment__indicator,
           }}
-          data={[REFILL_CONSTANTS.SEGMENT_CARD, REFILL_CONSTANTS.SEGMENT_SBP]}
+          data={[REPLENISHMENT_CONSTANTS.SEGMENT_CARD, REPLENISHMENT_CONSTANTS.SEGMENT_SBP]}
         />
       </div>
       <div className={styles.button}>
@@ -40,7 +40,7 @@ export const RefilContent: FC<RefillProps> = ({ lightMode }) => {
             label: styles.button__label,
           }}
         >
-          {REFILL_CONSTANTS.BUTTON}
+          {REPLENISHMENT_CONSTANTS.BUTTON}
         </Button>
       </div>
     </div>

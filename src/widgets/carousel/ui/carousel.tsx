@@ -13,6 +13,7 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
         loop
         className={styles.image}
         w={"100%"}
+        slideGap={15}
         styles={{
           indicator: {
             width: "12px",
@@ -25,8 +26,8 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
           },
         }}
       >
-        {images.map((slide) => (
-          <MantineCarousel.Slide key={slide.path} className={styles.img}>
+        {images.map((slide, index) => (
+          <MantineCarousel.Slide key={index} className={styles.img}>
             <Image
               width={16}
               height={9}

@@ -1,8 +1,9 @@
 import { useMediaQuery } from "@mantine/hooks"
-import { breakpoints } from "../constants/mediaQueries"
+import { TABLET, TABLET_SM, DESKTOP } from "../constants/mediaQueries"
 
 export const useMobile = () => {
-  const isMobile = useMediaQuery(`(max-width: ${breakpoints[1]}px)`)
+  const isMobile = useMediaQuery(`(max-width: ${TABLET - 1}px)`)
+  const isTablet = useMediaQuery(`(min-width: ${TABLET}px) and (max-width: ${TABLET_SM}px)`)
 
-  return {isMobile}
+  return { isMobile, isTablet };
 }

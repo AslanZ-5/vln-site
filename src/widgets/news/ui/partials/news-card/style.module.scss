@@ -1,0 +1,50 @@
+.cardWrapper {
+  max-width: 310px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+.text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  padding-bottom: 8px;
+}
+
+.date {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: #515b73;
+  padding-bottom: 8px;
+}
+
+.moreBtn {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+  display: flex;
+  background: unset;
+  align-items: center;
+  border: unset;
+  cursor: pointer;
+  padding: 0;
+}
+
+.arrowStyles {
+  margin-left: 8px;
+}
+
+.cardImgWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}

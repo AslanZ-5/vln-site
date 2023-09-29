@@ -41,6 +41,10 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+
+  @include only-mobile {
+    flex-direction: column;
+  }
 }
 
 .news {

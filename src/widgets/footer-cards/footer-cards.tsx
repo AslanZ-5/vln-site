@@ -18,7 +18,7 @@ export function FooterCardsBlock() {
           <div className={styles.textKate}>Задайте вопрос
             нашему виртуальному помощнику!</div>
         </div>
-        <Button type='button' className={styles.btnKate} color="gray.0">
+        <Button type='button' className={styles.btnKate}>
           Виртуальный помощник Катя
         </Button>
       </div>

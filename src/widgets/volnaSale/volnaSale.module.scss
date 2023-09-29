@@ -1,0 +1,79 @@
+@import 'media-queries';
+
+.card {
+  margin: 0 -20px;
+  padding: 20px;
+  width: 110%;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.50px rgba(239.06, 34.86, 136.96, 0.20) solid;
+  border-radius: 0;
+  box-shadow: 0px 15px 30px rgba(0, 0, 190, 0.15);
+  background-image: url('/assets/img/volnaSale.png');
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  @include tablet {
+    width: 33%;
+    height: 100%;
+    height: 322px;
+    border-radius: 24px;
+    background-size: 455px;
+    background-position: top;
+  }
+
+  &:hover {
+    border-radius: 24px 24px 24px 0;
+    box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
+  }
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.32px;
+}
+
+.info {
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word;
+  font-style: normal;
+}
+
+.btn {
+  padding: 1px 30px 0px 30px;
+  margin-top: 24px;
+  width: 100%;
+  background: #fff;
+  color: black;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  word-wrap: break-word;
+
+  @include tablet {
+    margin: 0;
+    width: fit-content;
+  }
+
+  &:hover {
+    background: $color-base-200;
+  }
+}

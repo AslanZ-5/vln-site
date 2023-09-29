@@ -2,47 +2,34 @@
 
 .card {
   padding: 20px;
-  width: 310px;
-  height: 322px;
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 0.50px rgba(239.06, 34.86, 136.96, 0.20) solid;
+  border: none;
   border-radius: 24px;
-  cursor: pointer;
+  box-shadow: 0px 15px 30px rgba(0, 0, 190, 0.15);
+  background-image: url('/assets/img/eSim.png');
+  background-repeat: no-repeat;
+  background-size: 140px;
+  background-position: 90% 25%;
 
-  @include only-mobile {
-    width: 100%;
-    height: fit-content;
-  }
-
-  @include tablet-sm {
-    background-image: url('/assets/img/eSim.png');
-    background-repeat: no-repeat;
-    background-position: 1855% 125%;
+  @include tablet {
+    width: 33%;
+    height: 322px;
+    background-position: left 140px bottom;
     background-size: 300px;
   }
 
-  @include desktop {
-    background-image: url('/assets/img/eSim.png');
-    background-repeat: no-repeat;
-    background-position: 1855% 125%;
-    background-size: 300px;
+  @include desktop-max {
+    width: 310px;
+    height: 100%;
   }
-}
 
-.card:hover {
-  border-radius: 24px 24px 24px 0;
-  box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
-}
-
-.top {
-  display: flex;
-  justify-content: space-between;
-
-  @include only-mobile {
-    width: 100%;
-    height: 124px;
+  &:hover {
+    border-radius: 24px 24px 24px 0;
+    box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
   }
 }
 
@@ -57,38 +44,27 @@
 }
 
 .header {
-  font-size: 32px;
+  font-family: "TT Norms Pro";
+  font-style: normal;
   font-weight: 500;
-  font-family: Roboto;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
 
-  @include only-mobile {
-    font-size: 24px;
-    line-height: 28px;
+  @include tablet {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.32px;
   }
 }
 
 .info {
   font-size: 14px;
-  font-family: Roboto;
+  font-family: "TT Norms Pro";
+  font-style: normal;
   font-weight: 400;
   line-height: 14px;
   word-wrap: break-word
-}
-
-.img {
-  @include only-mobile {
-    width: 140px;
-    height: 124px;
-  }
-
-  @include tablet-sm {
-    display: none;
-  }
-
-  @include desktop {
-    display: none;
-  }
 }
 
 .btn {
@@ -105,5 +81,9 @@
   @include only-mobile {
     margin-top: 24px;
     width: 100%;
+  }
+
+  &:hover {
+    background: $color-primary-400;
   }
 }

@@ -5,6 +5,7 @@ import { slidesMock } from '@/widgets/carousel/ui/constants';
 import { Esim } from '@/widgets/eSim/eSim';
 import { Replenishment } from '@/widgets/replenishment/replenishment';
 import { HomeInternet } from '@/widgets/home-internet';
+import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
 import styles from './main-page.module.scss';
 import { Carousel as MantineCarousel } from "@mantine/carousel";
 
@@ -68,9 +69,7 @@ function MainPage() {
         <Card withBorder className={styles.bannerCard}>
           Красивые номера
         </Card>
-        <Card withBorder className={styles.bannerCard}>
-          Волна Sale
-        </Card>
+        <VolnaSale />
         <Esim />
       </div>
       <div className={styles.replenishmentAndInternet}>

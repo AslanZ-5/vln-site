@@ -1,0 +1,109 @@
+@import 'media-queries';
+
+.card {
+  padding: 20px;
+  width: 310px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.50px rgba(239.06, 34.86, 136.96, 0.20) solid;
+  border-radius: 24px;
+  cursor: pointer;
+
+  @include only-mobile {
+    width: 100%;
+    height: fit-content;
+  }
+
+  @include tablet-sm {
+    background-image: url('/assets/img/eSim.png');
+    background-repeat: no-repeat;
+    background-position: 1855% 125%;
+    background-size: 300px;
+  }
+
+  @include desktop {
+    background-image: url('/assets/img/eSim.png');
+    background-repeat: no-repeat;
+    background-position: 1855% 125%;
+    background-size: 300px;
+  }
+}
+
+.card:hover {
+  border-radius: 24px 24px 24px 0;
+  box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+
+  @include only-mobile {
+    width: 100%;
+    height: 124px;
+  }
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include only-mobile {
+    margin-top: 30px;
+  }
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: Roboto;
+  line-height: 36px;
+
+  @include only-mobile {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.info {
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 14px;
+  word-wrap: break-word
+}
+
+.img {
+  @include only-mobile {
+    width: 140px;
+    height: 124px;
+  }
+
+  @include tablet-sm {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.btn {
+  padding: 0 30px;
+  width: fit-content;
+  background: #184BFF;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  word-wrap: break-word;
+
+  @include only-mobile {
+    margin-top: 24px;
+    width: 100%;
+  }
+}

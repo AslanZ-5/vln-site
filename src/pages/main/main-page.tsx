@@ -3,6 +3,7 @@ import { Carousel } from '@/widgets/carousel';
 import { Slide } from '@/widgets/carousel/ui/constants';
 // import { Button } from 'ui-kit-volna';
 // import { BeautifulNumbers } from './beautiful-numbers/beautiful-numbers';
+import { Esim } from '@/widgets/eSim/eSim';
 import styles from './main-page.module.scss';
 
 // TODO убрать это туда, где ему место
@@ -31,9 +32,7 @@ function MainPage() {
         <Card withBorder>
           Волна Sale
         </Card>
-        <Card withBorder>
-          Подключи eSIM
-        </Card>
+        <Esim />
       </div>
       <div className={styles.news}>
         Новости

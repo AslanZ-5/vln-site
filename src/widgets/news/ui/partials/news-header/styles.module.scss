@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  font-family: TT Norms Pro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.32px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.titleBtn {
+  display: flex;
+  background: unset;
+  align-items: center;
+  border: unset;
+  cursor: pointer;
+
+  .arrowStyles {
+    padding-top: 6px;
+  }
+}
+
+.tabsWrapper {
+  padding-bottom: 4px;
+}

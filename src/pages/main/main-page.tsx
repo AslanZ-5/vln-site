@@ -18,6 +18,7 @@ function MainPage() {
         <Carousel images={slidesMock} />
       </div>
       <div className={styles.tariffs}>
+      <h3>Тарифы</h3>
         <MantineCarousel
           initialSlide={1}
           withIndicators

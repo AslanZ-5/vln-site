@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "@/widgets/header";
 import { Sidebar } from "@/widgets/sidebar";
+import { News } from "@/widgets/news/ui/news";
 import { Footer } from "@/widgets/footer/footer";
 import { FooterCardsBlock } from "@/widgets/footer-cards/footer-cards";
 import styles from './layout.module.scss';

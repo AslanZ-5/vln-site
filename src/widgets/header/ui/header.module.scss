@@ -6,10 +6,15 @@
   display: flex;
   background-color: #fff;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 32px;
 
   @include tablet {
+    height: 44px;
+    align-items: center;
+  }
+
+  @include desktop-max {
     height: 84px;
   }
 }

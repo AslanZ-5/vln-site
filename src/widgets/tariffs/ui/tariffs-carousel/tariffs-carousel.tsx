@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Carousel } from '@mantine/carousel';
 import TariffCard from '@/shared/ui-kit/tariff-card/tariff-card';
-import { EmailIcon, PhoneIcon, GlobeIcon } from '@/shared/assets/svg';
+import { EmailIcon, PhoneMiniIcon, GlobeIcon } from '@/shared/assets/svg';
 import styles from './tariffs-carousel.module.scss';
 import { useMobile } from '@/shared/lib/useMobile';
 import { MOBILE, TABLET } from '@/shared/constants/mediaQueries';
@@ -20,7 +20,7 @@ const items = [
     },
     options: [
       {
-        icon: <PhoneIcon />,
+        icon: <PhoneMiniIcon />,
         value: 300,
         text: 'мин по России',
       },
@@ -49,7 +49,7 @@ const items = [
     },
     options: [
       {
-        icon: <PhoneIcon />,
+        icon: <PhoneMiniIcon />,
         value: 300,
         text: 'мин по России',
       },
@@ -73,7 +73,7 @@ const items = [
     oldPrice: 650,
     options: [
       {
-        icon: <PhoneIcon />,
+        icon: <PhoneMiniIcon />,
         value: 100,
         text: 'мин по России',
       },
@@ -101,7 +101,7 @@ const items = [
     },
     options: [
       {
-        icon: <PhoneIcon />,
+        icon: <PhoneMiniIcon />,
         value: 100,
         text: 'мин по России',
       },
@@ -119,7 +119,7 @@ const items = [
     newPrice: 990,
     options: [
       {
-        icon: <PhoneIcon />,
+        icon: <PhoneMiniIcon />,
         value: 900,
         text: 'мин по России',
       },
@@ -138,7 +138,7 @@ const items = [
     oldPrice: 850,
     options: [
       {
-        icon: <PhoneIcon />,
+        icon: <PhoneMiniIcon />,
         value: 150,
         text: 'мин по России',
       },
@@ -157,7 +157,7 @@ export const TariffsCarousel: FC = () => {
   return (
     <Carousel
       height={365}
-      slideSize="25%"
+      slideSize="10%"
       slideGap={20}
       slidesToScroll={1}
       loop={true}
@@ -165,7 +165,7 @@ export const TariffsCarousel: FC = () => {
       withControls={!isMobile}
       withIndicators
       breakpoints={[
-        { maxWidth: MOBILE, slideSize: '10%' },
+        { maxWidth: MOBILE, slideSize: '5%' },
         { maxWidth: TABLET, slideSize: '50%' },
       ]}
       classNames={{

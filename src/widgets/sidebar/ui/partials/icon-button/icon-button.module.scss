@@ -1,3 +1,5 @@
+@import 'media-queries';
+
 .wrapper {
   display: flex;
   cursor: pointer;
@@ -15,6 +17,15 @@
   width: 70px;
   flex-direction: column;
   stroke: #2f384c;
+
+  @include tablet {
+    height: 95px;
+    width: 64px;
+  }
+
+  @include desktop-max {
+    width: 70px;
+  }
 }
 
 .hiddenContent {

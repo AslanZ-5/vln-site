@@ -8,8 +8,9 @@ import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
 import { BeautifulNumbers } from '@/widgets/beautiful-numbers/beautiful-numbers';
 import { News } from '@/widgets/news/ui/news';
 import { Tariffs } from '@/widgets/tariffs';
-
 import styles from './main-page.module.scss';
+import { Modal } from '@/shared/ui-kit';
+import { Input } from '@mantine/core';
 
 function MainPage() {
   const { isMobile } = useMobile();
@@ -31,6 +32,9 @@ function MainPage() {
       <div className={styles.news}>
         <News />
       </div>
+      <Modal size="md" title="Выбор города" opened={true} onClose={() => {}}>
+        <Input placeholder="Ваш город" />
+      </Modal>
     </div>
   );
 }

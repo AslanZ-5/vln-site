@@ -11,10 +11,11 @@ import { Tariffs } from '@/widgets/tariffs';
 import styles from './main-page.module.scss';
 
 function MainPage() {
+  const { isMobile } = useMobile();
   return (
     <div className={styles.wrapper}>
       <div className={styles.carouselWrapper}>
-        <Carousel images={slidesMock} />
+        <Carousel images={isMobile ? slidesMockMobile : slidesMock} />
       </div>
       <div className={styles.tariffs}>
         <Tariffs />

@@ -42,4 +42,4 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
   );
 });
 
-Carousel.displayName = 'Carousel';
+Carousel.displayName = "Carousel";

@@ -13,6 +13,22 @@ export const slidesMock = [
   },
 ];
 
+
+export const slidesMockMobile = [
+  {
+    path: "/assets/img/imageCarouselMobile.png",
+    alt: "slide1",
+  },
+  {
+    path: "/assets/img/imageCarouselMobile.png",
+    alt: "slide1",
+  },
+  {
+    path: "/assets/img/imageCarouselMobile.png",
+    alt: "slide1",
+  },
+]
+
 export type Slide = {
   path: string;
   alt: string;

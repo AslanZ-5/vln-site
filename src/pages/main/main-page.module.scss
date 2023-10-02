@@ -48,32 +48,49 @@
 .banners {
   //@include border;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 32px;
 
-  @include only-mobile {
-    flex-direction: column;
-    gap: 20px;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 433px 322px 1fr;
+    gap: 48px 20px;
+    place-items: stretch stretch;
+    grid-template-areas:
+      'Replenishment BeautifulNumbers'
+      'VolnaSale Esim'
+      'HomeInternet HomeInternet';
+
+    &__beautiful_numbers {
+      grid-area: BeautifulNumbers;
+    }
+    &__volna_sale {
+      grid-area: VolnaSale;
+    }
+    &__esim {
+      grid-area: Esim;
+    }
+    &__replenishment {
+      grid-area: Replenishment;
+    }
+    &__home_internet {
+      grid-area: HomeInternet;
+    }
   }
 
-  @include desktop {
-    height: 322px;
-  }
-}
+  @include desktop-max {
+    grid-template-columns: 50% auto 310px;
+    grid-template-rows: 322px auto;
+    grid-template-areas:
+      'BeautifulNumbers VolnaSale Esim'
+      'Replenishment HomeInternet HomeInternet';
+    place-items: stretch stretch;
+    gap: 64px 20px;
 
-.bannerCard {
-  width: 33%;
-  height: 100%;
-}
-
-.replenishmentAndInternet {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-
-  @include only-mobile {
-    flex-direction: column;
+    &__volna_sale {
+      margin-left: -120px;
+    }
   }
 }
 

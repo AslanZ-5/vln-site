@@ -21,15 +21,12 @@ function MainPage() {
       <div className={styles.tariffs}>
         <Tariffs />
       </div>
-
       <div className={styles.banners}>
-        <BeautifulNumbers />
-        <VolnaSale />
-        <Esim />
-      </div>
-      <div className={styles.replenishmentAndInternet}>
-        <Replenishment />
-        <HomeInternet />
+        <BeautifulNumbers className={styles.banners__beautiful_numbers} />
+        <VolnaSale className={styles.banners__volna_sale} />
+        <Esim className={styles.banners__esim} />
+        <Replenishment className={styles.banners__replenishment} />
+        <HomeInternet className={styles.banners__home_internet} />
       </div>
       <div className={styles.news}>
         <News />

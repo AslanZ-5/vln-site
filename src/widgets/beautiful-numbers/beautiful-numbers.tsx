@@ -1,13 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, HTMLAttributes } from 'react';
 import { Button, useMantineTheme } from '@mantine/core';
 import Card from '@/shared/ui-kit/card/card';
 import styles from './beautiful-numbers.module.scss';
 import { ChevronRight } from '@/shared/assets/icons';
 import Link from 'next/link';
+import cn from 'classnames';
 
 const OFFSET = 10;
 
-function BeautifulNumbers() {
+interface BeautifulNumbersProps extends HTMLAttributes<HTMLDivElement> {}
+
+function BeautifulNumbers({ className }: BeautifulNumbersProps) {
   const theme = useMantineTheme();
 
   const [isAnimating, setIsAnimating] = useState(false);
@@ -19,13 +22,12 @@ function BeautifulNumbers() {
     if (!isAnimating) {
       setIsAnimating(true);
       intervalRef.current = setInterval(() => {
-        setCurrentNumber(prev => {
+        setCurrentNumber((prev) => {
           if (prev < 1) {
             return 9;
           }
           return prev - 1;
         });
-
       }, 10);
 
       setTimeout(() => {
@@ -48,12 +50,10 @@ function BeautifulNumbers() {
   }, []);
 
   return (
-    <Card className={styles.card} padding={'24px 20px'} radius={24}>
+    <Card className={cn(styles.card, className && className)} padding={'24px 20px'} radius={24}>
       <Link href={''} className={styles.link}>
         {/* нужно будет добавить ссылку на страницу домашнего интернета*/}
-        <span className={styles.link__text}>
-          Красивые номера
-        </span>
+        <span className={styles.link__text}>Красивые номера</span>
         <ChevronRight className={styles.link__chevron} color={theme.other.colors.base[0]} />
       </Link>
       <div className={styles.content}>

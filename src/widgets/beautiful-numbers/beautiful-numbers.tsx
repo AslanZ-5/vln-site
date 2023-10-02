@@ -5,6 +5,7 @@ import styles from './beautiful-numbers.module.scss';
 import { ChevronRight } from '@/shared/assets/icons';
 import Link from 'next/link';
 import cn from 'classnames';
+import { LINKS } from '@/shared/constants/links';
 
 const OFFSET = 10;
 
@@ -51,7 +52,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
 
   return (
     <Card className={cn(styles.card, className && className)} padding={'24px 20px'} radius={24}>
-      <Link href={''} className={styles.link}>
+      <Link href={LINKS.BEAUTIFUL_NUMBERS} className={styles.link}>
         {/* нужно будет добавить ссылку на страницу домашнего интернета*/}
         <span className={styles.link__text}>Красивые номера</span>
         <ChevronRight className={styles.link__chevron} color={theme.other.colors.base[0]} />
@@ -77,13 +78,15 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
           <span className={styles.prefix}>+7(978)</span>
         </div>
       </div>
-      <Button
-        classNames={{
-          root: styles.button__root,
-        }}
-      >
-        Купить от 500 руб.
-      </Button>
+      <Link href={LINKS.BEAUTIFUL_NUMBERS}>
+        <Button
+          classNames={{
+            root: styles.button__root,
+          }}
+        >
+          Купить от 500 руб.
+        </Button>
+      </Link>
     </Card>
   );
 }

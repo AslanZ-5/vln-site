@@ -22,11 +22,10 @@
 }
 
 .carouselWrapper {
-  width: 100%;
+  width: calc(100% + 40px);
   max-height: 272px;
 
   @include tablet {
-    width: calc(100% + 40px);
     max-height: 209px;
   }
 

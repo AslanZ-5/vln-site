@@ -31,7 +31,6 @@ function MainPage() {
       <div className={styles.news}>
         <News />
       </div>
-      <div className={styles.news}>Новости</div>
     </div>
   );
 }

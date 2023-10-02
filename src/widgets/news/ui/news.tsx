@@ -35,6 +35,7 @@ export function News() {
         slideGap={'20px'}
         loop
         className={styles.image}
+        withControls={!isMobile}
         w={'100%'}
         styles={{
           indicator: {

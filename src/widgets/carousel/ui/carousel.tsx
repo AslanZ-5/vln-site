@@ -3,8 +3,11 @@ import { Carousel as MantineCarousel } from "@mantine/carousel";
 import Image from "next/image";
 import { Slide } from "./constants";
 import styles from "./carousel.module.scss";
+import { useMobile } from '@/shared/lib/useMobile';
 
 export const Carousel = memo(({ images }: { images: Slide[] }) => {
+  const { isMobile } = useMobile();
+
   return (
     <div className={styles.wrapper}>
       <MantineCarousel
@@ -14,6 +17,7 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
         className={styles.image}
         w={"100%"}
         slideGap={15}
+        withControls={!isMobile}
         styles={{
           indicator: {
             width: "12px",

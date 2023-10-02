@@ -181,7 +181,7 @@
 .questionAnswerCard {
   padding: 20px;
   margin-top: -20px;
-  width: 110%;
+  width: calc(100% + 40px);
   height: fit-content;
   gap: 16px;
   border-radius: 0;
@@ -238,7 +238,7 @@
 .mobAppCard {
   margin: 0 -20px;
   padding: 20px;
-  width: 110%;
+  width: calc(100% + 40px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

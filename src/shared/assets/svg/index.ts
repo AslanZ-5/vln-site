@@ -38,3 +38,4 @@ export { default as Mastercard } from './mastercard-payment.svg';
 export { default as Sbp } from './sbp-payment.svg';
 export { default as MinusOctagon } from './minus-octagon.svg';
 export { default as CheckboxRec } from './checkbox-rec.svg';
+export { default as ChevronRight } from './chevron-right.svg';

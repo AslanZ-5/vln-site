@@ -19,6 +19,7 @@ import styles from "./sidebar.module.scss";
 import { useMobile } from "@/shared/lib/useMobile";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
+import Link from "next/link";
 
 const Sidebar = React.memo(() => {
   const { isMobile, isTablet } = useMobile();
@@ -49,7 +50,7 @@ const Sidebar = React.memo(() => {
         showActiveLine={isActive}
         Icon={el.Icon && (() => <el.Icon />)}
       >
-        {el.Title}
+        {el.src ? <Link href={el.src}>{el.Title}</Link> : el.Title}
       </IconButton>
     );
   });
@@ -59,7 +60,8 @@ const Sidebar = React.memo(() => {
       onClick={handleChangeCategory(ind)}
       key={ind}
       active={ind === activeCategory}
-      title={el}
+      title={el.name}
+      src={el?.src}
     />
   ));
 
@@ -143,7 +145,7 @@ const Sidebar = React.memo(() => {
           className={cn(styles.content, sidebarOpen && styles.contentVisible)}
         >
           {Boolean(prevSidebarState.current.length) && renderBackButton}
-          {!isTablet || isTablet && sidebarOpen ? renderOptions : null}
+          {!isTablet || (isTablet && sidebarOpen) ? renderOptions : null}
         </div>
 
         {isFullSidebar && (

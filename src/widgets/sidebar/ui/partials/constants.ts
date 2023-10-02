@@ -9,7 +9,15 @@ import {
   Box_2,
 } from "@/shared/assets/svg/index";
 
-export const categoryBtn = ["Частным лицам", "Бизнесу"];
+export const categoryBtn = [
+  {
+    name: "Частным лицам",
+  },
+  {
+    name: "Бизнесу",
+    src: "https://corp.volnamobile.ru/",
+  },
+];
 
 export const sideBarBtns: SideBarOption[] = [
   {
@@ -35,12 +43,14 @@ export const sideBarBtns: SideBarOption[] = [
     Title: "Новости и акции",
     childrens: null,
     id: 4,
+    src: "https://volnamobile.ru/numbers/",
   },
   {
     Icon: Pin,
     Title: "Точки продаж",
     childrens: null,
     id: 5,
+    src: "https://volnamobile.ru/numbers/",
   },
   {
     Icon: Sketch,
@@ -119,4 +129,5 @@ export interface SideBarOption {
   Title: string;
   childrens: null | SideBarOption[];
   id: number;
+  src?: string;
 }

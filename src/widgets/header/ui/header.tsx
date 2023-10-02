@@ -1,42 +1,33 @@
 import { NAVIGATION_MENU_LIST } from "../constans";
-import {
-  Wrapper,
-  Logo,
-  Navigation,
-  RightSide,
-  Personal,
-  User,
-  Search,
-} from "./header.styles";
-
+import styles from "./header.module.scss";
 import { LogoIcon, SearchIcon, PackIcon, UserIcon } from "@/shared/assets/svg";
 import Link from "next/link";
 
 export function Header() {
   return (
-    <Wrapper>
-      <Logo>
+    <div className={styles.wrapper}>
+      <div className={styles.logo}>
         <LogoIcon />
-      </Logo>
-      <Navigation>
+      </div>
+      <div className={styles.navigation}>
         {NAVIGATION_MENU_LIST.map((list) => (
           <div key={list.id}>
             <Link href={list.path}>{list.label}</Link>
           </div>
         ))}
-      </Navigation>
-      <RightSide>
-        <Search>
+      </div>
+      <div className={styles.rightSide} >
+        <div className={styles.search} >
           <SearchIcon />
-        </Search>
-        <User>
+        </div>
+        <div className={styles.user} >
           <UserIcon />
-        </User>
-        <Personal>
+        </div>
+        <div className={styles.personal} >
           <PackIcon />
           Личный кабинет
-        </Personal>
-      </RightSide>
-    </Wrapper>
+        </div>
+      </div>
+    </div>
   );
 }

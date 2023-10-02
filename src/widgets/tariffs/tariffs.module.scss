@@ -1,5 +1,15 @@
+@import '@/styles/media-queries';
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include only-mobile {
+    flex-direction: column;
+    margin-bottom: 20px;
+    h3 {
+      display: none;
+    }
+  }
 }

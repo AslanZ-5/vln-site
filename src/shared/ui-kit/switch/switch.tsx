@@ -42,7 +42,7 @@ const SwitchStyles = styled.div<SwitchStylesProps>`
     border-radius: 35px;
     top: 50%;
     left: 2px;
-    background: $color-base-0;
+    background: #fff;
     transform: translate(0, -50%);
     width: ${({ sizeStyles }) => sizeStyles.beforeWidth};
     height: ${({ sizeStyles }) => sizeStyles.beforeHeight};
@@ -54,7 +54,7 @@ const Input = styled.input<SwitchStylesProps>`
   position: absolute;
 
   &:checked + ${SwitchStyles} {
-    background: #184bff;
+    background: #eb008c;
 
     &:before {
       transform: translate(${({ sizeStyles }) => sizeStyles.beforeTranslate}, -50%);
@@ -96,7 +96,7 @@ export const Switch = ({ disabled, label, size, onChange, checked }: SwitchProps
     <Label>
       <Input
         checked={checked}
-        type='checkbox'
+        type="checkbox"
         disabled={disabled}
         onChange={onChange}
         sizeStyles={getSizeStyles(size)}

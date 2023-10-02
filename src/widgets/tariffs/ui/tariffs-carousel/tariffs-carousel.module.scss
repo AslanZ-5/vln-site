@@ -1,7 +1,22 @@
+@import '@/styles/variables.scss';
+
 .root {
   width: 100%;
 }
 
 .container {
   padding: 15px 0;
+}
+
+.indicators {
+  bottom: -10px;
+}
+
+.indicator {
+  background-color: $color-primary-500;
+  flex: 0 0 1%;
+
+  &[data-active='true'] {
+    flex: 0 0 3%;
+  }
 }

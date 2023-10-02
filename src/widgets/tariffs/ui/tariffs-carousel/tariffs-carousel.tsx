@@ -131,7 +131,7 @@ const items = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     backgroundImage: '/assets/img/tariff-banners/banner-6.png',
     title: 'Лайт',
     newPrice: 690,

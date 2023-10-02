@@ -51,7 +51,7 @@ export function News() {
         }}>
         {imgCards.map((item) => {
           return (
-            <MantineCarousel.Slide className={styles.img}>
+            <MantineCarousel.Slide className={styles.img} key={item.id}>
               <NewsCard src={item.src} title={item.title} date={item.date} />
             </MantineCarousel.Slide>
           );

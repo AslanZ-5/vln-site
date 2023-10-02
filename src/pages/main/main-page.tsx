@@ -1,5 +1,6 @@
+import { useMobile } from '@/shared/lib/useMobile';
 import { Carousel } from '@/widgets/carousel';
-import { slidesMock } from '@/widgets/carousel/ui/constants';
+import { slidesMock, slidesMockMobile } from '@/widgets/carousel/ui/constants';
 import { Esim } from '@/widgets/eSim/eSim';
 import { Replenishment } from '@/widgets/replenishment/replenishment';
 import { HomeInternet } from '@/widgets/home-internet';

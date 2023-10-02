@@ -10,6 +10,12 @@
   border-radius: 24px;
   background: var(--gradient-blue, linear-gradient(90deg, #0000be 0%, #4e00ad 100%));
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 182, 0.15);
+
+  &:hover {
+    border-radius: 24px 24px 24px 0px;
+    border: 0.5px solid rgba(239, 35, 137, 0.2);
+    box-shadow: 0px 25px 45px 0px rgba(235, 0, 140, 0.2);
+  }
 }
 .wrapper {
   display: flex;

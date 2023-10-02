@@ -9,7 +9,7 @@ export function FooterCardsBlock() {
         <div className={styles.questionAnswerTop}><div className={styles.title}>Вопросы и ответы</div>
           <div className={styles.text}>Найдите здесь ответы на самые частые вопросы абонентов</div>
         </div>
-        <Button type='button' className={styles.btn} color="indigo.5">Найти информацию</Button>
+        <Button type='button' classNames={{root: styles.btn__root}} color="indigo.5">Найти информацию</Button>
       </div>
 
       <div className={styles.cardKate}>
@@ -18,7 +18,7 @@ export function FooterCardsBlock() {
           <div className={styles.textKate}>Задайте вопрос
             нашему виртуальному помощнику!</div>
         </div>
-        <Button type='button' className={styles.btnKate}>
+        <Button type='button' classNames={{root: styles.btnKate__root}}>
           Виртуальный помощник Катя
         </Button>
       </div>

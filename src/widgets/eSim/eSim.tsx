@@ -8,7 +8,7 @@ export function Esim() {
           <span className={styles.header}>Подключи<br />eSIM</span>
           <span className={styles.info}>Цифровое решение<br />классических задач</span>
         </div>
-      <Button className={styles.btn}>
+      <Button classNames={{ root: styles.button__root }}>
         Оформить eSIM
       </Button>
     </div>

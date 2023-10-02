@@ -1,7 +1,6 @@
 @import 'media-queries';
 
 .wrapper {
-  width: 100%;
   min-height: 204px;
   display: flex;
   flex-direction: column;
@@ -20,18 +19,40 @@
 }
 
 .btn {
-  width: 100%;
-  background: #184BFF;
-  color: #fff;
-  border-radius: 12px;
-  font-size: 14px;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 14px;
-  word-wrap: break-word;
+  &__root {
+    margin-top: auto;
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #184BFF;
+    color: $color-base-0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    outline: none;
 
-  @include tablet {
-    width: fit-content;
+    &:hover {
+      background-color: $color-primary-400;
+    }
+
+    &:active {
+      background-color: #184BFF;
+    }
+
+    &[data-disabled] {
+      background-color: $color-primary-200;
+      color: $color-base-500;
+    }
+
+    @include tablet {
+      width: fit-content;
+    }
+
+    @include desktop-max {
+      height: 40px;
+    }
   }
 }
 
@@ -50,7 +71,7 @@
 
   @include tablet {
     width: 310px;
-    flex-basis: 48.9%; 
+    flex-basis: 47%; 
   }
 }
 
@@ -61,16 +82,18 @@
 }
 
 .titleKate {
-  color: #fff;
-  font-family: Manrope;
+  display: block;
+  font-family: 'TT Norms Pro';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
+  color: $color-base-0;
   font-size: 24px;
   line-height: 28px;
 
   @include tablet {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 36px;
+    letter-spacing: -0.32px;
   }
 }
 
@@ -81,23 +104,46 @@
   font-weight: 400;
   line-height: 18px;
 
-  @include tablet {
+  @include desktop-max {
     width: 150px;
   }
 }
 
 .btnKate {
-  width: fit-content;
-  background: #fff;
-  color: #000;
-  border-radius: 12px;
-  font-size: 14px;
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 14px;
+  &__root {
+    margin-top: auto;
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: $color-base-0;
+    color: $color-black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    outline: none;
 
-  &:hover {
-    background: $color-base-200;
+    &:hover {
+      background-color: $color-base-200;
+    }
+
+    &:active {
+      background-color: $color-base-300;
+    }
+
+    &[data-disabled] {
+      background-color: $color-base-200;
+      color: $color-base-500;
+    }
+
+    @include tablet {
+      width: fit-content;
+    }
+
+    @include desktop-max {
+      height: 40px;
+    }
   }
 }
 
@@ -107,11 +153,13 @@
   }
 
   @include tablet {
-    font-size: 24px;
+    font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-size: 32px;
     color: #122B3D;
     font-weight: 500;
     line-height: 36px;
-    word-wrap: break-word;
+    letter-spacing: -0.32px;
   }
 }
 
@@ -148,7 +196,7 @@
     width: 310px;
     height: 204px;
     border-radius: 24px;
-    flex-basis: 48.9%; 
+    flex-basis: 50%; 
   }
 }
 
@@ -218,17 +266,14 @@
 }
 
 .mobAppTitle {
-  font-family: "Manrope";
+  display: block;
+  font-family: 'TT Norms Pro';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.32px;
   color: #fff;
-
-  @include tablet {
-    font-size: 32px;
-    line-height: 36px;
-  }
 }
 
 .mobAppMainText {
@@ -246,10 +291,10 @@
 
 .label {
   font-size: 16px;
-  font-family: TT Norms Pro;
+  font-family: 'TT Norms Pro';
+  font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  word-wrap: break-word
 }
 
 .textWithArrow {
@@ -269,7 +314,10 @@
   width: 100%;
   display: flex;
   justify-content: start;
-  gap: 8px;
+  
+  @include tablet {
+    gap: 8px;
+  }
 }
 
 .mobAppIcon {

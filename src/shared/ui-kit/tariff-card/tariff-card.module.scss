@@ -1,3 +1,5 @@
+@import '@/styles/media-queries';
+
 $borderRadius: 24px;
 
 .root {
@@ -15,6 +17,10 @@ $borderRadius: 24px;
   height: 375px;
   overflow: hidden;
   cursor: pointer;
+
+  @include only-mobile {
+    max-width: 290px;
+  }
 
   &:hover {
     border-radius: $borderRadius $borderRadius $borderRadius 0px;

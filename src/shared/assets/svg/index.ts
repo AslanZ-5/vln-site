@@ -42,3 +42,4 @@ export { default as Logo_3 } from './logoIcon_3.svg';
 export { default as EmailIcon } from './email.svg';
 export { default as GlobeIcon } from './globe.svg';
 export { default as PhoneIcon } from './phone.svg';
+export { default as PhoneMiniIcon } from './phone-mini.svg';

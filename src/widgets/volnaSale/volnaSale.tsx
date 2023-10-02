@@ -8,7 +8,7 @@ export function VolnaSale() {
         <span className={styles.header}>Волна Sale</span>
         <span className={styles.info}>Биржа гигабайт, минут и SMS. Есть лишний ресурс? <br />Продайте не нужное, купите нужное</span>
       </div>
-      <Button className={styles.btn} >
+      <Button classNames={{root: styles.button__root}} >
         Зарабатывай сейчас
       </Button>
     </div>

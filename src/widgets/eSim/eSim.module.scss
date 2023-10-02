@@ -1,7 +1,7 @@
 @import 'media-queries';
 
 .card {
-  padding: 20px;
+  padding: 24px 20px;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -14,22 +14,23 @@
   background-repeat: no-repeat;
   background-size: 140px;
   background-position: 90% 25%;
+  gap: inherit;
 
   @include tablet {
     width: 33%;
     height: 322px;
     background-position: left 140px bottom;
     background-size: 300px;
+
+    &:hover {
+      border-radius: 24px 24px 24px 0;
+      box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
+    }
   }
 
   @include desktop-max {
     width: 310px;
     height: 100%;
-  }
-
-  &:hover {
-    border-radius: 24px 24px 24px 0;
-    box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
   }
 }
 
@@ -67,23 +68,39 @@
   word-wrap: break-word
 }
 
-.btn {
-  padding: 0 30px;
-  width: fit-content;
-  background: #184BFF;
-  color: #fff;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  word-wrap: break-word;
-
-  @include only-mobile {
-    margin-top: 24px;
+.button {
+  &__root {
+    margin-top: auto;
+    height: 48px;
     width: 100%;
-  }
+    border-radius: 12px;
+    background-color: #184BFF;
+    color: $color-base-0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    outline: none;
 
-  &:hover {
-    background: $color-primary-400;
+    &:hover {
+      background-color: $color-primary-400;
+    }
+    &:active {
+      background-color: #184BFF;
+    }
+
+    &[data-disabled] {
+      background-color: $color-primary-200;
+      color: $color-base-500;
+    }
+
+    @include tablet {
+      width: fit-content;
+    }
+
+    @include desktop-max {
+      height: 40px;
+    }
   }
 }

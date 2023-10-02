@@ -1,4 +1,4 @@
-@import '../../../styles/media-queries';
+@import "../../../styles/media-queries";
 
 .wrapper {
   width: 100%;
@@ -7,7 +7,10 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0;
+  @include desktop-max {
+    border-radius: 0.5rem;
+  }
 }
 
 .image {

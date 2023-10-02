@@ -1,0 +1,166 @@
+$borderRadius: 24px;
+
+.root {
+  position: relative;
+  display: flex;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 310px;
+  color: white;
+  flex-direction: column;
+  border-radius: $borderRadius;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(90deg, #1a02ba 0%, #820eb9 216.06%, #1a02ba 419.03%);
+  height: 375px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: $borderRadius $borderRadius $borderRadius 0px;
+    height: 408px;
+    top: -15px;
+
+    .bgImage {
+      opacity: 1;
+    }
+
+    .buttonConnectService {
+      background: #eb008c;
+      color: #fff;
+    }
+  }
+}
+
+.topInfo {
+  flex: 1;
+}
+
+.details {
+  position: relative;
+  z-index: 3;
+}
+
+.bgImage {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.title {
+  color: #fff;
+  font-family: 'TT Norms Pro';
+  font-size: 24px;
+  margin: 0;
+}
+
+.tariffPrice {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.newPrice {
+  display: flex;
+  align-items: center;
+
+  span {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+  }
+}
+
+.oldPrice {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.circle {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  flex-shrink: 0;
+  z-index: 1;
+  border-radius: 370px;
+  background: rgba(254, 254, 254, 0.1);
+}
+
+.circleTop {
+  top: 192px;
+  right: 100px;
+}
+
+.circleBottom {
+  bottom: 100px;
+  left: 0px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.tariffButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonConnectService {
+  display: flex;
+  width: 164px;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #fff;
+  color: #282d3c;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: #eb008c;
+    color: #fff;
+  }
+}
+
+.buttonTariffMore {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 12px;
+  background: transparent;
+
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  &:hover {
+    background: transparent;
+  }
+}

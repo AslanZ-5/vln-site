@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { FC, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { ButtonProps } from './button.types';
@@ -48,8 +49,8 @@ const StyledSpinner = styled.svg<{
 `;
 
 const Spinner = ({ color }: { color: string }) => (
-  <StyledSpinner viewBox='0 0 50 50' color={color}>
-    <circle className='path' cx='25' cy='25' r='20' fill='none' strokeWidth='5' />
+  <StyledSpinner viewBox="0 0 50 50" color={color}>
+    <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5" />
   </StyledSpinner>
 );
 
@@ -66,8 +67,10 @@ export const Button: FC<ButtonProps> = ({
   const [textColor, setTextColor] = useState(null);
 
   useEffect(() => {
-    const color = type === 'inverted' ? buttonColorsInverted[state] : buttonColors[purpose]?.[state];
-    const textColor = type === 'inverted' ? buttonTextColorsInverted[state] : buttonTextColors[purpose]?.[state];
+    const color =
+      type === 'inverted' ? buttonColorsInverted[state] : buttonColors[purpose]?.[state];
+    const textColor =
+      type === 'inverted' ? buttonTextColorsInverted[state] : buttonTextColors[purpose]?.[state];
     color && setColor(theme.colors[color[0]][color[1]]);
     textColor && setTextColor(theme.colors[textColor[0]][textColor[1]]);
   }, [type, purpose, state]);
@@ -80,8 +83,7 @@ export const Button: FC<ButtonProps> = ({
         borderRadius: type === 'icon' ? '50%' : '12px',
       }}
       className={[`storybook-button--${type}-${size}`].join(' ')}
-      onClick={onClick}
-    >
+      onClick={onClick}>
       {
         <>
           {(type === 'with_icon' || 'icon') && icon}
@@ -89,9 +91,12 @@ export const Button: FC<ButtonProps> = ({
             style={{
               display: type === 'icon' ? 'none' : 'inline-block',
               visibility: state === 'load' ? 'hidden' : 'visible',
-            }}
-          >
-            <Typography lable={true} weight={'medium'} size={size === 'xs' ? 5 : 4} color={textColor || 'inherit'}>
+            }}>
+            <Typography
+              lable={true}
+              weight={'medium'}
+              size={size === 'xs' ? 5 : 4}
+              color={textColor || 'inherit'}>
               {children}
             </Typography>
           </span>

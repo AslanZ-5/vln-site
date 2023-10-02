@@ -1,0 +1,52 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 20px;
+
+  h5 {
+    display: flex;
+    gap: 8px;
+    color: var(--base-0-cloud, #fff);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin: 0;
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: #bcc3d2;
+    font-family: Roboto;
+    font-size: 11px;
+    margin: 0;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: flex-start;
+}
+
+.discountPrice {
+  display: flex;
+  height: var(--corner-radii-radius-large, 24px);
+  padding: 0px var(--Corner-Small-8, 8px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 12px 12px 0px;
+  opacity: 0.55;
+  background: #fff;
+  color: #3730a3;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-top: -7px;
+  margin-left: 10px;
+}

@@ -43,3 +43,6 @@ export { default as EmailIcon } from './email.svg';
 export { default as GlobeIcon } from './globe.svg';
 export { default as PhoneIcon } from './phone.svg';
 export { default as PhoneMiniIcon } from './phone-mini.svg';
+export { default as ElipsisPink } from './gradient-elipsis-pink.svg';
+export { default as ElipsisPurple } from './gradient-elipsis-purple.svg';
+export { default as CloseIcon } from './close-icon.svg';

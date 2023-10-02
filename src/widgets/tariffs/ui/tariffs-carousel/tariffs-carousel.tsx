@@ -3,6 +3,8 @@ import { Carousel } from '@mantine/carousel';
 import TariffCard from '@/shared/ui-kit/tariff-card/tariff-card';
 import { EmailIcon, PhoneIcon, GlobeIcon } from '@/shared/assets/svg';
 import styles from './tariffs-carousel.module.scss';
+import { useMobile } from '@/shared/lib/useMobile';
+import { MOBILE, TABLET } from '@/shared/constants/mediaQueries';
 
 const items = [
   {
@@ -150,6 +152,8 @@ const items = [
 ];
 
 export const TariffsCarousel: FC = () => {
+  const { isMobile } = useMobile();
+
   return (
     <Carousel
       height={365}
@@ -158,9 +162,17 @@ export const TariffsCarousel: FC = () => {
       slidesToScroll={1}
       loop={true}
       align="start"
+      withControls={!isMobile}
+      withIndicators
+      breakpoints={[
+        { maxWidth: MOBILE, slideSize: '10%' },
+        { maxWidth: TABLET, slideSize: '50%' },
+      ]}
       classNames={{
         root: styles.root,
         container: styles.container,
+        indicators: styles.indicators,
+        indicator: styles.indicator,
       }}
       controlSize={32}>
       {items.map((obj) => (

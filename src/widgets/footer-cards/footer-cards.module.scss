@@ -221,6 +221,7 @@
     margin-right: 0;
     order: 4;
     flex-basis: 30%; 
+    gap: 6px;
   }
 
   @include desktop-max {

@@ -23,10 +23,10 @@ export function Header() {
         <div className={styles.user} >
           <UserIcon />
         </div>
-        <div className={styles.personal} >
+        <Link href={'https://lk-new.volnamobile.ru/'}className={styles.personal} >
           <PackIcon />
           Личный кабинет
-        </div>
+        </Link>
       </div>
     </div>
   );

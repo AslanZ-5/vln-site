@@ -15,6 +15,12 @@
   background-position: 90% 25%;
   gap: inherit;
 
+  @include tablet {
+    height: auto;
+    background-position: left 140px bottom;
+    background-size: 300px;
+  }
+
   &:hover {
     border-radius: 24px 24px 24px 0;
     box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.2);

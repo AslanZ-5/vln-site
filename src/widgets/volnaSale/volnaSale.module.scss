@@ -1,35 +1,30 @@
-@import 'media-queries';
+@import 'global.scss';
 
 .card {
   margin: 0 -20px;
   padding: 24px 20px;
-  width: 110%;
   height: 268px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 0.50px rgba(239.06, 34.86, 136.96, 0.20) solid;
-  border-radius: 0;
+  border: 0.5px rgba(239.06, 34.86, 136.96, 0.2) solid;
   box-shadow: 0px 15px 30px rgba(0, 0, 190, 0.15);
   background-image: url('/assets/img/volnaSale.png');
-  background-size: 110%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff;
+  color: $color-base-0;
 
   @include tablet {
-    width: 33%;
-    height: 100%;
-    height: 322px;
+    margin: 0;
+    height: auto;
     border-radius: 24px;
-    background-size: 455px;
-    background-position: top;
 
     &:hover {
       border-radius: 24px 24px 24px 0;
-      box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
+      box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.2);
     }
-  }  
+  }
 }
 
 .headerInfo {
@@ -39,7 +34,7 @@
 }
 
 .header {
-  font-family: "TT Norms Pro";
+  font-family: 'TT Norms Pro';
   font-style: normal;
   font-weight: 500;
   font-size: 32px;

@@ -3,7 +3,6 @@
 .card {
   padding: 24px 20px;
   width: 100%;
-  height: 236px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,22 +15,9 @@
   background-position: 90% 25%;
   gap: inherit;
 
-  @include tablet {
-    height: auto;
-    // width: 33%;
-    // height: 322px;
-    // background-position: left 140px bottom;
-    // background-size: 300px;
-
-    &:hover {
-      border-radius: 24px 24px 24px 0;
-      box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.2);
-    }
-  }
-
-  @include desktop-max {
-    width: 310px;
-    height: 100%;
+  &:hover {
+    border-radius: 24px 24px 24px 0;
+    box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.2);
   }
 }
 

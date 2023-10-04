@@ -22,6 +22,7 @@ import "react-spring-bottom-sheet/dist/style.css";
 import Link from "next/link";
 import { LINKS } from '@/shared/constants/links';
 import { Tooltip } from "@/shared/ui-kit/tooltip/tooltip";
+import { useLocation } from "@/widgets/location/use-location";
 
 const Sidebar = React.memo(() => {
   const { isMobile, isTablet } = useMobile();
@@ -38,6 +39,10 @@ const Sidebar = React.memo(() => {
     handleBackPrevState,
     handleGoInto,
   } = useSidebar();
+  const {
+    location,
+    handleLocationModalOpen
+  } = useLocation();
 
   const renderOptions = sidebarOptions.map((el, ind) => {
     const isActive = el.id === activeItem;
@@ -158,8 +163,9 @@ const Sidebar = React.memo(() => {
               classname={styles.hoverIcon}
               visibleChildren={sidebarOpen}
               Icon={() => <Pin_2 />}
+              onClick={handleLocationModalOpen}
             >
-              {"Симферополь"}
+              {location}
             </IconButton>
           </div>
         )}

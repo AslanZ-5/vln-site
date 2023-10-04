@@ -58,7 +58,7 @@ export const Input = styled.input<{
     appearance: none;
     height: 20px;
     width: 20px;
-    background: url(${props => (props.$isError ? errorClearIcon : clearIcon)}) no-repeat 50% 50%;
+    //background: url(${props => (props.$isError ? errorClearIcon : clearIcon)}) no-repeat 50% 50%;
   }
 
   &::-webkit-calendar-picker-indicator {

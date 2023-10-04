@@ -43,6 +43,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
 
     return {
       transform: `translate(0, ${m * OFFSET}px)`,
+      color: i === currentNumber + 1 ? '#FFFFFF' : 'rgba(255, 255, 255, 0.50)',
     };
   };
 
@@ -109,7 +110,7 @@ function getRandomNumbers() {
   return result;
 }
 
-function randomIntFromInterval(min, max) {
+function randomIntFromInterval(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 

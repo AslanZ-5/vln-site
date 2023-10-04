@@ -1,5 +1,6 @@
 import styles from "./footer.module.scss";
 import { Logo_3 } from "@/shared/assets/svg";
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -14,14 +15,13 @@ export function Footer() {
         </div>
       </div>
 
-      <div className={styles.rightSide}>
-        <p className={styles.notice}>
-          Посещая сайт, вы предоставляете 
-          <span className={styles.agreement}> согласие на обработку данных </span>
-          в соответствии с политикой конфиденциальности.
-        </p>
-        <div className={styles.telecom2023}>© 2023 ООО «КТК Телеком»</div>
-      </div>
+      <p className={styles.notice}>
+        Посещая сайт, вы предоставляете
+        <Link href={''}><span className={styles.agreement}> согласие на обработку данных </span></Link>
+        в соответствии с политикой конфиденциальности.
+      </p>
+      <div className={styles.telecom2023}>© 2023 ООО «КТК Телеком»</div>
+
     </div>
   );
 }

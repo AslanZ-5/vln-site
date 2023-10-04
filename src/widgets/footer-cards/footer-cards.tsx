@@ -1,6 +1,7 @@
 import { VkIcon, TelegramIcon, YouTubeIcon, DzenIcon, QRCode, AppStore, GooglePlay, RuStore, RightArrow, AppStore_2, GooglePlay_2 } from "@/shared/assets/svg";
 import { Button } from '@mantine/core';
 import Link from "next/link";
+import { LINKS } from '@/shared/constants/links';
 import styles from "./footer-cards.module.scss";
 
 export function FooterCardsBlock() {
@@ -26,13 +27,13 @@ export function FooterCardsBlock() {
 
       <div className={styles.socialBlock}>
         <div className={styles.socialRow}>
-          <Link href={'https://vk.com/volnamobile'}><VkIcon /></Link>
-          <Link href={' https://www.youtube.com/channel/UCBE0ytesPsF1BAbiRqMYTJw'}><YouTubeIcon /></Link>
+          <Link href={LINKS.VK}><VkIcon /></Link>
+          <Link href={LINKS.YOUTUBE}><YouTubeIcon /></Link>
         </div>
 
         <div className={styles.socialRow}>
-          <Link href={'https://t.me/Volnamobile_bot'}><TelegramIcon /></Link>
-          <Link href={' https://dzen.ru/volna_techno'}><DzenIcon /></Link>
+          <Link href={LINKS.TELEGRAM}><TelegramIcon /></Link>
+          <Link href={LINKS.DZEN}><DzenIcon /></Link>
         </div>
       </div>
 
@@ -48,11 +49,11 @@ export function FooterCardsBlock() {
           <QRCode />
         </div>
         <div className={styles.mobAppRow}>
-        <Link className={styles.mobAppIcon} href={'https://redirect.appmetrica.yandex.com/serve/316104190839494864'}><AppStore /></Link>
-        <Link className={styles.mobAppIcon} href={'https://redirect.appmetrica.yandex.com/serve/1180795317767977724'}><GooglePlay /></Link>
-        <Link className={styles.mobAppIcon2} href={'https://redirect.appmetrica.yandex.com/serve/316104190839494864'}><AppStore_2 /></Link>
-        <Link className={styles.mobAppIcon2} href={'https://redirect.appmetrica.yandex.com/serve/1180795317767977724'}><GooglePlay_2 /></Link>
-        <Link href={'https://redirect.appmetrica.yandex.com/serve/1180923242865509178'}><RuStore /></Link>
+        <Link className={styles.mobAppIcon} href={LINKS.APP_STORE}><AppStore /></Link>
+        <Link className={styles.mobAppIcon} href={LINKS.GOOGLE_PLAY}><GooglePlay /></Link>
+        <Link className={styles.mobAppIcon2} href={LINKS.APP_STORE}><AppStore_2 /></Link>
+        <Link className={styles.mobAppIcon2} href={LINKS.GOOGLE_PLAY}><GooglePlay_2 /></Link>
+        <Link href={LINKS.RU_STORE}><RuStore /></Link>
         </div>
       </div>
     </div>

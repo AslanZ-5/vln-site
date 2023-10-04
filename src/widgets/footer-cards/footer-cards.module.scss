@@ -24,7 +24,7 @@
     height: 48px;
     width: 100%;
     border-radius: 12px;
-    background-color: #184BFF;
+    background-color: $color-primary-500;
     color: $color-base-0;
     font-family: Roboto;
     font-size: 14px;
@@ -38,7 +38,7 @@
     }
 
     &:active {
-      background-color: #184BFF;
+      background-color: $color-primary-500;
     }
 
     &[data-disabled] {
@@ -99,7 +99,7 @@
 
 .textKate {
   width: 200px;
-  color: #fff;
+  color: $color-base-0;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -156,7 +156,7 @@
     font-family: 'TT Norms Pro';
     font-style: normal;
     font-size: 32px;
-    color: #122B3D;
+    color: $color-black;
     font-weight: 500;
     line-height: 36px;
     letter-spacing: -0.32px;
@@ -189,7 +189,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #F4F6FB;
+  background: $color-base-100;
 
   @include tablet {
     margin-top: 0;
@@ -274,7 +274,7 @@
   font-size: 32px;
   line-height: 36px;
   letter-spacing: -0.32px;
-  color: #fff;
+  color: $color-base-0;
 }
 
 .mobAppMainText {
@@ -287,7 +287,7 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  color: #fff;
+  color: $color-base-0;
 }
 
 .label {

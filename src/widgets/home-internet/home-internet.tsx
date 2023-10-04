@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, useEffect, useState } from 'react';
+import { ChangeEvent, FC, HTMLAttributes, useEffect, useState } from 'react';
 import styles from './home-internet.module.scss';
 import cn from 'classnames';
 import { TextInput, useMantineTheme, Button } from '@mantine/core';
@@ -13,16 +13,21 @@ export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ..
   const theme = useMantineTheme();
   const [possible, setPossible] = useState(false);
   const [address, setAddress] = useState('');
-  const isMobile = useMediaQuery(`(max-width: 375px)`);
+  const [phone, setPhone] = useState('');
+  const isMobile = useMediaQuery(`(max-width: 767px)`);
 
   useEffect(() => {
     // отправление запроса с проверкой возможности
     if (address === '') {
       setPossible(true);
     } else {
-      setPossible(false);
+      setPossible(true);
     }
   }, [address]);
+
+  const onPhoneChange = (val?: string) => {
+    (val || val === '') && setPhone(val);
+  };
 
   return (
     <div className={cn(styles.container, className && className)} {...props}>
@@ -45,6 +50,7 @@ export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ..
           rightSection={address && <RightSection possible={possible} />}
           rightSectionWidth={isMobile ? 0 : address && (possible ? 197 : 235)}
         />
+        {address && isMobile && <RightSection possible={possible} />}
         {address && !possible && (
           <>
             <div className={styles.description}>
@@ -52,20 +58,39 @@ export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ..
               {HOME_INTERNET__CONSTANTS.ADDRESS_DESCRIPTION_PART2}
             </div>
 
-            <PhoneInput darkBackground />
+            <PhoneInput
+              darkBackground
+              changeHandler={(a, b) => onPhoneChange(b)}
+              clearHandler={() => setPhone('')}
+            />
+          </>
+        )}
+        {address && possible && (
+          <>
+            <div className={styles.description}>{HOME_INTERNET__CONSTANTS.POSSIBLE__LABEL}</div>
+            <PhoneInput
+              darkBackground
+              changeHandler={(a, b) => onPhoneChange(b)}
+              clearHandler={() => setPhone('')}
+            />
           </>
         )}
       </div>
-      <Button
-        disabled={address === ''}
-        classNames={{
-          root: styles.button__root,
-        }}
-      >
-        {possible
-          ? HOME_INTERNET__CONSTANTS.BUTTON_POSSIBLE
-          : HOME_INTERNET__CONSTANTS.BUTTON_IMPOSSIBLE}
-      </Button>
+      <div className={styles.footer}>
+        <Button
+          disabled={address === '' || phone.length !== 10}
+          classNames={{
+            root: styles.button__root,
+          }}
+        >
+          {possible
+            ? HOME_INTERNET__CONSTANTS.BUTTON_POSSIBLE
+            : HOME_INTERNET__CONSTANTS.BUTTON_IMPOSSIBLE}
+        </Button>
+        {possible && address && (
+          <div className={styles.price}>{HOME_INTERNET__CONSTANTS.PRICE}</div>
+        )}
+      </div>
     </div>
   );
 };

@@ -9,6 +9,10 @@ export enum HOME_INTERNET__CONSTANTS {
   ADDRESS_DESCRIPTION_PART1 = 'Мы активно развиваемся и скоро будем у вас!',
   ADDRESS_DESCRIPTION_PART2 = 'Оставьте контактные данные, и мы сообщим вам о возможности подключения, как только она появится.',
 
+  POSSIBLE__LABEL = 'Оставьте контактные данные, чтобы подключить интернет.',
+
   BUTTON_POSSIBLE = 'Подключить интернет',
   BUTTON_IMPOSSIBLE = 'Хочу интернет дома!',
+
+  PRICE = 'от 300 ₽ /мес',
 }

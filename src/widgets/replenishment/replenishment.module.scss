@@ -11,11 +11,12 @@
   gap: 16px;
   flex: 1 0 0;
   width: 100%;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     border-radius: 24px 24px 24px 0px;
-    border: 0.5px solid rgba(239, 35, 137, 0.2);
-    box-shadow: 0px 25px 45px 0px rgba(235, 0, 140, 0.2);
+    box-shadow: 0px 25px 45px 0px rgba(0, 0, 190, 0.2);
+    transition: all 0.2s ease-in-out;
   }
 }
 .light {
@@ -35,7 +36,7 @@
     display: block;
     font-family: 'TT Norms Pro';
     font-style: normal;
-    font-weight: 500;
+    font-weight: bolder;
     color: $color-base-0;
     font-size: 24px;
     line-height: 28px;
@@ -91,6 +92,10 @@
     }
     &:hover {
       background: transparent;
+    }
+
+    @include only-mobile {
+      padding: 10px 12px;
     }
   }
 

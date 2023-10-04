@@ -8,20 +8,22 @@ import { FC } from 'react';
 import { ReplenishmentProps } from './replenishment.types';
 import cn from 'classnames';
 
-export const Replenishment:FC<ReplenishmentProps> = ({ lightMode, className, ...props }) => {
+export const Replenishment: FC<ReplenishmentProps> = ({ lightMode, className, ...props }) => {
   const theme = useMantineTheme();
-  
+
   return (
     <div
       className={cn(styles.container, lightMode && styles.light, className && className)}
       {...props}
     >
-      { !lightMode && (
+      {!lightMode && (
         <Link href={''} className={styles.link}>
+          {/* надо будет вставить ссылку на страницу пополнения счета */}
           <span className={styles.link__text}>{REPLENISHMENT_CONSTANTS.TITLE}</span>
           <ChevronRight className={styles.link__chevron} color={theme.other.colors.base[0]} />
         </Link>
       )}
+
       <Tabs
         classNames={{
           root: styles.tabs__root,
@@ -45,10 +47,13 @@ export const Replenishment:FC<ReplenishmentProps> = ({ lightMode, className, ...
         </Tabs.Panel>
 
         <Tabs.Panel value={REPLENISHMENT_CONSTANTS.HOME_INTERNET}>
-          <ReplenishmentContent lightMode={lightMode} />
+          <ReplenishmentContent
+            lightMode={lightMode}
+            mask={REPLENISHMENT_CONSTANTS.MASK}
+            placeholder={REPLENISHMENT_CONSTANTS.PLACEHOLDER}
+          />
         </Tabs.Panel>
-
       </Tabs>
     </div>
-  )
-}
+  );
+};

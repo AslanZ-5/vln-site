@@ -7,12 +7,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 15px 30px #0000be26;
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 190, 0.15);
   background-image: url('/assets/img/volnaSale.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: $color-base-0;
+  transition: all 0.2s ease-in-out;
 
   @include tablet {
     margin: 0;
@@ -21,7 +22,8 @@
 
     &:hover {
       border-radius: 24px 24px 24px 0;
-      box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.2);
+      box-shadow: 0px 25px 45px 0px rgba(0, 0, 190, 0.2);
+      transition: all 0.2s ease-in-out;
     }
   }
 }

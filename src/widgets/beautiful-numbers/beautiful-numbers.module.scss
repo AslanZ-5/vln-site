@@ -6,8 +6,9 @@
   justify-content: space-between;
   width: 100%;
   border-radius: 24px;
-  background: linear-gradient(270deg, #9D009D 0%, #EB008C 100%);
-  box-shadow: 0px 15px 30px 0px rgba(235, 0, 140, 0.15);
+  background: linear-gradient(270deg, #9d009d 0%, #eb008c 100%);
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 190, 0.15);
+  transition: all 0.2s ease-in-out;
 
   @include desktop-max {
     max-width: 530px;
@@ -16,7 +17,8 @@
 
 .card:hover {
   border-radius: 24px 24px 24px 0;
-  box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.20);
+  box-shadow: 0px 25px 45px 0px rgba(0, 0, 190, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 
 .link {
@@ -87,11 +89,17 @@
   overflow: hidden;
 }
 
+.phoneNumber,
 .prefix {
   color: $color-base-0;
 }
 
-.phoneNumber, .prefix {
+.prefix {
+  color: $color-base-0;
+}
+
+.phoneNumber,
+.prefix {
   user-select: none;
   cursor: pointer;
   text-align: right;
@@ -111,7 +119,8 @@
   }
 }
 
-.phoneNumber:nth-child(1), .phoneNumber:nth-child(3) {
+.phoneNumber:nth-child(1),
+.phoneNumber:nth-child(3) {
   //color: rgba(255, 255, 255, 0.50)
 }
 

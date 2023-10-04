@@ -32,8 +32,8 @@ function MainPage() {
       <div className={styles.news}>
         <News />
       </div>
-      <Modal size="md" title="Выбор города" opened={true} onClose={() => {}}>
-        <Search placeholder="Ваш город" label={'Search'} options={[]} />
+      <Modal size='md' title='Выбор города' opened={true} onClose={() => {}}>
+        <Search placeholder='Ваш город' label={'Search'} options={[]} />
       </Modal>
     </div>
   );

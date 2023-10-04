@@ -8,12 +8,13 @@
   justify-content: space-between;
   border: none;
   border-radius: 24px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 190, 0.15);
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 190, 0.15);
   background-image: url('/assets/img/eSim.png');
   background-repeat: no-repeat;
   background-size: 140px;
   background-position: 90% 25%;
   gap: inherit;
+  transition: all 0.2s ease-in-out;
 
   @include tablet {
     height: auto;
@@ -23,7 +24,8 @@
 
   &:hover {
     border-radius: 24px 24px 24px 0;
-    box-shadow: 0px 25px 45px rgba(235, 0, 140, 0.2);
+    box-shadow: 0px 25px 45px 0px rgba(0, 0, 190, 0.2);
+    transition: all 0.2s ease-in-out;
   }
 }
 

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { SegmentedControl, Button } from '@mantine/core';
 import cn from 'classnames';
 
@@ -11,7 +11,18 @@ import { ReplenishmentProps } from './replenishment.types';
 
 import styles from './content.module.scss';
 
-export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode }) => {
+export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode, mask, placeholder }) => {
+  const [phone, setPhone] = useState('');
+  const [currency, setCurrency] = useState('');
+
+  const phoneHandler = (val?: string) => {
+    (val || val === '') && setPhone(val);
+  };
+
+  const currencyHandler = (val?: string) => {
+    (val || val === '') && setCurrency(val);
+  };
+
   return (
     <div className={cn(styles.container, lightMode && styles.light)}>
       <div className={styles.payment}>
@@ -21,8 +32,20 @@ export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode }) => {
         <Sbp />
       </div>
       <div className={styles.form}>
-        <PhoneInput darkBackground={!lightMode} className={styles.form__phone} />
-        <CurrencyInput darkBackground={!lightMode} className={styles.form__currency} />
+        <PhoneInput
+          darkBackground={!lightMode}
+          changeHandler={(a, b) => phoneHandler(b)}
+          clearHandler={() => setPhone('')}
+          className={styles.form__phone}
+          mask={mask}
+          placeholder={placeholder}
+        />
+        <CurrencyInput
+          darkBackground={!lightMode}
+          changeHandler={(a, b) => currencyHandler(b)}
+          clearHandler={() => setCurrency('')}
+          className={styles.form__currency}
+        />
         <SegmentedControl
           classNames={{
             root: styles.segment__root,
@@ -37,8 +60,8 @@ export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode }) => {
         <Button
           classNames={{
             root: styles.button__root,
-            label: styles.button__label,
           }}
+          disabled={(mask ? phone.length !== 7 : phone.length !== 10) || !currency}
         >
           {REPLENISHMENT_CONSTANTS.BUTTON}
         </Button>

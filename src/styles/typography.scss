@@ -1,0 +1,241 @@
+@mixin heading-h1 {
+  font-family: TT Norms Pro;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 64px;
+  letter-spacing: -0.84px;
+}
+
+@mixin heading-h2 {
+  font-family: TT Norms Pro;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 48px;
+  letter-spacing: -0.4px;
+}
+
+@mixin heading-h3 {
+  font-family: TT Norms Pro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 36px;
+  letter-spacing: -0.32px;
+}
+
+@mixin heading-h4 {
+  font-family: TT Norms Pro;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+}
+
+@mixin heading-h5 {
+  font-family: TT Norms Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+@mixin heading-h6 {
+  font-family: TT Norms Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}
+
+@mixin label-l1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+}
+
+@mixin label-l1-m {
+  @include label-l1;
+  font-weight: bolder;
+}
+
+@mixin label-l2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+}
+
+@mixin label-l2-m {
+  @include label-l2;
+  font-weight: bolder;
+}
+
+@mixin label-l3 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.16px;
+}
+
+@mixin label-l3-m {
+  @include label-l3;
+  font-weight: bolder;
+}
+
+@mixin label-l4 {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+}
+
+@mixin label-l4-m {
+  @include label-l4;
+  font-weight: bolder;
+}
+
+@mixin label-l5 {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+@mixin label-l5-m {
+  @include label-l5;
+  font-weight: bolder;
+}
+
+@mixin label-l6 {
+  font-family: Roboto;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+@mixin label-l6-m {
+  @include label-l6;
+  font-weight: bolder;
+}
+
+@mixin short-text-t1 {
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.32px;
+}
+
+@mixin short-text-t2 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+}
+
+@mixin short-text-t3 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+@mixin short-text-t4 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+}
+
+@mixin short-text-t5 {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.14px;
+}
+
+@mixin short-text-t6 {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@mixin paragraph-p1 {
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: -0.32px;
+}
+
+@mixin paragraph-p2 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: -0.24px;
+}
+
+@mixin paragraph-p3 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+}
+
+@mixin paragraph-p4 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+@mixin paragraph-p5 {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+@mixin paragraph-p6 {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}

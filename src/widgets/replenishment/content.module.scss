@@ -19,7 +19,7 @@
 
   @include tablet {
     grid-template-rows: 48px auto;
-    gap: 32px;
+    gap: $gap-mobile;
   }
   @include desktop-max {
     padding-top: 24px;
@@ -44,7 +44,7 @@
 .form {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: $corner-radius-small;
 
   &__phone,
   &__currency {
@@ -60,7 +60,7 @@
 
   @include tablet {
     grid-template-columns: minmax(233px, 1fr) minmax(168px, 1fr) minmax(auto, 1fr);
-    gap: 16px;
+    gap: $corner-radius-small;
   }
 }
 

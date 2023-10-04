@@ -1,27 +1,17 @@
-@import '../styles/media-queries';
+@import 'global.scss';
 
 .wrapper {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  //padding-left: 70px;
-  //padding-right: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //padding-top: 44px;
   padding-bottom: 96px;
   background-color: $color-base-100;
 
   @include tablet {
-    //padding-left: 20px;
-    //padding-right: 20px;
     padding-bottom: 0;
-  }
-
-  @include desktop-max {
-    //padding-left: 20px;
-    //padding-right: 20px;
   }
 }
 
@@ -46,7 +36,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   width: calc(100% + 40px);
   padding-left: 20px;
   padding-right: 20px;
@@ -59,11 +49,9 @@
   }
 
   @include desktop-max {
-    padding-left: 70px ;
+    padding-left: 70px;
     padding-right: 70px;
     width: $breakpoint-max;
-    //margin: 0 auto;
-    //position: sticky;
   }
 }
 
@@ -78,32 +66,23 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  //gap: 64px; ?
   margin-top: auto;
-  gap: 24px;
+  gap: $gap-mobile;
 
   @include tablet {
-    gap: 24px;
+    gap: $gap-tablet;
+  }
+
+  @include desktop-max {
+    gap: $gap-desktop;
   }
 }
 
 .footerCards {
   display: flex;
   align-items: center;
-  //height: fit-content;
-  height: 630px;
-
-  @include tablet {
-    height: fit-content;
-  }
 }
 
 .footer {
-  border-top: 1px solid #E5E8EB;
-  //height: 82px;
-  height: 100px;
-
-  @include tablet {
-    height: 84px;
-  }
+  border-top: 1px solid #e5e8eb;
 }

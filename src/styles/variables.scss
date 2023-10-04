@@ -12,46 +12,56 @@ $font-size-h3: 32px;
 $font-size-h2: 40px;
 $font-size-h1: 56px;
 
-$color-primary-900: #111D3B;
+$corner-radius-large: 24px;
+$corner-radius-small: 16px;
+
+$gap-mobile: 32px;
+$gap-tablet: 48px;
+$gap-desktop: 64px;
+$gap-horizontal: 20px;
+
+$gradient-blue: linear-gradient(90deg, #0000be 0%, #4e00ad 100%);
+
+$color-primary-900: #111d3b;
 $color-primary-800: #003164;
-$color-primary-700: #004A97;
-$color-primary-600: #0469D2;
-$color-primary-500: #007BFB;
-$color-primary-400: #3395FC;
-$color-primary-300: #66B0FD;
-$color-primary-200: #99CAFD;
-$color-primary-100: #CCE5FE;
-$color-primary-0: #EBF4FF;
+$color-primary-700: #004a97;
+$color-primary-600: #0469d2;
+$color-primary-500: #007bfb;
+$color-primary-400: #3395fc;
+$color-primary-300: #66b0fd;
+$color-primary-200: #99cafd;
+$color-primary-100: #cce5fe;
+$color-primary-0: #ebf4ff;
 
-$color-base-900: #282D3C;
+$color-base-900: #282d3c;
 $color-base-800: #414961;
-$color-base-700: #515B73;
+$color-base-700: #515b73;
 $color-base-600: #788095;
-$color-base-500: #8C94A8;
-$color-base-400: #BCC3D2;
-$color-base-300: #E2E7F3;
-$color-base-200: #ECF0F8;
-$color-base-100: #F4F6FB;
-$color-base-0: #FFFFFF;
+$color-base-500: #8c94a8;
+$color-base-400: #bcc3d2;
+$color-base-300: #e2e7f3;
+$color-base-200: #ecf0f8;
+$color-base-100: #f4f6fb;
+$color-base-0: #ffffff;
 
-$color-accept-garden: #5CC867;
-$color-error-fire: #ED584E;
+$color-accept-garden: #5cc867;
+$color-error-fire: #ed584e;
 
-$color-option-dance: #FD770D;
-$color-option-ice: #70D0F4;
-$color-option-lime: #B6D20D;
-$color-option-flower: #4F08E8;
-$color-option-berrie: #E75CA3;
-$color-option-lima: #75B91F;
-$color-option-acai: #92278F;
-$color-option-sun: #F8CC4D;
-$color-option-drow: #2C73B4;
-$color-option-steel: #ADACAC;
-$color-option-crayola: #BCC8E5;
+$color-option-dance: #fd770d;
+$color-option-ice: #70d0f4;
+$color-option-lime: #b6d20d;
+$color-option-flower: #4f08e8;
+$color-option-berrie: #e75ca3;
+$color-option-lima: #75b91f;
+$color-option-acai: #92278f;
+$color-option-sun: #f8cc4d;
+$color-option-drow: #2c73b4;
+$color-option-steel: #adacac;
+$color-option-crayola: #bcc8e5;
 
-$color-magenta-0: #EC489E;
-$color-magenta-100: #EB008C;
-$color-magenta-200: #C20073;
+$color-magenta-0: #ec489e;
+$color-magenta-100: #eb008c;
+$color-magenta-200: #c20073;
 
 $color-black: #000000;
 

@@ -1,4 +1,4 @@
-@import '../../styles/media-queries';
+@import 'global.scss';
 
 @mixin border {
   border: 1px solid lightgray;
@@ -8,16 +8,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 64px;
-  margin-bottom: 64px;
+  gap: $gap-mobile;
+  margin-bottom: $gap-mobile;
   width: 100%;
   @include tablet {
-    gap: 48px;
-    margin-bottom: 48px;
+    gap: $gap-tablet;
+    margin-bottom: $gap-tablet;
   }
-  @include only-mobile {
-    gap: 32px;
-    margin-bottom: 32px;
+  @include desktop-max {
+    gap: $gap-desktop;
+    margin-bottom: $gap-desktop;
   }
 }
 
@@ -41,20 +41,18 @@
 
 .tariffCard {
   width: 100%;
-  height: 100%;
 }
 
 .banners {
-  //@include border;
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
-  gap: 32px;
+  gap: $gap-mobile;
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 433px 322px 1fr;
-    gap: 48px 20px;
+    gap: $gap-tablet $gap-horizontal;
     place-items: stretch stretch;
     grid-template-areas:
       'Replenishment BeautifulNumbers'
@@ -85,7 +83,7 @@
       'BeautifulNumbers VolnaSale Esim'
       'Replenishment HomeInternet HomeInternet';
     place-items: stretch stretch;
-    gap: 64px 20px;
+    gap: $gap-desktop $gap-horizontal;
 
     &__volna_sale {
       margin-left: -120px;
@@ -94,17 +92,5 @@
 }
 
 .news {
-  //@include border;
   width: 100%;
-  @include only-mobile {
-    //border: 5px solid red;
-  }
-
-  @include tablet {
-    //border: 3px solid blue;
-  }
-
-  @include desktop {
-    //border: 1px solid green;
-  }
 }

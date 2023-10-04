@@ -1,4 +1,4 @@
-@import "../../../styles/media-queries";
+@import 'global.scss';
 
 .wrapper {
   width: 100%;
@@ -6,10 +6,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   border-radius: 0;
-  @include desktop-max {
-    border-radius: 0.5rem;
+
+  :global(.mantine-Carousel-controls svg) {
+    height: 32px !important;
+    width: 32px !important;
+  }
+
+  :global(.mantine-Carousel-controls button) {
+    opacity: 1;
+  }
+
+  :global(.mantine-Carousel-controls) {
+    z-index: $z-index-slider-controls;
+
+    @include desktop-max {
+      left: -30px;
+      right: -30px;
+    }
+  }
+
+  :global(.mantine-Carousel-viewport) {
+    @include desktop-max {
+      border-radius: $corner-radius-large;
+    }
   }
 }
 

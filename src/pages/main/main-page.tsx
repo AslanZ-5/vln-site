@@ -10,7 +10,7 @@ import { News } from '@/widgets/news/ui/news';
 import { Tariffs } from '@/widgets/tariffs';
 import styles from './main-page.module.scss';
 import { Modal } from '@/shared/ui-kit';
-import { Input } from '@mantine/core';
+import { Search } from '@/shared/ui-kit/search/search';
 
 function MainPage() {
   const { isMobile } = useMobile();
@@ -33,7 +33,7 @@ function MainPage() {
         <News />
       </div>
       <Modal size="md" title="Выбор города" opened={true} onClose={() => {}}>
-        <Input placeholder="Ваш город" />
+        <Search placeholder="Ваш город" label={'Search'} options={[]} />
       </Modal>
     </div>
   );

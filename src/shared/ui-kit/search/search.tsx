@@ -2,7 +2,8 @@ import { FC, useId, useState } from 'react';
 import { SearchProps } from './search.types';
 import searchIcon from './searchIcon.svg';
 import disabledSearchIcon from './disabledSearchIcon.svg';
-import { Container, Label, InputWrapper, Input, Error, List, Item } from './constants';
+import { Container, Label, InputWrapper, Error, List, Item } from './constants';
+import styles from './search.module.scss';
 
 export const Search: FC<SearchProps> = ({
   options,
@@ -54,7 +55,7 @@ export const Search: FC<SearchProps> = ({
       )}
       <InputWrapper $isError={isError} $withBorder={withBorder} $backgroundColor={backgroundColor}>
         <img src={disabled ? disabledSearchIcon : searchIcon} alt='searchIcon' />
-        <Input
+        {/*<Input
           $isError={isError}
           $disabled={disabled}
           autoComplete='off'
@@ -62,6 +63,15 @@ export const Search: FC<SearchProps> = ({
           id={inputId || id}
           placeholder={placeholder}
           value={inputValue}
+          onChange={e => onInputChange(e.target.value)}
+          disabled={disabled}
+        />*/}
+        <input
+          type="search"
+          value={inputValue}
+          placeholder={placeholder}
+          id={inputId || id}
+          className={styles.input}
           onChange={e => onInputChange(e.target.value)}
           disabled={disabled}
         />

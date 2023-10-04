@@ -1,0 +1,30 @@
+@import 'global.scss';
+
+@mixin border {
+  border: 1px solid lightgray;
+}
+
+.wrapper {
+  @include border;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0;
+
+  @include tablet {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+
+  @include desktop-max {
+    margin-bottom: 64px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

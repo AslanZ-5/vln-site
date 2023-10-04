@@ -41,14 +41,14 @@ export const Corner = styled.div<{
   $position?: Position;
   $inverted?: boolean;
 }>`
-  padding: 0.5px;
+  padding: 0.7px;
   background: transparent;
   border: 4px solid transparent;
   border-${props => (props.$position === 'side' ? props.$side : props.$position)}: 4px solid
     ${props =>
       props.$backgroundColor || (props.$inverted ? theme.colors.base[900] : theme.colors.primary[500])};
   position: absolute;
-  top: ${props => (props.$position === 'bottom' && '-8px') || (props.$position === 'side' && '18px')};
+  top: ${props => (props.$position === 'bottom' && '-8px') || (props.$position === 'side' && '20px')};
   left: ${props =>
     props.$side === 'right' && props.$position === 'side' ? '-8px' : props.$side === 'right' && '16px'};
   right: ${props => (props.$side === 'left' && props.$position === 'side' ? '-8px' : props.$side === 'left' && '16px')};

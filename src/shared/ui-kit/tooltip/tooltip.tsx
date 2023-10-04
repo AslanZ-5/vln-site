@@ -28,8 +28,9 @@ export const Tooltip: FC<TooltipProps> = ({
         $position={position}
         $side={side}
         $inverted={inverted}
+        style={{ marginTop: '22px', width: 'max-content', maxWidth: '200px' }}
       >
-        <Typography style={{ width: '100%' }} color={textColor || '#fff'} paragraph={true} size={5}>
+        <Typography style={{ width: '100%', display: 'inline-flex', justifyContent: 'center' }} color={textColor || '#fff'} paragraph={true} size={5}>
           {text}
         </Typography>
         {component}

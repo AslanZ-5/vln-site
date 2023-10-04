@@ -1,3 +1,5 @@
+import { LINKS } from '@/shared/constants/links';
+
 enum NAVIGATION_MAIN {
   MAIN,
   MOBILE,
@@ -10,8 +12,8 @@ const NAVIGATION_PATHNAME = {
   [NAVIGATION_MAIN.MAIN]: "/",
   [NAVIGATION_MAIN.MOBILE]: "/mobile",
   [NAVIGATION_MAIN.HOME_INTERNET]: "/homeInternet",
-  [NAVIGATION_MAIN.VOLNA_SALE]: "https://volnamobile.ru/sale/",
-  [NAVIGATION_MAIN.ESIM]: "https://volnamobile.ru/esim/",
+  [NAVIGATION_MAIN.VOLNA_SALE]: LINKS.VOLNA_SALE,
+  [NAVIGATION_MAIN.ESIM]: LINKS.ESIM,
 } as const;
 
 const NAVIGATION_LABELS = {

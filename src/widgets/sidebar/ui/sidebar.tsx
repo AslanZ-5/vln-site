@@ -20,6 +20,8 @@ import { useMobile } from "@/shared/lib/useMobile";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 import Link from "next/link";
+import { LINKS } from '@/shared/constants/links';
+import { Tooltip } from "@/shared/ui-kit/tooltip/tooltip";
 
 const Sidebar = React.memo(() => {
   const { isMobile, isTablet } = useMobile();
@@ -40,18 +42,20 @@ const Sidebar = React.memo(() => {
   const renderOptions = sidebarOptions.map((el, ind) => {
     const isActive = el.id === activeItem;
     return (
-      <IconButton
-        onClick={handleGoInto(el.Title, el.childrens, el.id)}
-        nestedOptions={el.childrens}
-        classname={styles.hoverIcon}
-        key={ind}
-        active={isActive}
-        visibleChildren={sidebarOpen}
-        showActiveLine={isActive}
-        Icon={el.Icon && (() => <el.Icon />)}
-      >
-        {el.src ? <Link href={el.src}>{el.Title}</Link> : el.Title}
-      </IconButton>
+      <Tooltip text={(el.Title)} backgroundColor="#282D3C" position="side" >
+        <IconButton
+          onClick={handleGoInto(el.Title, el.childrens, el.id)}
+          nestedOptions={el.childrens}
+          classname={styles.hoverIcon}
+          key={ind}
+          active={isActive}
+          visibleChildren={sidebarOpen}
+          showActiveLine={isActive}
+          Icon={el.Icon && (() => <el.Icon />)}
+        >
+          {el.src ? <Link href={el.src}>{el.Title}</Link> : el.Title}
+        </IconButton>
+      </Tooltip>
     );
   });
 
@@ -93,8 +97,8 @@ const Sidebar = React.memo(() => {
             />
             <IconButton innerLabel="Связь" Icon={Phone} />
             <IconButton innerLabel="Интернет" Icon={Home} />
-            <IconButton innerLabel="Волна Sale" Icon={Frame} />
-            <IconButton innerLabel="eSIM" Icon={Simcard} />
+            <Link href={LINKS.VOLNA_SALE}><IconButton innerLabel="Волна Sale" Icon={Frame} /></Link>
+            <Link href={LINKS.ESIM}><IconButton innerLabel="eSIM" Icon={Simcard} /></Link>
           </div>
           <BottomSheet
             blocking={false}

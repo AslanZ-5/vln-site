@@ -13,7 +13,7 @@ export function VolnaSale({ className }: VolnaSaleProps) {
       <div className={styles.headerInfo}>
         <span className={styles.header}>Волна Sale</span>
         <span className={styles.info}>
-          Биржа гигабайт, минут и SMS. Есть лишний ресурс? <br />
+          Биржа гигабайт, минут и SMS. Есть лишний ресурс?
           Продайте не нужное, купите нужное
         </span>
       </div>

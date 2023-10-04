@@ -10,7 +10,7 @@ import {
   buttonTextColorsInverted,
 } from './сolors';
 import { volnaTheme as theme } from '../../constants/theme';
-import './button.css';
+import './button.module.scss';
 
 const StyledSpinner = styled.svg<{
   color: string;

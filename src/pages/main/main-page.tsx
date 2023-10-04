@@ -8,12 +8,14 @@ import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
 import { BeautifulNumbers } from '@/widgets/beautiful-numbers/beautiful-numbers';
 import { News } from '@/widgets/news/ui/news';
 import { Tariffs } from '@/widgets/tariffs';
+import { Location } from '@/widgets/location';
 import styles from './main-page.module.scss';
-import { Modal } from '@/shared/ui-kit';
-import { Search } from '@/shared/ui-kit/search/search';
+import { useLocation } from '@/widgets/location/use-location';
 
 function MainPage() {
   const { isMobile } = useMobile();
+  const { locationModalOpened, handleLocationModalClose }  = useLocation();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.carouselWrapper}>
@@ -32,9 +34,7 @@ function MainPage() {
       <div className={styles.news}>
         <News />
       </div>
-      <Modal size='md' title='Выбор города' opened={false} onClose={() => {}}>
-        <Search placeholder='Ваш город' label={'Search'} options={[]} />
-      </Modal>
+      <Location opened={locationModalOpened} onClose={handleLocationModalClose} />
     </div>
   );
 }

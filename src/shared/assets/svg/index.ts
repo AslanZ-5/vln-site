@@ -46,3 +46,5 @@ export { default as PhoneMiniIcon } from './phone-mini.svg';
 export { default as ElipsisPink } from './gradient-elipsis-pink.svg';
 export { default as ElipsisPurple } from './gradient-elipsis-purple.svg';
 export { default as CloseIcon } from './close-icon.svg';
+export { default as Separator } from './separator.svg';
+export { default as ArrowLeft } from './arrow-left.svg';

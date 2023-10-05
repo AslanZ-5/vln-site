@@ -1,7 +1,6 @@
-export const breakpoints = ['768', '375'];
-export const MOBILE = 375;
-export const TABLET = 768;
-export const TABLET_SM = 1024;
-export const DESKTOP = 1440;
+import styles from '@/styles/tokens.module.scss';
 
-export const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
+export const onlyMobile = `(max-width: ${styles.breakpointMobileTablet})`;
+export const tablet = `(min-width: ${styles.breakpointTablet})`;
+export const tabletOnly = `(min-width: ${styles.breakpointTablet}) and (max-width: ${styles.breakpointTabletDesktop})`;
+export const desktop = `(min-width: ${styles.breakpointMax})`;

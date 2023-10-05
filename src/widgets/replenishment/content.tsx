@@ -2,8 +2,8 @@ import { FC, useState } from 'react';
 import { SegmentedControl, Button } from '@mantine/core';
 import cn from 'classnames';
 
-import { PhoneInput } from '@/shared/ui-kit/phone-input';
-import { CurrencyInput } from '@/shared/ui-kit/currency-input';
+import { PhoneInput } from '@/shared/ui-kit';
+import { CurrencyInput } from '@/shared/ui-kit';
 import { Mir, Visa, VisaBlack, Mastercard, Sbp } from '@/shared/assets/svg';
 
 import { REPLENISHMENT_CONSTANTS } from './constants';

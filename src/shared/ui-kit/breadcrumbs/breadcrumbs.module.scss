@@ -1,0 +1,35 @@
+@import 'global.scss';
+
+.mobile {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 28px;
+  }
+
+  &__link {
+    @include heading-h6;
+    color: $color-base-700;
+  }
+}
+
+.link {
+  @include label-l5;
+  color: $color-base-500;
+  height: 12px;
+
+  &__last {
+    color: $color-base-900;
+  }
+}
+
+.breadcrumbs {
+  &__root {
+    height: 12px;
+  }
+  &__separator {
+    margin: 0 8px;
+    height: 12px;
+  }
+}

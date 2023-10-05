@@ -7,14 +7,15 @@ import Link from 'next/link';
 import { ChevronRight } from '@/shared/assets/icons';
 import { RightSection } from './right-section';
 import { HOME_INTERNET__CONSTANTS } from './constants';
-import { PhoneInput } from '@/shared/ui-kit/phone-input';
+import { PhoneInput } from '@/shared/ui-kit';
+import { onlyMobile } from '@/shared/constants/mediaQueries';
 
 export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   const theme = useMantineTheme();
   const [possible, setPossible] = useState(false);
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
-  const isMobile = useMediaQuery(`(max-width: 767px)`);
+  const isMobile = useMediaQuery(onlyMobile);
 
   useEffect(() => {
     // отправление запроса с проверкой возможности
@@ -48,7 +49,7 @@ export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ..
           }}
           onChange={(e) => setAddress(e.target.value)}
           rightSection={address && <RightSection possible={possible} />}
-          rightSectionWidth={isMobile ? 0 : address && (possible ? 197 : 235)}
+          rightSectionWidth={isMobile ? undefined : address && (possible ? 197 : 235)}
         />
         {address && isMobile && <RightSection possible={possible} />}
         {address && !possible && (

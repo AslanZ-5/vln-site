@@ -2,18 +2,39 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  :global(.mantine-Carousel-controls) {
+    left: -30px;
+    right: -30px;
+    top: calc(50% - 85px);
+  }
+}
+
+.carouselControl {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -20px;
+  &[data-inactive] {
+    opacity: 0;
+    cursor: default;
+  }
 }
 
 .cardMoreNews {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f4f6fb;
   width: 310px;
-  height: 400px;
+  height: 356px;
   border-radius: 24px;
   flex-direction: column;
   gap: 20px;
+
+  &:hover {
+    background-color: #D0DFFF;
+  }
 
   .cardText {
     align-items: center;
@@ -36,4 +57,3 @@
     align-items: center;
   }
 }
-

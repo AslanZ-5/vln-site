@@ -2,6 +2,21 @@
   width: 310px;
   background-color: #fff;
   margin-bottom: 50px;
+  position: relative;
+  height: 480px;
+  cursor: pointer;
+}
+
+.category {
+  font-size: 12px;
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  color: white;
+  background-color: #eb008c;
+  border-radius: 20px;
+  padding: 5px 12px;
+  text-align: center;
 }
 
 .text {
@@ -37,6 +52,8 @@
   border: unset;
   cursor: pointer;
   padding: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 .arrowStyles {
@@ -47,4 +64,21 @@
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 12px;
+}
+
+.cardImg {
+  height: 356px;
+  filter: grayscale(100%);
+}
+
+.cardWrapper:hover .text,
+.cardWrapper:hover .date,
+.cardWrapper:hover .moreBtn,
+.cardWrapper:hover .arrowStyles path {
+  color: #eb008c;
+  stroke: #eb008c;
+}
+
+.cardWrapper:hover .cardImg {
+  filter: grayscale(0);
 }

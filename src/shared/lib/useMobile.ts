@@ -1,9 +1,10 @@
-import { useMediaQuery } from "@mantine/hooks"
-import { TABLET, TABLET_SM, DESKTOP } from "../constants/mediaQueries"
+import { useMediaQuery } from "@mantine/hooks";
+import { onlyMobile, tablet, tabletOnly, desktop } from "../constants/mediaQueries";
 
 export const useMobile = () => {
-  const isMobile = useMediaQuery(`(max-width: ${TABLET - 1}px)`)
-  const isTablet = useMediaQuery(`(min-width: ${TABLET}px) and (max-width: ${TABLET_SM}px)`)
+  const isMobile = useMediaQuery(onlyMobile);
+  const isTablet = useMediaQuery(`(min-width: ${tablet}px) and (max-width: ${tabletOnly}px)`);
+  const isDesktop = useMediaQuery(desktop);
 
-  return { isMobile, isTablet };
+  return { isMobile, isTablet, isDesktop };
 }

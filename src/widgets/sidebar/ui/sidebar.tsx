@@ -26,7 +26,7 @@ import { Location } from "@/widgets/location";
 import { useLocation } from "@/widgets/location/use-location";
 
 const Sidebar = React.memo(() => {
-  const { isMobile, isTablet } = useMobile();
+  const { isMobile, isDesktop } = useMobile();
   const {
     activeItem,
     sidebarOpen,
@@ -49,21 +49,30 @@ const Sidebar = React.memo(() => {
 
   const renderOptions = sidebarOptions.map((el, ind) => {
     const isActive = el.id === activeItem;
-    return (
-      <Tooltip text={(el.Title)} backgroundColor="#282D3C" position="side" key={ind}>
-        <IconButton
-          onClick={handleGoInto(el.Title, el.childrens, el.id)}
-          nestedOptions={el.childrens}
-          classname={styles.hoverIcon}
-          active={isActive}
-          visibleChildren={sidebarOpen}
-          showActiveLine={isActive}
-          Icon={el.Icon && (() => <el.Icon />)}
-        >
-          {el.src ? <Link href={el.src}>{el.Title}</Link> : el.Title}
-        </IconButton>
-      </Tooltip>
+    const button = (
+      <IconButton
+        onClick={handleGoInto(el.Title, el.childrens, el.id)}
+        nestedOptions={el.childrens}
+        classname={styles.hoverIcon}
+        key={ind}
+        active={isActive}
+        visibleChildren={sidebarOpen}
+        showActiveLine={isActive}
+        Icon={el.Icon && (() => <el.Icon />)}
+      >
+        {el.src ? <Link href={el.src}>{el.Title}</Link> : el.Title}
+      </IconButton>
     );
+
+    if (isMobile) {
+      return button;
+    } else {
+      return (
+        <Tooltip text={(el.Title)} backgroundColor="#282D3C" position="side" key={el.Title}>
+          {button}
+        </Tooltip>
+      );
+    }
   });
 
   const renderCategoryBtns = categoryBtn.map((el, ind) => (
@@ -157,7 +166,7 @@ const Sidebar = React.memo(() => {
           className={cn(styles.content, sidebarOpen && styles.contentVisible)}
         >
           {Boolean(prevSidebarState.current.length) && renderBackButton}
-          {!isTablet || (isTablet && sidebarOpen) ? renderOptions : null}
+          {isDesktop || sidebarOpen ? renderOptions : null}
         </div>
 
         {isFullSidebar && (

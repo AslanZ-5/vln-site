@@ -5,7 +5,6 @@ export const useLocation = () => {
   const [ location, setLocation ] = useState('Симферополь');
 
   const handleLocationModalOpen = useCallback(() => { 
-    console.log('handleLocationModalOpen')
     setLocationModalOpened(true) 
   }, []);
 

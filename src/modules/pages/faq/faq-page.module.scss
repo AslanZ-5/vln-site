@@ -1,0 +1,101 @@
+@import 'global.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  height: 72px;
+}
+
+.title {
+  @include heading-h2;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0;
+
+  @include tablet {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+
+  @include desktop-max {
+    margin-bottom: 64px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid {
+  display: flex;
+  width: 1300px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  width: 310px;
+  min-width: 310px;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.cardHeader {
+  display: flex;
+  height: 72px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  & > div {
+    @include heading-h5;
+    padding: 24px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+}
+
+.headerArrowIcon {
+  width: 25px;
+  height: 25px;
+  transform: translate(-7px, -7px); 
+  svg {
+    transform: scale(0.625);
+  }
+}
+
+.cardContent {
+  @include paragraph-p5;
+  display: flex;
+  padding: 0px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 94px;
+  align-self: stretch;
+}

@@ -48,3 +48,7 @@ export { default as ElipsisPurple } from './gradient-elipsis-purple.svg';
 export { default as CloseIcon } from './close-icon.svg';
 export { default as Separator } from './separator.svg';
 export { default as ArrowLeft } from './arrow-left.svg';
+export { default as ListRules } from './list-rules.svg';
+export { default as CommentQuestion } from './comment-question.svg';
+export { default as SimCard } from './simcard.svg';
+export { default as UserRules } from './user-rules.svg';

@@ -17,7 +17,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
   const [isAnimating, setIsAnimating] = useState(false);
   const intervalRef = useRef<NodeJS.Timer>();
   const [currentNumber, setCurrentNumber] = useState(0);
-  const [randomNumbers, setRandomNumbers] = useState([]);
+  const [randomNumbers, setRandomNumbers] = useState<string[]>([]);
 
   const handleClick = () => {
     if (!isAnimating) {
@@ -70,8 +70,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
                 key={i}
                 className={styles.phoneNumber}
                 style={getNumberStyle(i)}
-                onClick={handleClick}
-              >
+                onClick={handleClick}>
                 {n}
               </div>
             );
@@ -83,8 +82,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
         <Button
           classNames={{
             root: styles.button__root,
-          }}
-        >
+          }}>
           Купить от 500 руб.
         </Button>
       </Link>
@@ -92,8 +90,9 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
   );
 }
 
-function getRandomNumbers() {
-  const result = [];
+function getRandomNumbers(): string[] {
+  const result: string[] = [];
+
   for (let i = 0; i < 10; i++) {
     let number = '';
     for (let j = 0; j < 7; j++) {

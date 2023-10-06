@@ -61,8 +61,7 @@ export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode, mask, 
           classNames={{
             root: styles.button__root,
           }}
-          disabled={(mask ? phone.length !== 7 : phone.length !== 10) || !currency}
-        >
+          disabled={(mask ? phone.length !== 7 : phone.length !== 10) || !currency}>
           {REPLENISHMENT_CONSTANTS.BUTTON}
         </Button>
       </div>

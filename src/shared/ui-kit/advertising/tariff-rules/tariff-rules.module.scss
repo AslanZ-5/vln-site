@@ -1,0 +1,39 @@
+.advertisingOffer {
+  margin: 60px 0;
+  color: #000;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+}
+
+.rules {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rules {
+  display: flex;
+  .listRules {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.textRules {
+  margin: 60px 0;
+  color: #000;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.text {
+  color: #eb008c;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}

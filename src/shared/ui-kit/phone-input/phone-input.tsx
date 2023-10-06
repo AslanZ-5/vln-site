@@ -66,22 +66,20 @@ export const PhoneInput: FC<PhoneInputProps> = ({
   return (
     <div
       className={cn(styles.container, darkBackground && styles.dark, className && className)}
-      style={{ width: containerWidth }}
-    >
+      style={{ width: containerWidth }}>
       {label && (
         <label className={styles.label} htmlFor={id || inputId}>
           {label}
         </label>
       )}
       <div
-        className={cn(styles.inputWrapper, isActive && styles.isActive, isError && styles.isError)}
-      >
+        className={cn(styles.inputWrapper, isActive && styles.isActive, isError && styles.isError)}>
         <input
           className={cn(styles.input, isError && styles.invalid)}
           value={value}
           ref={installRefs}
           onInput={onChange}
-          autoComplete='off'
+          autoComplete="off"
           placeholder={placeholder}
           name={name}
           id={id || inputId}
@@ -89,10 +87,9 @@ export const PhoneInput: FC<PhoneInputProps> = ({
           onBlur={() => setIsActive(false)}
         />
         <button
-          type='button'
+          type="button"
           onClick={onClearInput}
-          className={cn(styles.closeBtn, value && isActive && styles.visible)}
-        >
+          className={cn(styles.closeBtn, value && isActive && styles.visible)}>
           <CloseBtn
             color={
               isError

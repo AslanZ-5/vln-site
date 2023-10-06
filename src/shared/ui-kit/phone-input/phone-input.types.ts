@@ -4,7 +4,7 @@ export interface PhoneInputProps extends InputHTMLAttributes<HTMLInputElement> {
   changeHandler?: (
     value: string,
     unmaskedValue?: string,
-    event?: ChangeEvent<HTMLInputElement>
+    event?: ChangeEvent<HTMLInputElement>,
   ) => void;
   clearHandler?: VoidFunction;
   className?: string;

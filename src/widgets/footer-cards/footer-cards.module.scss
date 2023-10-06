@@ -71,14 +71,14 @@
 
   @include tablet {
     width: 310px;
-    flex-basis: 47%; 
+    flex-basis: 47%;
   }
 }
 
 .topRowKate {
   display: flex;
   flex-direction: column;
-  gap: 16px
+  gap: 16px;
 }
 
 .titleKate {
@@ -167,7 +167,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .italicsText {
@@ -175,7 +175,7 @@
   font-family: Caveat;
   font-weight: 400;
   line-height: 40px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .questionAnswerCard {
@@ -196,14 +196,14 @@
     width: 310px;
     height: 204px;
     border-radius: 24px;
-    flex-basis: 50%; 
+    flex-basis: 50%;
   }
 }
 
 .questionAnswerTop {
   display: flex;
   flex-direction: column;
-  gap: 16px
+  gap: 16px;
 }
 
 .socialBlock {
@@ -220,7 +220,7 @@
     flex-direction: column;
     margin-right: 0;
     order: 4;
-    flex-basis: 30%; 
+    flex-basis: 30%;
     gap: 6px;
   }
 
@@ -247,7 +247,12 @@
   order: 1;
   border-radius: 0;
   background: rgb(32, 3, 183);
-  background: linear-gradient(90deg, rgba(32, 3, 183, 1) 0%, rgba(125, 13, 185, 1) 50%, rgba(32, 3, 183, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 3, 183, 1) 0%,
+    rgba(125, 13, 185, 1) 50%,
+    rgba(32, 3, 183, 1) 100%
+  );
   cursor: pointer;
 
   @include tablet {
@@ -258,7 +263,7 @@
     height: 204px;
     border-radius: 24px;
     order: 3;
-    flex-basis: 65%; 
+    flex-basis: 65%;
   }
 
   @include desktop-max {
@@ -315,7 +320,7 @@
   width: 100%;
   display: flex;
   justify-content: start;
-  
+
   @include tablet {
     gap: 8px;
   }
@@ -333,6 +338,6 @@
   display: none;
 
   @include only-mobile {
-    display: flex
+    display: flex;
   }
 }

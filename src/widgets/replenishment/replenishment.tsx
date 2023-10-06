@@ -14,8 +14,7 @@ export const Replenishment: FC<ReplenishmentProps> = ({ lightMode, className, ..
   return (
     <div
       className={cn(styles.container, lightMode && styles.light, className && className)}
-      {...props}
-    >
+      {...props}>
       {!lightMode && (
         <Link href={''} className={styles.link}>
           {/* надо будет вставить ссылку на страницу пополнения счета */}
@@ -31,8 +30,7 @@ export const Replenishment: FC<ReplenishmentProps> = ({ lightMode, className, ..
           tab: styles.tabs__tab,
           panel: styles.tabs__panel,
         }}
-        defaultValue={REPLENISHMENT_CONSTANTS.MOBILE_CONNECTION}
-      >
+        defaultValue={REPLENISHMENT_CONSTANTS.MOBILE_CONNECTION}>
         <Tabs.List>
           <Tabs.Tab value={REPLENISHMENT_CONSTANTS.MOBILE_CONNECTION}>
             {REPLENISHMENT_CONSTANTS.MOBILE_CONNECTION}

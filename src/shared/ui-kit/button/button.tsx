@@ -49,8 +49,8 @@ const StyledSpinner = styled.svg<{
 `;
 
 const Spinner = ({ color }: { color: string }) => (
-  <StyledSpinner viewBox="0 0 50 50" color={color}>
-    <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5" />
+  <StyledSpinner viewBox='0 0 50 50' color={color}>
+    <circle className='path' cx='25' cy='25' r='20' fill='none' strokeWidth='5' />
   </StyledSpinner>
 );
 
@@ -83,7 +83,8 @@ export const Button: FC<ButtonProps> = ({
         borderRadius: type === 'icon' ? '50%' : '12px',
       }}
       className={[`storybook-button--${type}-${size}`].join(' ')}
-      onClick={onClick}>
+      onClick={onClick}
+    >
       {
         <>
           {(type === 'with_icon' || 'icon') && icon}
@@ -91,12 +92,14 @@ export const Button: FC<ButtonProps> = ({
             style={{
               display: type === 'icon' ? 'none' : 'inline-block',
               visibility: state === 'load' ? 'hidden' : 'visible',
-            }}>
+            }}
+          >
             <Typography
               lable={true}
               weight={'medium'}
               size={size === 'xs' ? 5 : 4}
-              color={textColor || 'inherit'}>
+              color={textColor || 'inherit'}
+            >
               {children}
             </Typography>
           </span>

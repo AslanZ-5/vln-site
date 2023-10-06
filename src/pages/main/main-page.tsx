@@ -8,13 +8,10 @@ import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
 import { BeautifulNumbers } from '@/widgets/beautiful-numbers/beautiful-numbers';
 import { News } from '@/widgets/news/ui/news';
 import { Tariffs } from '@/widgets/tariffs';
-import { Location } from '@/widgets/location';
 import styles from './main-page.module.scss';
-import { useLocation } from '@/widgets/location/use-location';
 
 function MainPage() {
   const { isMobile } = useMobile();
-  const { locationModalOpened, handleLocationModalClose }  = useLocation();
 
   return (
     <div className={styles.wrapper}>
@@ -34,7 +31,6 @@ function MainPage() {
       <div className={styles.news}>
         <News />
       </div>
-      <Location opened={locationModalOpened} onClose={handleLocationModalClose} />
     </div>
   );
 }

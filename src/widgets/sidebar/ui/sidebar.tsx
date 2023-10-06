@@ -22,6 +22,7 @@ import "react-spring-bottom-sheet/dist/style.css";
 import Link from "next/link";
 import { LINKS } from '@/shared/constants/links';
 import { Tooltip } from "@/shared/ui-kit/tooltip/tooltip";
+import { Location } from "@/widgets/location";
 import { useLocation } from "@/widgets/location/use-location";
 
 const Sidebar = React.memo(() => {
@@ -40,19 +41,20 @@ const Sidebar = React.memo(() => {
     handleGoInto,
   } = useSidebar();
   const {
+    locationModalOpened,
     location,
-    handleLocationModalOpen
+    handleLocationModalOpen,
+    handleLocationModalClose
   } = useLocation();
 
   const renderOptions = sidebarOptions.map((el, ind) => {
     const isActive = el.id === activeItem;
     return (
-      <Tooltip text={(el.Title)} backgroundColor="#282D3C" position="side" >
+      <Tooltip text={(el.Title)} backgroundColor="#282D3C" position="side" key={ind}>
         <IconButton
           onClick={handleGoInto(el.Title, el.childrens, el.id)}
           nestedOptions={el.childrens}
           classname={styles.hoverIcon}
-          key={ind}
           active={isActive}
           visibleChildren={sidebarOpen}
           showActiveLine={isActive}
@@ -88,6 +90,7 @@ const Sidebar = React.memo(() => {
   if (isMobile) {
     return (
       <>
+        <Location opened={locationModalOpened} onClose={handleLocationModalClose} />
         <div
           onClick={handleCloseSideBar}
           className={cn(sidebarOpen && styles.openBackground)}

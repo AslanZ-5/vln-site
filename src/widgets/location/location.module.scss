@@ -1,0 +1,14 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 13.5px;
+}

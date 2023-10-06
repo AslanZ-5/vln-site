@@ -24,7 +24,7 @@ export const Search: FC<SearchProps> = ({
   const [inputValue, setInputValue] = useState(value || '');
   const id = useId();
   const filtered = options
-    ? options.filter(item => {
+    ? options.filter((item) => {
         if (filter) {
           return filter(item);
         }
@@ -44,7 +44,11 @@ export const Search: FC<SearchProps> = ({
     setInputValue(str);
   };
   const optionsArr = filtered.length
-    ? filtered.map((item, index) => <Item key={index} onClick={() => selectHandler(item)}>{item}</Item>)
+    ? filtered.map((item, index) => (
+        <Item key={index} onClick={() => selectHandler(item)}>
+          {item}
+        </Item>
+      ))
     : null;
   return (
     <Container $containerWidth={containerWidth}>
@@ -54,7 +58,7 @@ export const Search: FC<SearchProps> = ({
         </Label>
       )}
       <InputWrapper $isError={isError} $withBorder={withBorder} $backgroundColor={backgroundColor}>
-        <img src={disabled ? disabledSearchIcon : searchIcon} alt='searchIcon' />
+        <img src={disabled ? disabledSearchIcon : searchIcon} alt="searchIcon" />
         {/*<Input
           $isError={isError}
           $disabled={disabled}
@@ -72,7 +76,7 @@ export const Search: FC<SearchProps> = ({
           placeholder={placeholder}
           id={inputId || id}
           className={styles.input}
-          onChange={e => onInputChange(e.target.value)}
+          onChange={(e) => onInputChange(e.target.value)}
           disabled={disabled}
         />
       </InputWrapper>

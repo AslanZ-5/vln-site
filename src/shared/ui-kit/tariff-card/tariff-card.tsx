@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
+import { useRouter } from 'next/router';
 import styles from './tariff-card.module.scss';
-import { Button } from '@mantine/core';
+import { Button, Modal } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+
 import cn from 'classnames';
 import { TariffCardProps } from './tariff-card.types';
 import TariffCardOption from './tariff-card-option/tariff-card-option';
@@ -16,9 +19,15 @@ const TariffCard: FC<React.PropsWithChildren<TariffCardProps>> = ({
   additionalInfo,
 }) => {
   const [discountEnabled, setDiscountEnabled] = React.useState(false);
+  const [opened, { open, close }] = useDisclosure(false);
+  const router = useRouter();
 
   const onEnableAdditionalOption = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDiscountEnabled(e.target.checked);
+  };
+  const handleClick: React.MouseEventHandler = (e) => {
+    e.preventDefault();
+    router.push('/tariffs');
   };
 
   const priceWithDiscount = !additionalInfo
@@ -59,9 +68,14 @@ const TariffCard: FC<React.PropsWithChildren<TariffCardProps>> = ({
           </h3>
         </div>
         <div className={styles.tariffButtons}>
-          <Button className={styles.buttonConnectService}>Подключить</Button>
-          <Button className={styles.buttonTariffMore}>Подробнее</Button>
+          <Button onClick={open} className={styles.buttonConnectService}>
+            Подключить
+          </Button>
+          <Button onClick={handleClick} className={styles.buttonTariffMore}>
+            Подробнее
+          </Button>
         </div>
+        <Modal opened={opened} onClose={close} title="Authentication"></Modal>
       </div>
     </div>
   );

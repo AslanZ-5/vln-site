@@ -1,7 +1,7 @@
-import React from "react";
-import cn from "classnames";
-import styles from "./category-button.module.scss";
-import Link from "next/link";
+import React from 'react';
+import cn from 'classnames';
+import styles from './category-button.module.scss';
+import Link from 'next/link';
 
 function CategoryButton({
   title,
@@ -15,10 +15,7 @@ function CategoryButton({
   src?: string;
 }) {
   return (
-    <button
-      className={cn(styles.wrapper, active && styles.active)}
-      onClick={onClick}
-    >
+    <button className={cn(styles.wrapper, active && styles.active)} onClick={onClick}>
       {src ? <Link href={src}>{title}</Link> : title}
     </button>
   );

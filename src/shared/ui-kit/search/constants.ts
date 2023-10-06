@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import { volnaTheme as theme } from '../../constants/theme';
 import clearIcon from './clearIcon.svg';
 import errorClearIcon from './errorclearIcon.svg';
@@ -8,7 +8,7 @@ export const Container = styled.div<{ $containerWidth?: string }>`
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  width: ${props => props.$containerWidth};
+  width: ${(props) => props.$containerWidth};
 `;
 
 export const InputWrapper = styled.div<{
@@ -24,9 +24,9 @@ export const InputWrapper = styled.div<{
   gap: 16px;
   align-self: stretch;
   border-radius: var(--other-input, 12px);
-  background: ${props =>
+  background: ${(props) =>
     props.$backgroundColor || (props.$withBorder ? theme.colors.base[0] : theme.colors.base[100])};
-  border: ${props =>
+  border: ${(props) =>
     props.$isError
       ? `1px solid ${theme.colors.error.fire}`
       : props.$withBorder
@@ -38,7 +38,7 @@ export const Input = styled.input<{
   $isError?: boolean;
   $disabled?: boolean;
 }>`
-  color: ${props => (props.$disabled ? theme.colors.base[400] : theme.colors.base[900])};
+  color: ${(props) => (props.$disabled ? theme.colors.base[400] : theme.colors.base[900])};
   /* Label/L4 [m] */
   display: block;
   font-family: Roboto;
@@ -58,7 +58,8 @@ export const Input = styled.input<{
     appearance: none;
     height: 20px;
     width: 20px;
-    //background: url(${props => (props.$isError ? errorClearIcon : clearIcon)}) no-repeat 50% 50%;
+    //background: url(${(props) =>
+      props.$isError ? errorClearIcon : clearIcon}) no-repeat 50% 50%;
   }
 
   &::-webkit-calendar-picker-indicator {
@@ -66,11 +67,11 @@ export const Input = styled.input<{
   }
 
   &::placeholder {
-    color: ${props => (props.$disabled ? theme.colors.base[400] : theme.colors.base[700])};
+    color: ${(props) => (props.$disabled ? theme.colors.base[400] : theme.colors.base[700])};
   }
 `;
 export const Label = styled.label<{ $disabled?: boolean }>`
-  color: ${props => (props.$disabled ? theme.colors.base[400] : theme.colors.base[900])};
+  color: ${(props) => (props.$disabled ? theme.colors.base[400] : theme.colors.base[900])};
 
   /* Label/L5 */
   font-family: Roboto;
@@ -92,8 +93,8 @@ export const List = styled.div<{
   align-items: flex-start;
   flex-shrink: 0;
   border-radius: var(--other-input, 12px);
-  border: ${props => (props.$withBorder ? `1px solid ${theme.colors.base[400]}` : 'none')};
-  background: ${props =>
+  border: ${(props) => (props.$withBorder ? `1px solid ${theme.colors.base[400]}` : 'none')};
+  background: ${(props) =>
     props.$backgroundColor || (props.$withBorder ? theme.colors.base[0] : theme.colors.base[100])};
 `;
 export const Item = styled.div`
@@ -103,7 +104,7 @@ export const Item = styled.div`
   gap: 10px;
   align-self: stretch;
 
-  color: ${props => theme.colors.base[900]};
+  color: ${(props) => theme.colors.base[900]};
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -112,16 +113,16 @@ export const Item = styled.div`
   letter-spacing: -0.14px;
 
   &:hover {
-    background: ${props => theme.colors.base[300]};
+    background: ${(props) => theme.colors.base[300]};
   }
   &:active {
-    color: ${props => theme.colors.primary[500]};
+    color: ${(props) => theme.colors.primary[500]};
   }
 `;
 export const Error = styled.div`
   position: relative;
   top: -4px;
-  color: ${props => theme.colors.error.fire};
+  color: ${(props) => theme.colors.error.fire};
   font-family: Roboto;
   font-size: 12px;
   font-style: normal;

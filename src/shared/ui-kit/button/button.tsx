@@ -8,7 +8,7 @@ import {
   buttonColorsInverted,
   buttonTextColors,
   buttonTextColorsInverted,
-} from './сolors';
+} from './colors';
 import { volnaTheme as theme } from '../../constants/theme';
 import './button.module.scss';
 

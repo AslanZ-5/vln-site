@@ -1,4 +1,4 @@
 export type Props = {
-    color: string
-    className?: string
-}
+  color: string;
+  className?: string;
+};

@@ -1,30 +1,30 @@
 import React from 'react';
 import styles from '@/modules/pages/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import FaqCommon from '@/modules/pages/faq/common';
+import FaqUser from '@/modules/pages/faq/user';
 
 const list = [
   { title: 'Главная', href: '/' },
   { title: 'Вопросы и ответы', href: '/faq' },
-  { title: 'Общие вопросы', href: '/common' }
+  { title: 'Личный кабинет', href: '/user' }
 ];
 
-function FaqCommonPage() {
+function FaqUserPage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <span className={styles.title}>Общие вопросы</span>
+        <span className={styles.title}>Личный кабинет</span>
       </div>
       <div>
         <Breadcrumbs list={list} />
       </div>
       <div className={styles.container}>
         <div className={styles.accordeonCommon}>
-          <FaqCommon />
+          <FaqUser />
         </div>
       </div>
     </div>
   );
 }
 
-export default FaqCommonPage;
+export default FaqUserPage;

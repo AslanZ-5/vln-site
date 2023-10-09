@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -51,7 +53,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: white;
+    background-color: $color-base-0;
     display: flex;
     justify-content: center;
     align-items: center;

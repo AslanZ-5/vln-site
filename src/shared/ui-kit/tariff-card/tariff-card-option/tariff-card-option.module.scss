@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .container {
   display: flex;
   align-items: center;
@@ -6,23 +8,32 @@
   h4 {
     display: flex;
     align-items: center;
-    gap: var(--Corner-Small-8, 8px);
+    gap: 8px;
   }
 }
 
 .text {
-  color: var(--base-0-cloud, #fff);
+  color: $color-base-0;
   font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 12px;
 }
-.textOption {
-  color: fff;
 
+.textOption {
+  color: $color-base-0;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+}
+
+.numberOption {
+  color: $color-base-0;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.2px;
 }

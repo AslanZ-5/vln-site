@@ -75,11 +75,11 @@ export const Switch = ({ disabled, label, size, onChange, checked }: SwitchProps
         };
       case SwitchSize.LARGE:
         return {
-          width: '60px',
+          width: '50px',
           height: '30px',
           beforeWidth: '27px',
           beforeHeight: '27px',
-          beforeTranslate: '30px',
+          beforeTranslate: '20px',
         };
       default:
         return {

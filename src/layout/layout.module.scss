@@ -40,7 +40,7 @@
   width: calc(100% + 40px);
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #fff;
+  background-color: $color-base-0;
 
   @include tablet {
     margin-bottom: 16px;

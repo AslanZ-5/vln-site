@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .advertisingHeader {
   display: flex;
   align-items: center;
@@ -49,7 +51,7 @@
 }
 
 .titleAbonent {
-  color: #fff;
+  color: $color-base-0;
   font-family: 'TT Norms Pro';
   font-size: 32px;
   font-weight: 700;
@@ -58,7 +60,7 @@
 }
 
 .infoAbonent {
-  color: #fff;
+  color: $color-base-0;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
@@ -87,7 +89,7 @@
   gap: 10px;
 }
 .word {
-  color: #eb008c;
+  color: $color-magenta-100;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 600;

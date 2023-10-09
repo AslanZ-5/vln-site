@@ -8,7 +8,11 @@ const items = COMMON_CONTENTS.map((item, i) => {
       <Accordion.Control>
           {item.Q}
         </Accordion.Control>
-      <Accordion.Panel>{item.A}</Accordion.Panel>
+      <Accordion.Panel
+        styles={{ padding: '16px 20px' }}
+      >
+        {item.A}
+      </Accordion.Panel>
     </Accordion.Item>
   )
 })

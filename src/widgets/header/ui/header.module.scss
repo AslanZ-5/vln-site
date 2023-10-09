@@ -1,4 +1,4 @@
-@import 'media-queries';
+@import "media-queries";
 
 .wrapper {
   width: 100%;
@@ -36,6 +36,10 @@
   }
 }
 
+.navigationHiden {
+  visibility: hidden;
+}
+
 .rightSide {
   margin-top: 14px;
   display: flex;
@@ -67,11 +71,17 @@
 }
 
 .search {
-  display: none;
-
+  cursor: pointer;
+  flex-grow: 2;
+  width: 100%;
   @include tablet {
     display: inline-flex;
   }
+}
+
+.searchOpen {
+  flex-grow: 2;
+  width: 100%;
 }
 
 .user {

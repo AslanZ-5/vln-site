@@ -1,0 +1,28 @@
+.input {
+  width: 100%;
+
+  &__root {
+    display: flex;
+    width: 100%;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__input {
+    background-color: #f4f6fb;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.14px;
+    border: none;
+    padding: 16px 24px;
+    width: 100%;
+  }
+}
+.closeIcon {
+  color: #282d3c;
+}

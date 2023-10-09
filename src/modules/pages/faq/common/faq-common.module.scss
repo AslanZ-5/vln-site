@@ -1,0 +1,22 @@
+@import 'global.scss';
+
+$chevron-liter: invert(80%) sepia(11%) saturate(393%) hue-rotate(170deg) brightness(87%) contrast(88%);
+
+.control {
+  @include short-text-t4;
+  &[data-active] {
+    background-color: $color-primary-100;
+  } 
+}
+
+.panel {
+  padding: 16px 20px;
+}
+
+.chevron {
+  filter: $chevron-liter;
+  transform: rotate(-90deg) scale(1.33);
+  &[data-rotate] {
+    transform: rotate(-180deg) scale(1.33);
+  }
+}

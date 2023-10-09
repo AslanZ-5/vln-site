@@ -11,3 +11,16 @@ export enum LINKS {
   GOOGLE_PLAY = 'https://redirect.appmetrica.yandex.com/serve/1180795317767977724',
   RU_STORE = 'https://redirect.appmetrica.yandex.com/serve/1180923242865509178',
 }
+
+export const Path = {
+  faq: {
+    root: '/faq',
+    common: '/faq/common',
+    mobileInternet: '/faq/mobile-internet',
+    roaming: '/faq/roaming',
+    user: '/faq/user',
+    payment: '/faq/payment',
+    newUser: '/faq/new-user',
+    dials: '/faq/dials'
+  }
+}

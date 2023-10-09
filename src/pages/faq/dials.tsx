@@ -2,11 +2,12 @@ import React from 'react';
 import styles from '@/modules/pages/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
 import FaqDials from '@/modules/pages/faq/dials';
+import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
-  { title: 'Вопросы и ответы', href: '/faq' },
-  { title: 'Полезные команды', href: '/dials' }
+  { title: 'Вопросы и ответы', href: Path.faq.root },
+  { title: 'Полезные команды', href: Path.faq.dials }
 ];
 
 function FaqDialsPage() {

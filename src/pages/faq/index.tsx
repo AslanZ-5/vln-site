@@ -2,10 +2,11 @@ import React from 'react';
 import styles from '@/modules/pages/faq/faq-page.module.scss';
 import { Breadcrumbs, Search } from '@/shared/ui-kit';
 import Cards from '@/modules/pages/faq/cards';
+import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
-  { title: 'Вопросы и ответы', href: '/faq' },
+  { title: 'Вопросы и ответы', href: Path.faq.root },
 ];
 
 function FaqPage() {

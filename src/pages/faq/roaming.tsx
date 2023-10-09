@@ -2,11 +2,12 @@ import React from 'react';
 import styles from '@/modules/pages/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
 import FaqRoaming from '@/modules/pages/faq/roaming';
+import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
-  { title: 'Вопросы и ответы', href: '/faq' },
-  { title: 'Роуминг', href: '/roaming' }
+  { title: 'Вопросы и ответы', href: Path.faq.root },
+  { title: 'Роуминг', href: Path.faq.roaming }
 ];
 
 function FaqRoamingPage() {

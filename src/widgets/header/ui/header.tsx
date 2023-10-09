@@ -8,6 +8,8 @@ import { LINKS } from "@/shared/constants/links";
 import { SearchInput } from "@/widgets/search-input/ui/search-input";
 import { useMobile } from "@/shared/lib/useMobile";
 import cn from "classnames";
+import { mockData } from "@/shared/constants/mock";
+
 export function Header() {
   const [openInput, setOpenInput] = useState(false);
 
@@ -39,7 +41,12 @@ export function Header() {
         {!isMobile && (
           <div className={styles.search}>
             {openInput ? (
-              <SearchInput onClose={onSearchInputLostFocus} />
+              <SearchInput
+                onClose={onSearchInputLostFocus}
+                data={mockData.globalSearchData}
+                onClickOutside={onSearchInputLostFocus}
+                className={styles.searchInputWrapper}
+              />
             ) : (
               <SearchIcon onClick={onSearchInputFocus} />
             )}

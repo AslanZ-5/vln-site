@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { LinkProps } from './link.types';
 import NextLink from 'next/link'
 import { Typography } from '../typography/typography';
@@ -42,9 +43,21 @@ const StyledTitleDark = styled.div<{ disabled: boolean }>`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `;
 
-export const Link = ({ light = false, dark = false, href, title, disabled = false, style }: LinkProps) => {
+export const Link: FC<LinkProps> = ({
+  light = false,
+  dark = false,
+  href,
+  title,
+  disabled = false,
+  style,
+  onClick,
+}) => {
+  const handleClick = () => {
+    onClick?.();
+  };
+
   return (
-    <NextLink href={href} style={{ color: 'transparent' }}>
+    <NextLink href={href} style={{ color: 'transparent' }} onClick={handleClick}>
       <Typography paragraph size={3} style={style ? { ...style } : {}}>
         {light && !dark && <StyledTitleLight disabled={disabled}>{title}</StyledTitleLight>}
         {dark && !light && <StyledTitleDark disabled={!!disabled}>{title}</StyledTitleDark>}

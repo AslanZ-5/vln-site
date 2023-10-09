@@ -7,4 +7,5 @@ export interface LinkProps {
   title: string;
   disabled?: boolean;
   style?: CSSProperties;
+  onClick?: VoidFunction;
 }

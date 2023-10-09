@@ -24,7 +24,8 @@ import { LINKS } from '@/shared/constants/links';
 import { Tooltip } from "@/shared/ui-kit/tooltip/tooltip";
 import { Location } from "@/widgets/location";
 import { useLocation } from "@/widgets/location/use-location";
-import {SearchInput} from "@/widgets/search-input/ui/search-input";
+import { SearchInput } from "@/widgets/search-input/ui/search-input";
+import { mockData } from "@/shared/constants/mock";
 
 const Sidebar = React.memo(() => {
   const { isMobile, isDesktop } = useMobile();
@@ -123,9 +124,7 @@ const Sidebar = React.memo(() => {
             onDismiss={handleCloseSideBar}
             open={sidebarOpen}
           >
-            <SearchInput onClose={() => {
-
-            }} />
+            <SearchInput data={mockData.globalSearchData} />
             <div className={styles.categoryWrapper}>
               {renderCategoryBtns}
             </div>
@@ -145,50 +144,53 @@ const Sidebar = React.memo(() => {
   }
 
   return (
-    <div
-      onClick={handleCloseSideBar}
-      className={cn(styles.wrapper, sidebarOpen && styles.openBackground)}
-    >
+    <>
+      <Location opened={locationModalOpened} onClose={handleLocationModalClose} />
       <div
-        onClick={(e) => e.stopPropagation()}
-        className={cn(styles.closed, sidebarOpen && styles.opened)}
+        onClick={handleCloseSideBar}
+        className={cn(styles.wrapper, sidebarOpen && styles.openBackground)}
       >
-        <div className={styles.controlBlock}>
-          <IconButton
-            visibleChildren={sidebarOpen}
-            onClick={handleToggleSidebar}
-            Icon={() => <Burger opened={sidebarOpen} />}
-          >
-            <div className={styles.logoIcon}>
-              <LogoIcon />
-            </div>
-          </IconButton>
-        </div>
-        {isFullSidebar && (
-          <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
-        )}
-
         <div
-          className={cn(styles.content, sidebarOpen && styles.contentVisible)}
+          onClick={(e) => e.stopPropagation()}
+          className={cn(styles.closed, sidebarOpen && styles.opened)}
         >
-          {Boolean(prevSidebarState.current.length) && renderBackButton}
-          {isDesktop || sidebarOpen ? renderOptions : null}
-        </div>
-
-        {isFullSidebar && (
-          <div className={styles.footer}>
+          <div className={styles.controlBlock}>
             <IconButton
-              classname={styles.hoverIcon}
               visibleChildren={sidebarOpen}
-              Icon={() => <Pin_2 />}
-              onClick={handleLocationModalOpen}
+              onClick={handleToggleSidebar}
+              Icon={() => <Burger opened={sidebarOpen} />}
             >
-              {location}
+              <div className={styles.logoIcon}>
+                <LogoIcon />
+              </div>
             </IconButton>
           </div>
-        )}
+          {isFullSidebar && (
+            <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
+          )}
+
+          <div
+            className={cn(styles.content, sidebarOpen && styles.contentVisible)}
+          >
+            {Boolean(prevSidebarState.current.length) && renderBackButton}
+            {isDesktop || sidebarOpen ? renderOptions : null}
+          </div>
+
+          {isFullSidebar && (
+            <div className={styles.footer}>
+              <IconButton
+                classname={styles.hoverIcon}
+                visibleChildren={sidebarOpen}
+                Icon={() => <Pin_2 />}
+                onClick={handleLocationModalOpen}
+              >
+                {location}
+              </IconButton>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 });
 

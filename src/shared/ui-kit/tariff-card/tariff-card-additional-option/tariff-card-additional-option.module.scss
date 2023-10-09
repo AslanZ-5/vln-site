@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .root {
   display: flex;
   align-items: center;
@@ -8,14 +10,14 @@
   h5 {
     display: flex;
     gap: 8px;
-    color: var(--base-0-cloud, #fff);
+    color: $color-base-0;
     font-family: Roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 12px;
     margin: 0;
-    border-bottom: 1px dashed #fff;
+    border-bottom: 1px dashed $color-base-0;
     padding-bottom: 4px;
     margin-bottom: 4px;
   }
@@ -41,7 +43,7 @@
   align-items: center;
   border-radius: 12px 12px 12px 0px;
   opacity: 0.55;
-  background: #fff;
+  background: $color-base-0;
   color: #3730a3;
   font-family: Roboto;
   font-size: 20px;

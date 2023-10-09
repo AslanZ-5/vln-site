@@ -9,7 +9,7 @@ import { MOBILE, TABLET } from '@/shared/constants/mediaQueries';
 const items = [
   {
     id: 1,
-    backgroundImage: '/assets/img/tariff-banners/banner-1.png',
+    backgroundImage: '/assets/img/tariff-banners/banner-5.png',
     title: 'Сделай сам',
     newPrice: 300,
     oldPrice: 450,
@@ -20,7 +20,7 @@ const items = [
     },
     options: [
       {
-        icon: <PhoneMiniIcon />,
+        icon: <PhoneMiniIcon className={styles.phoneIcon} />,
         value: 300,
         text: 'мин по России',
       },
@@ -49,7 +49,7 @@ const items = [
     },
     options: [
       {
-        icon: <PhoneMiniIcon />,
+        icon: <PhoneMiniIcon className={styles.phoneIcon} />,
         value: 300,
         text: 'мин по России',
       },
@@ -73,7 +73,7 @@ const items = [
     oldPrice: 650,
     options: [
       {
-        icon: <PhoneMiniIcon />,
+        icon: <PhoneMiniIcon className={styles.phoneIcon} />,
         value: 100,
         text: 'мин по России',
       },
@@ -101,7 +101,7 @@ const items = [
     },
     options: [
       {
-        icon: <PhoneMiniIcon />,
+        icon: <PhoneMiniIcon className={styles.phoneIcon} />,
         value: 100,
         text: 'мин по России',
       },
@@ -119,7 +119,7 @@ const items = [
     newPrice: 990,
     options: [
       {
-        icon: <PhoneMiniIcon />,
+        icon: <PhoneMiniIcon className={styles.phoneIcon} />,
         value: 900,
         text: 'мин по России',
       },
@@ -138,7 +138,7 @@ const items = [
     oldPrice: 850,
     options: [
       {
-        icon: <PhoneMiniIcon />,
+        icon: <PhoneMiniIcon className={styles.phoneIcon} />,
         value: 150,
         text: 'мин по России',
       },
@@ -174,7 +174,7 @@ export const TariffsCarousel: FC = () => {
         indicators: styles.indicators,
         indicator: styles.indicator,
       }}
-      controlSize={32}>
+      controlSize={25}>
       {items.map((obj) => (
         <Carousel.Slide key={obj.id}>
           <TariffCard

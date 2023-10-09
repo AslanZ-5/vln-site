@@ -2,31 +2,37 @@ import React from 'react';
 import { TariffsCarousel } from './tariffs-carousel/tariffs-carousel';
 
 import styles from './tariffs.module.scss';
-import { Tabs } from '@mantine/core';
+import { Button, Tabs } from '@mantine/core';
 
 export const Tariffs = () => {
+  const [activeTab, setActiveTab] = React.useState('tab1');
+
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+  };
+
   return (
     <>
       <div className={styles.header}>
-        <h3>Тарифы</h3>
-        <Tabs radius="md" variant="pills" defaultValue={'1'}>
-          <Tabs.List>
-            <Tabs.Tab
-              value="1"
-              classNames={{
-                tabButton: styles.tabButton,
-              }}>
-              Мобильная связь
-            </Tabs.Tab>
-            <Tabs.Tab
-              classNames={{
-                tabButton: styles.tabButton,
-              }}
-              value="2">
-              Домашний интернет
-            </Tabs.Tab>
-          </Tabs.List>
-        </Tabs>
+        <h3 className={styles.title}>Тарифы</h3>
+        <div className={styles.buttonList}>
+          <Button
+            className={`${styles.tab1} ${activeTab === 'tab1' ? styles.tabActive : ''}`}
+            variant="white"
+            color="black"
+            radius="xl"
+            onClick={() => handleTabClick('tab1')}>
+            Мобильная связь
+          </Button>
+          <Button
+            className={`${styles.tab2} ${activeTab === 'tab2' ? styles.tabActive : ''}`}
+            variant="white"
+            color="black"
+            radius="xl"
+            onClick={() => handleTabClick('tab2')}>
+            Домашний интернет
+          </Button>
+        </div>
       </div>
       <TariffsCarousel />
     </>

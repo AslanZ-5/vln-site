@@ -3,14 +3,29 @@
 
 .root {
   width: 100%;
+  :global(.mantine-Carousel-controls) {
+    left: -27px;
+    right: -27px;
+  }
+
+  :global(.mantine-Carousel-viewport) {
+    height: 24.8125rem;
+  }
 }
 
 .container {
   padding: 15px 0;
-}
 
+  :global(.mantine-Carousel-slide) {
+    padding-right: 1.1rem;
+  }
+}
 .indicators {
   bottom: -10px;
+}
+
+.phoneIcon {
+  margin-left: -5px;
 }
 
 .indicator {

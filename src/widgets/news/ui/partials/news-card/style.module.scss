@@ -1,6 +1,8 @@
+@import 'global.scss';
+
 .cardWrapper {
   width: 310px;
-  background-color: #fff;
+  background-color: $color-base-0;
   margin-bottom: 50px;
   position: relative;
   height: 480px;
@@ -12,8 +14,8 @@
   position: absolute;
   top: 12px;
   right: 11px;
-  color: white;
-  background-color: #eb008c;
+  color: $color-base-0;
+  background-color: $color-magenta-100;
   border-radius: 20px;
   padding: 5px 12px;
   text-align: center;
@@ -75,8 +77,8 @@
 .cardWrapper:hover .date,
 .cardWrapper:hover .moreBtn,
 .cardWrapper:hover .arrowStyles path {
-  color: #eb008c;
-  stroke: #eb008c;
+  color: $color-magenta-100;
+  stroke: $color-magenta-100;
 }
 
 .cardWrapper:hover .cardImg {

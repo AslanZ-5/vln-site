@@ -7,8 +7,8 @@ const TariffCardOption: FC<TariffCardOptionProps> = ({ icon, value, text }) => {
     <div className={styles.container}>
       <h4>
         {icon}
-        {value}
-        <span className={styles.textOption}> {text}</span>
+        <span className={styles.numberOption}>{value}</span>
+        <span className={styles.textOption}>{text}</span>
       </h4>
     </div>
   );

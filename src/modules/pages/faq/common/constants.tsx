@@ -1,6 +1,6 @@
 import { Answer3 } from "./answers";
 
-export const COMMON_CONTENTS = [
+export const CONTENTS = [
   {
     Q: 'Что делать, если я ошибся номером при пополнении?',
     A: 'Не знаю'

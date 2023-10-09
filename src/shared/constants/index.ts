@@ -4,5 +4,19 @@ import { THEME_OTHER } from './other';
 export const theme: MantineThemeOverride = {
     fontFamily: 'Roboto',
     other: THEME_OTHER,
+    components: {
+        Accordion: {
+            styles: {
+                control: {
+                    '&:last-of-type': {
+                        '&[data-accordion-control]': {
+                            borderBottomLeftRadius: 0,
+                            borderBottomRightRadius: 0
+                        }
+                    }
+                }
+            }
+        }
+    }
 };
   

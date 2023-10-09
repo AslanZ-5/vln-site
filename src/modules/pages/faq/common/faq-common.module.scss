@@ -6,11 +6,7 @@ $chevron-liter: invert(80%) sepia(11%) saturate(393%) hue-rotate(170deg) brightn
   @include short-text-t4;
   &[data-active] {
     background-color: $color-primary-100;
-  } 
-}
-
-.panel {
-  padding: 16px 20px;
+  }
 }
 
 .chevron {

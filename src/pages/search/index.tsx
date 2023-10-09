@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./global-search-results.module.scss";
-import { Breadcrumbs } from "@/shared/ui-kit";
-import { breadCrumbsItems, questions } from "./global-search-results.constants";
+import React from 'react';
+import styles from './search-results.module.scss';
+import { Breadcrumbs } from '@/shared/ui-kit';
+import { breadCrumbsItems, questions } from './search-results.constants';
 
 const resultsCount = 187;
 
@@ -11,7 +11,9 @@ export default function GlobalSearchResults() {
       <Breadcrumbs list={breadCrumbsItems} />
       <div
         className={styles.title}
-      >{`Результаты поиска (${resultsCount})`}</div>
+      >
+        {`Результаты поиска (${resultsCount})`}
+      </div>
       <div className={styles.questions}>
         {questions.map((question, index) => {
           return (

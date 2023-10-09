@@ -1,11 +1,11 @@
 @import 'global.scss';
 
-.answer4Title {
+.answer3Title {
   @include short-text-t5;
   padding: 0;
 }
 
-.answer4List {
+.answer3List {
   @include paragraph-p6;
   padding: 0;
   margin: 0;

@@ -24,6 +24,7 @@ import { LINKS } from '@/shared/constants/links';
 import { Tooltip } from "@/shared/ui-kit/tooltip/tooltip";
 import { Location } from "@/widgets/location";
 import { useLocation } from "@/widgets/location/use-location";
+import {SearchInput} from "@/widgets/search-input/ui/search-input";
 
 const Sidebar = React.memo(() => {
   const { isMobile, isDesktop } = useMobile();
@@ -122,7 +123,12 @@ const Sidebar = React.memo(() => {
             onDismiss={handleCloseSideBar}
             open={sidebarOpen}
           >
-            <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
+            <SearchInput onClose={() => {
+
+            }} />
+            <div className={styles.categoryWrapper}>
+              {renderCategoryBtns}
+            </div>
             <div
               className={cn(
                 styles.contentMobile,

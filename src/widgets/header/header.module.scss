@@ -43,6 +43,7 @@
 .rightSide {
   margin-top: 14px;
   display: flex;
+  align-items: center;
   gap: 32px;
 
   @include desktop-max {
@@ -67,6 +68,7 @@
     font-family: Roboto;
     font-weight: 500;
     line-height: 14px;
+    white-space: nowrap;
   }
 }
 
@@ -92,12 +94,13 @@
   display: inline-flex;
   position: absolute;
   padding: 0px 20px 10px 0px;
-  right:  0;
+  right: 0;
   bottom: 0;
 
   @include tablet {
     position: initial;
     padding-right: 0;
+    padding-bottom: 0;
   }
 
   @include desktop-max {

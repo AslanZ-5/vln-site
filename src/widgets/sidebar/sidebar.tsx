@@ -20,11 +20,11 @@ import { useMobile } from "@/shared/lib/use-mobile";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 import Link from "next/link";
-import { LINKS } from '@/shared/constants/links';
+import { LINKS } from "@/shared/constants/links";
 import { Tooltip } from "@/shared/ui-kit/tooltip/tooltip";
 import { Location } from "@/widgets/location";
 import { useLocation } from "@/widgets/location/use-location";
-import { SearchInput } from "@/widgets/search-input/ui/search-input";
+import { SearchInput } from "@/shared/ui-kit/search-input/search-input";
 import { mockData } from "@/shared/constants/mock";
 
 const Sidebar = React.memo(() => {
@@ -46,7 +46,7 @@ const Sidebar = React.memo(() => {
     locationModalOpened,
     location,
     handleLocationModalOpen,
-    handleLocationModalClose
+    handleLocationModalClose,
   } = useLocation();
 
   const renderOptions = sidebarOptions.map((el, ind) => {
@@ -70,7 +70,12 @@ const Sidebar = React.memo(() => {
       return button;
     } else {
       return (
-        <Tooltip text={(el.Title)} backgroundColor="#282D3C" position="side" key={el.Title}>
+        <Tooltip
+          text={el.Title}
+          backgroundColor="#282D3C"
+          position="side"
+          key={el.Title}
+        >
           {button}
         </Tooltip>
       );
@@ -101,7 +106,10 @@ const Sidebar = React.memo(() => {
   if (isMobile) {
     return (
       <>
-        <Location opened={locationModalOpened} onClose={handleLocationModalClose} />
+        <Location
+          opened={locationModalOpened}
+          onClose={handleLocationModalClose}
+        />
         <div
           onClick={handleCloseSideBar}
           className={cn(sidebarOpen && styles.openBackground)}
@@ -116,8 +124,12 @@ const Sidebar = React.memo(() => {
             />
             <IconButton innerLabel="Связь" Icon={Phone} />
             <IconButton innerLabel="Интернет" Icon={Home} />
-            <Link href={LINKS.VOLNA_SALE}><IconButton innerLabel="Волна Sale" Icon={Frame} /></Link>
-            <Link href={LINKS.ESIM}><IconButton innerLabel="eSIM" Icon={Simcard} /></Link>
+            <Link href={LINKS.VOLNA_SALE}>
+              <IconButton innerLabel="Волна Sale" Icon={Frame} />
+            </Link>
+            <Link href={LINKS.ESIM}>
+              <IconButton innerLabel="eSIM" Icon={Simcard} />
+            </Link>
           </div>
           <BottomSheet
             blocking={false}
@@ -125,9 +137,7 @@ const Sidebar = React.memo(() => {
             open={sidebarOpen}
           >
             <SearchInput data={mockData.globalSearchData} />
-            <div className={styles.categoryWrapper}>
-              {renderCategoryItems}
-            </div>
+            <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
             <div
               className={cn(
                 styles.contentMobile,
@@ -145,7 +155,10 @@ const Sidebar = React.memo(() => {
 
   return (
     <>
-      <Location opened={locationModalOpened} onClose={handleLocationModalClose} />
+      <Location
+        opened={locationModalOpened}
+        onClose={handleLocationModalClose}
+      />
       <div
         onClick={handleCloseSideBar}
         className={cn(styles.wrapper, sidebarOpen && styles.openBackground)}

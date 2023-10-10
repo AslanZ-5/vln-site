@@ -5,7 +5,7 @@ import { Sidebar } from "@/widgets/sidebar/sidebar";
 import { NAVIGATION_MENU_LIST } from "./constans";
 import { LogoIcon, SearchIcon, PackIcon, UserIcon } from "@/shared/assets/svg";
 import { LINKS } from "@/shared/constants/links";
-import { SearchInput } from "@/widgets/search-input/ui/search-input";
+import { SearchInput } from "@/shared/ui-kit/search-input/search-input";
 import { useMobile } from "@/shared/lib/use-mobile";
 import cn from "classnames";
 import { mockData } from "@/shared/constants/mock";

@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '@/modules/pages/faq/faq-page.module.scss';
+import styles from '@/modules/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import FaqPayment from '@/modules/pages/faq/payment';
+import FaqPayment from '@/modules/faq/payment';
 import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
   { title: 'Вопросы и ответы', href: Path.faq.root },
-  { title: 'Оплата и баланс', href: Path.faq.payment }
+  { title: 'Оплата и баланс', href: Path.faq.payment },
 ];
 
 function FaqPaymentPage() {

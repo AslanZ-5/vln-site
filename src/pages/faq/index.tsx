@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '@/modules/pages/faq/faq-page.module.scss';
+import styles from '@/modules/faq/faq-page.module.scss';
 import { Breadcrumbs, Search } from '@/shared/ui-kit';
-import Cards from '@/modules/pages/faq/cards';
+import Cards from '@/modules/faq/cards';
 import { Path } from '@/shared/constants/links';
 
 const list = [

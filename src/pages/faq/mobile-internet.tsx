@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '@/modules/pages/faq/faq-page.module.scss';
+import styles from '@/modules/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import FaqMobileInternet from '@/modules/pages/faq/mobile-internet';
+import FaqMobileInternet from '@/modules/faq/mobile-internet';
 import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
   { title: 'Вопросы и ответы', href: Path.faq.root },
-  { title: 'Мобильный интернет', href: Path.faq.mobileInternet }
+  { title: 'Мобильный интернет', href: Path.faq.mobileInternet },
 ];
 
 function FaqCommonPage() {

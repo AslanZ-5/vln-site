@@ -65,6 +65,7 @@
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
+
   & > div {
     @include heading-h5;
     padding: 24px 16px;
@@ -85,7 +86,8 @@
 .headerArrowIcon {
   width: 25px;
   height: 25px;
-  transform: translate(-7px, -7px); 
+  transform: translate(-7px, -7px);
+
   svg {
     transform: scale(0.625);
   }

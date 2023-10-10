@@ -27,6 +27,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
           if (prev < 1) {
             return 9;
           }
+          
           return prev - 1;
         });
       }, 10);

@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '@/modules/pages/faq/faq-page.module.scss';
+import styles from '@/modules/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import FaqUser from '@/modules/pages/faq/user';
+import FaqUser from '@/modules/faq/user';
 import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
   { title: 'Вопросы и ответы', href: Path.faq.root },
-  { title: 'Личный кабинет', href: Path.faq.user }
+  { title: 'Личный кабинет', href: Path.faq.user },
 ];
 
 function FaqUserPage() {

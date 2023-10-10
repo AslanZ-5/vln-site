@@ -1,5 +1,5 @@
-import styles from "./footer.module.scss";
-import { Logo_3 } from "@/shared/assets/svg";
+import styles from './footer.module.scss';
+import { Logo_3 } from '@/shared/assets/svg';
 import Link from 'next/link';
 
 export function Footer() {

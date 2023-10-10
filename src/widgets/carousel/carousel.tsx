@@ -1,9 +1,9 @@
-import { memo } from "react";
-import { Carousel as MantineCarousel } from "@mantine/carousel";
-import Image from "next/image";
-import { Slide } from "./constants";
-import styles from "./carousel.module.scss";
-import { useMobile } from "@/shared/lib/use-mobile";
+import { memo } from 'react';
+import { Carousel as MantineCarousel } from '@mantine/carousel';
+import Image from 'next/image';
+import { Slide } from './constants';
+import styles from './carousel.module.scss';
+import { useMobile } from '@/shared/lib/use-mobile';
 
 export const Carousel = memo(({ images }: { images: Slide[] }) => {
   const { isMobile } = useMobile();
@@ -12,21 +12,21 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
     <div className={styles.wrapper}>
       <MantineCarousel
         withIndicators
-        height={"100%"}
+        height={'100%'}
         loop
         className={styles.image}
-        w={"100%"}
+        w={'100%'}
         slideGap={15}
         classNames={{ control: styles.carouselControl }}
         withControls={!isMobile}
         styles={{
           indicator: {
-            width: "12px",
-            height: "4px",
-            transition: "width 250ms ease",
-            "&[data-active]": {
-              width: "40px",
-              height: "4px",
+            width: '12px',
+            height: '4px',
+            transition: 'width 250ms ease',
+            '&[data-active]': {
+              width: '40px',
+              height: '4px',
             },
           },
         }}
@@ -47,4 +47,4 @@ export const Carousel = memo(({ images }: { images: Slide[] }) => {
   );
 });
 
-Carousel.displayName = "Carousel";
+Carousel.displayName = 'Carousel';

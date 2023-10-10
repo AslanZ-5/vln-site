@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '@/modules/pages/faq/faq-page.module.scss';
+import styles from '@/modules/faq/faq-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import FaqCommon from '@/modules/pages/faq/common';
+import FaqCommon from '@/modules/faq/common';
 import { Path } from '@/shared/constants/links';
 
 const list = [
   { title: 'Главная', href: '/' },
   { title: 'Вопросы и ответы', href: Path.faq.root },
-  { title: 'Общие вопросы', href: Path.faq.common }
+  { title: 'Общие вопросы', href: Path.faq.common },
 ];
 
 function FaqCommonPage() {

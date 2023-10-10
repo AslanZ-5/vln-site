@@ -1,13 +1,21 @@
+@import "media-queries";
+
 .input {
   width: 100%;
-
   &__root {
     display: flex;
     width: 100%;
+    @include only-mobile {
+      padding: 8px 16px;
+    }
   }
 
   &__wrapper {
     width: 100%;
+  }
+
+  &__itemsWrapper {
+    background-color: #f4f6fb;
   }
 
   &__input {

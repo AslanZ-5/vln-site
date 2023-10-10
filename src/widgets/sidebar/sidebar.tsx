@@ -11,12 +11,12 @@ import {
   Pin_2,
   Simcard,
 } from "@/shared/assets/svg";
-import IconButton from "./partials/icon-button/icon-button";
-import CategoryBtn from "./partials/category-btn/category-button";
-import { categoryBtn } from "./partials/constants";
+import IconButton from "./icon-button/icon-button";
+import CategoryBtn from "./category-btn/category-button";
+import { categoryBtn } from "./constants";
 import { useSidebar } from "./use-sidebar";
 import styles from "./sidebar.module.scss";
-import { useMobile } from "@/shared/lib/useMobile";
+import { useMobile } from "@/shared/lib/use-mobile";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
 import Link from "next/link";
@@ -53,8 +53,8 @@ const Sidebar = React.memo(() => {
     const isActive = el.id === activeItem;
     const button = (
       <IconButton
-        onClick={handleGoInto(el.Title, el.childrens, el.id)}
-        nestedOptions={el.childrens}
+        onClick={handleGoInto(el.Title, el.children, el.id)}
+        nestedOptions={el.children}
         classname={styles.hoverIcon}
         key={ind}
         active={isActive}
@@ -62,7 +62,7 @@ const Sidebar = React.memo(() => {
         showActiveLine={isActive}
         Icon={el.Icon && (() => <el.Icon />)}
       >
-        {el.src ? <Link href={el.src}>{el.Title}</Link> : el.Title}
+        {el.src ? <Link href={el.src}>{el.Title} НЕ работает !</Link> : el.Title}
       </IconButton>
     );
 
@@ -77,7 +77,7 @@ const Sidebar = React.memo(() => {
     }
   });
 
-  const renderCategoryBtns = categoryBtn.map((el, ind) => (
+  const renderCategoryItems = categoryBtn.map((el, ind) => (
     <CategoryBtn
       onClick={handleChangeCategory(ind)}
       key={ind}
@@ -126,7 +126,7 @@ const Sidebar = React.memo(() => {
           >
             <SearchInput data={mockData.globalSearchData} />
             <div className={styles.categoryWrapper}>
-              {renderCategoryBtns}
+              {renderCategoryItems}
             </div>
             <div
               className={cn(
@@ -166,7 +166,7 @@ const Sidebar = React.memo(() => {
             </IconButton>
           </div>
           {isFullSidebar && (
-            <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
+            <div className={styles.categoryWrapper}>{renderCategoryItems}</div>
           )}
 
           <div

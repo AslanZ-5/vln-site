@@ -1,7 +1,7 @@
 import { Image, Card, CardSection, Text } from "@mantine/core";
 import styles from "./style.module.scss";
 import { ArrowRight } from "@/shared/assets/svg";
-import { CardProps } from "./imgCards";
+import { CardProps } from "./img-cards";
 
 export function NewsCard({ src, title, date, category }: CardProps) {
   return (

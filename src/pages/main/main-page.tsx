@@ -1,13 +1,13 @@
-import { useMobile } from '@/shared/lib/useMobile';
-import { Carousel } from '@/widgets/carousel';
-import { slidesMock, slidesMockMobile } from '@/widgets/carousel/ui/constants';
+import { useMobile } from '@/shared/lib/use-mobile';
+import { Carousel } from '@/widgets/carousel/carousel';
+import { slidesMock, slidesMockMobile } from '@/widgets/carousel/constants';
 import { Esim } from '@/widgets/eSim/eSim';
 import { Replenishment } from '@/widgets/replenishment/replenishment';
 import { HomeInternet } from '@/widgets/home-internet';
-import { VolnaSale } from '@/widgets/volnaSale/volnaSale';
+import { VolnaSale } from '@/widgets/volna-sale/volna-sale';
 import { BeautifulNumbers } from '@/widgets/beautiful-numbers/beautiful-numbers';
-import { News } from '@/widgets/news/ui/news';
-import { Tariffs } from '@/widgets/tariffs';
+import { News } from '@/widgets/news/news';
+import { Tariffs } from '@/widgets/tariffs/tariffs';
 import styles from './main-page.module.scss';
 
 function MainPage() {

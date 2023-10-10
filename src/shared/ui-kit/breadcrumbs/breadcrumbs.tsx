@@ -8,7 +8,7 @@ import styles from './breadcrumbs.module.scss';
 import Link from 'next/link';
 import cn from 'classnames';
 import { useMediaQuery } from '@mantine/hooks';
-import { onlyMobile } from '@/shared/constants/mediaQueries';
+import { onlyMobile } from '@/shared/constants/media-queries';
 
 export interface BreadcrumbsProps extends Partial<MantineBreadcrumbsProps> {
   list: {

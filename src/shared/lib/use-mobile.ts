@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@mantine/hooks";
-import { onlyMobile, tablet, tabletOnly, desktop } from "../constants/mediaQueries";
+import { onlyMobile, tablet, tabletOnly, desktop } from "../constants/media-queries";
 
 export const useMobile = () => {
   const isMobile = useMediaQuery(onlyMobile);

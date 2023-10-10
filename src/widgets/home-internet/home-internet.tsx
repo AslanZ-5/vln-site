@@ -8,7 +8,7 @@ import { ChevronRight } from '@/shared/assets/icons';
 import { RightSection } from './right-section';
 import { HOME_INTERNET__CONSTANTS } from './constants';
 import { PhoneInput } from '@/shared/ui-kit';
-import { onlyMobile } from '@/shared/constants/mediaQueries';
+import { onlyMobile } from '@/shared/constants/media-queries';
 
 export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   const theme = useMantineTheme();

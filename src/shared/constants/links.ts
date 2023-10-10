@@ -13,6 +13,10 @@ export enum LINKS {
 }
 
 export const Path = {
+  services: 'services',
+  search: 'search',
+  news: 'news',
+  tariffServices: 'tariff-services/activation',
   faq: {
     root: '/faq',
     common: '/faq/common',

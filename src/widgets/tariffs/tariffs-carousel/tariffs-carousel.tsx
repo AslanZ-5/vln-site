@@ -3,8 +3,8 @@ import { Carousel } from '@mantine/carousel';
 import TariffCard from '@/shared/ui-kit/tariff-card/tariff-card';
 import { EmailIcon, PhoneMiniIcon, GlobeIcon } from '@/shared/assets/svg';
 import styles from './tariffs-carousel.module.scss';
-import { useMobile } from '@/shared/lib/useMobile';
-import { MOBILE, TABLET } from '@/shared/constants/mediaQueries';
+import { useMobile } from '@/shared/lib/use-mobile';
+import { MOBILE, TABLET } from '@/shared/constants/media-queries';
 
 const items = [
   {

@@ -2,7 +2,7 @@ import React from 'react';
 import { TariffsCarousel } from './tariffs-carousel/tariffs-carousel';
 
 import styles from './tariffs.module.scss';
-import { Button, Tabs } from '@mantine/core';
+import { Button } from '@mantine/core';
 
 export const Tariffs = () => {
   const [activeTab, setActiveTab] = React.useState('tab1');

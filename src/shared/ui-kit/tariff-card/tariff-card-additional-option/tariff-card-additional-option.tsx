@@ -19,7 +19,7 @@ const TariffCardAdditionalOption: FC<TariffCardAdditionalProps> = ({
         </div>
         <div className={styles.discountPrice}>-{discount}%</div>
       </div>
-      <Switch size={SwitchSize.LARGE} onChange={onChangeSwith} size={SwitchSize.LARGE} />
+      <Switch size={SwitchSize.LARGE} onChange={onChangeSwith} />
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.scss";
-import { Sidebar } from "@/widgets/sidebar";
-import { NAVIGATION_MENU_LIST } from "../constans";
+import { Sidebar } from "@/widgets/sidebar/sidebar";
+import { NAVIGATION_MENU_LIST } from "./constans";
 import { LogoIcon, SearchIcon, PackIcon, UserIcon } from "@/shared/assets/svg";
 import { LINKS } from "@/shared/constants/links";
 import { SearchInput } from "@/widgets/search-input/ui/search-input";
-import { useMobile } from "@/shared/lib/useMobile";
+import { useMobile } from "@/shared/lib/use-mobile";
 import cn from "classnames";
 import { mockData } from "@/shared/constants/mock";
 
@@ -28,7 +28,10 @@ export function Header() {
     <div className={styles.wrapper}>
       <Sidebar />
       <div className={styles.logo}>
-        <LogoIcon />
+        <Link href={'/'}>
+          <LogoIcon />
+        </Link>
+
       </div>
       <div className={openInput ? styles.navigationHiden : styles.navigation}>
         {NAVIGATION_MENU_LIST.map((list) => (

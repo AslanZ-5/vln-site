@@ -1,0 +1,220 @@
+@import '@/styles/global.scss';
+
+.modal {
+  &__root {
+    margin-top: -20px;
+
+    @include tablet {
+      margin-top: 50px;
+      width: 640px;
+    }
+
+    @include desktop-max {
+      width: 800px;
+    }
+  }
+
+  &__content {
+    max-height: 420px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include tablet {
+      max-height: 500px;
+      height: 90%;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.32px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -0.4px;
+    }
+  }
+}
+
+.accordion {
+  &__item {
+    border: 1px solid $color-base-300;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__control {
+    width: 100%;
+    background-color: #d0dfff;
+    color: $color-black;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 20px;
+    word-wrap: break-word;
+    border: none;
+
+    &:hover {
+      background-color: #d0dfff;
+    }
+  }
+
+  &__chevron {
+    color: #A3B1C0;
+  }
+
+  &__content {
+    padding: 0;
+  }
+}
+
+.optionInfoRow {
+  margin: 0;
+  padding: 8px 20px;
+  min-height: 70px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px #E2E7F3 solid;
+}
+
+.optionInfoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.optionInfoTitle {
+  color: $color-black;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.optionInfoDesc {
+  color: $color-base-500;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.optionDescAppRow {
+  display: flex;
+  gap: 8px;
+}
+
+.optionDescIcons {
+  display: flex;
+  gap: 4px;
+}
+
+.optionInfoPrice {
+  color: $color-black;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.connectDisconectRow {
+  padding: 8px 20px;
+  color: $color-black;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.14px;
+}
+
+.connectDisconectCode {
+  padding: 0 8px;
+  color: $color-base-0;
+  background-color: $color-base-600;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.tariffs {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    justify-content: space-between;
+  }
+}
+
+.tariffsRow {
+  margin: 8px 0px;
+  padding: 0px 20px;
+
+  @include tablet {
+    margin: 0;
+    padding: 6px 20px;
+  }
+}
+
+.tariffsLink {
+  color: $color-primary-500;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.areaRow {
+  padding: 20px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.scroll {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.elipsisTop {
+  width: 370px;
+  height: 370px;
+  flex-shrink: 0;
+  position: fixed;
+  right: -15%;
+  top: -30%;
+  pointer-events: none;
+}
+
+.elipsisBottom {
+  width: 370px;
+  height: 370px;
+  flex-shrink: 0;
+  position: fixed;
+  left: -20%;
+  top: 38%;
+  pointer-events: none;
+}

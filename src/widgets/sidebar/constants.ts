@@ -7,7 +7,8 @@ import {
   New,
   Logo_2,
   Box_2,
-} from '@/shared/assets/svg/index';
+} from '@/shared/assets/svg';
+import { Path } from '@/shared/constants/links';
 
 export const categoryBtn = [
   {
@@ -19,73 +20,68 @@ export const categoryBtn = [
   },
 ];
 
-export const sideBarBtns: SideBarOption[] = [
+export const sidebarItems: SideBarOption[] = [
   {
     Icon: Currency,
     Title: 'Пополнение счета',
-    childrens: null,
+    children: null,
     id: 1,
   },
   {
     Icon: Box_2,
     Title: 'Услуги',
-    childrens: null,
+    children: null,
     id: 2,
+    src: Path.services,
   },
   {
     Icon: Dialpad,
     Title: 'Быстрые команды',
-    childrens: null,
+    children: null,
     id: 3,
   },
   {
     Icon: New,
     Title: 'Новости и акции',
-    childrens: null,
+    children: null,
     id: 4,
-    src: 'https://volnamobile.ru/numbers/',
+    src: Path.news,
   },
   {
     Icon: Pin,
     Title: 'Точки продаж',
-    childrens: null,
+    children: null,
     id: 5,
     src: 'https://volnamobile.ru/numbers/',
   },
   {
     Icon: Sketch,
     Title: 'Красивые номера',
-    childrens: null,
+    children: null,
     id: 6,
   },
   {
     Icon: Comment,
     Title: 'Вопросы и ответы',
     id: 7,
-    childrens: [
+    children: [
       {
         Icon: null,
         Title: 'База знаний',
         id: 8,
-        childrens: [
-          {
-            Icon: null,
-            Title: 'Программирование',
-            childrens: null,
-            id: 9,
-          },
-        ],
+        src: Path.faq.root,
+        children: null,
       },
       {
         Icon: null,
         Title: 'Оставить заявку',
-        childrens: null,
+        children: null,
         id: 10,
       },
       {
         Icon: null,
         Title: 'Написать в чат',
-        childrens: null,
+        children: null,
         id: 11,
       },
     ],
@@ -94,30 +90,23 @@ export const sideBarBtns: SideBarOption[] = [
     Icon: Logo_2,
     Title: 'О компании',
     id: 13,
-    childrens: [
+    children: [
       {
         Icon: null,
         Title: 'База знаний',
         id: 14,
-        childrens: [
-          {
-            Icon: null,
-            Title: 'Программирование',
-            childrens: null,
-            id: 15,
-          },
-        ],
+        children: null,
       },
       {
         Icon: null,
         Title: 'Оставить заявку',
-        childrens: null,
+        children: null,
         id: 16,
       },
       {
         Icon: null,
         Title: 'Написать в чат',
-        childrens: null,
+        children: null,
         id: 17,
       },
     ],
@@ -127,7 +116,7 @@ export const sideBarBtns: SideBarOption[] = [
 export interface SideBarOption {
   Icon: any;
   Title: string;
-  childrens: null | SideBarOption[];
+  children: null | SideBarOption[];
   id: number;
   src?: string;
 }

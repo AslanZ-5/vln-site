@@ -1,5 +1,5 @@
 import { Button } from '@mantine/core';
-import styles from './volnaSale.module.scss';
+import styles from './volna-sale.module.scss';
 import cn from 'classnames';
 import { HTMLAttributes } from 'react';
 import Link from 'next/link';

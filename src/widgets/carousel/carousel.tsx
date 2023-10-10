@@ -3,7 +3,7 @@ import { Carousel as MantineCarousel } from "@mantine/carousel";
 import Image from "next/image";
 import { Slide } from "./constants";
 import styles from "./carousel.module.scss";
-import { useMobile } from "@/shared/lib/useMobile";
+import { useMobile } from "@/shared/lib/use-mobile";
 
 export const Carousel = memo(({ images }: { images: Slide[] }) => {
   const { isMobile } = useMobile();

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Header } from '@/widgets/header';
+import { Header } from '@/widgets/header/header';
 import { Footer } from '@/widgets/footer/footer';
 import { FooterCardsBlock } from '@/widgets/footer-cards/footer-cards';
 import styles from './layout.module.scss';

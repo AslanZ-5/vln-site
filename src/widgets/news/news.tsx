@@ -1,9 +1,9 @@
-import { NewsCard } from "./partials/news-card/news-card";
+import { NewsCard } from "./news-card/news-card";
 import styles from "./news.module.scss";
-import { NewsHeader } from "./partials/news-header/news-header";
+import { NewsHeader } from "./news-header/news-header";
 import { Carousel as MantineCarousel } from "@mantine/carousel";
-import { useMobile } from "@/shared/lib/useMobile";
-import { imgCards } from "./partials/news-card/imgCards";
+import { useMobile } from "@/shared/lib/use-mobile";
+import { imgCards } from "./news-card/img-cards";
 import { ChevronRight } from "@/shared/assets/svg";
 
 export function News() {

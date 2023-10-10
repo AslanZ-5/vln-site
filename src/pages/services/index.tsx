@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './services-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import { Services } from '@/widgets/services';
+import { Services } from '@/widgets/services/services';
 
 const list = [
   { title: 'Главная', href: '/' },

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "@/shared/constants/mediaQueries";
+import { mq } from "@/shared/constants/media-queries";
 
 export const Wrapper = styled.div`
   width: 100%;

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { SideBarOption, sideBarBtns } from "./partials/constants";
+import { SideBarOption, sidebarItems } from "./constants";
 
 interface PrevOptions {
   name: string;
@@ -10,7 +10,7 @@ export const useSidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(0);
 
-  const [sidebarOptions, setSidebarOptions] = useState(sideBarBtns);
+  const [sidebarOptions, setSidebarOptions] = useState(sidebarItems);
   const prevSidebarState = useRef<PrevOptions[]>([]);
   const [activeItem, setActibeItem] = useState<null | number>(null);
 
@@ -37,10 +37,10 @@ export const useSidebar = () => {
   }, []);
 
   const handleGoInto = useCallback(
-    (name: string, childrens: SideBarOption[] | null, id: number) => () => {
-      if (childrens) {
+    (name: string, children: SideBarOption[] | null, id: number) => () => {
+      if (children) {
         prevSidebarState.current.push({ name, options: sidebarOptions });
-        setSidebarOptions(childrens);
+        setSidebarOptions(children);
       }
       setActibeItem(id);
     },
@@ -64,7 +64,7 @@ export const useSidebar = () => {
 
   useEffect(() => {
     if (!sidebarOpen && prevSidebarState.current) {
-      setSidebarOptions(sideBarBtns);
+      setSidebarOptions(sidebarItems);
       prevSidebarState.current = [];
     }
   }, [sidebarOpen, prevSidebarState.current]);

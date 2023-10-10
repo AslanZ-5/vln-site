@@ -7,6 +7,7 @@ const classSizes = {
   xs: styles.extraSmallWidth,
   sm: styles.smallWidth,
   md: styles.mediumWidth,
+  m: styles.mediumModal,
   lg: styles.largeWidth,
   xl: styles.extraLargeWidth,
 };

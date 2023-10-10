@@ -137,7 +137,7 @@ const Sidebar = React.memo(() => {
             open={sidebarOpen}
           >
             <SearchInput data={mockData.globalSearchData} />
-            <div className={styles.categoryWrapper}>{renderCategoryBtns}</div>
+            <div className={styles.categoryWrapper}>{renderCategoryItems}</div>
             <div
               className={cn(
                 styles.contentMobile,

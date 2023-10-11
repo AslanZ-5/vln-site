@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Modal } from '@/shared/ui-kit';
 import { BalanceCheckProps } from './balance-check.types';
-import Link from "next/link";
+import Link from 'next/link';
 import styles from './balance-check.module.scss';
 
 export const BalanceCheck: FC<BalanceCheckProps> = ({ opened, onClose }) => {
@@ -12,4 +12,4 @@ export const BalanceCheck: FC<BalanceCheckProps> = ({ opened, onClose }) => {
       <Link href={''} className={styles.link}> * 100 #</Link>
     </Modal>
   );
-}
+};

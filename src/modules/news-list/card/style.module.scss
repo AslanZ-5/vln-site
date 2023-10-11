@@ -1,0 +1,93 @@
+@import 'global.scss';
+
+.cardWrapper {
+  width: 335px;
+  background-color: $color-base-0;
+  position: relative;
+  height: 480px;
+  cursor: pointer;
+
+  @include tablet {
+    width: 354px;
+  }
+
+  @include desktop-max {
+    width: 310px;
+  }
+}
+
+.category {
+  font-size: 12px;
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  color: $color-base-0;
+  background-color: $color-magenta-100;
+  border-radius: 20px;
+  padding: 5px 12px;
+  text-align: center;
+}
+
+.text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  padding-bottom: 8px;
+}
+
+.date {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: #515b73;
+  padding-bottom: 8px;
+}
+
+.moreBtn {
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+  display: flex;
+  background: unset;
+  align-items: center;
+  border: unset;
+  cursor: pointer;
+  padding: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.arrowStyles {
+  margin-left: 8px;
+}
+
+.cardImgWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.cardImg {
+  height: 356px;
+  // filter: grayscale(100%);
+}
+
+.cardWrapper:hover .text,
+.cardWrapper:hover .date,
+.cardWrapper:hover .moreBtn,
+.cardWrapper:hover .arrowStyles path {
+  color: $color-magenta-100;
+  stroke: $color-magenta-100;
+}
+
+.cardWrapper:hover .cardImg {
+  filter: grayscale(0);
+}

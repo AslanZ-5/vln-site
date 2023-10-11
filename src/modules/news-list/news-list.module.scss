@@ -1,0 +1,63 @@
+@import 'global.scss';
+
+.cardsBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: $gap-mobile;
+  
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px 20px;
+    justify-items: center;
+    margin-bottom: $gap-tablet;
+  }
+
+  @include desktop-max {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px 20px;
+    margin-bottom: $gap-desktop;
+  }
+}
+
+
+.pagination {
+  &__control {
+    border: 1px solid $color-base-300;
+    border-radius: 8px;
+
+    &[data-active] {
+      background-color: $color-link;
+    }
+  }
+}
+
+.button {
+  &__root {
+    margin-top: auto;
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: $color-base-100;
+    color: $color-link;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    outline: none;
+
+    &:active {
+      background-color: $color-base-100;
+    }
+
+    &[data-disabled] {
+      background-color: $color-primary-200;
+      color: $color-base-500;
+    }
+  }
+}

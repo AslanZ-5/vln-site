@@ -4,12 +4,12 @@ import { ServiceInfoModalProps } from './service-info-modal.types';
 import { Accordion, ScrollArea } from '@mantine/core';
 import { serviceParamsMock } from './service-info-modal.mock';
 import Link from 'next/link';
-import { ElipsisPurple, ElipsisPink } from '@/shared/assets/svg';
+import { EllipsisPurple, EllipsisPink } from '@/shared/assets/svg';
 import { useMobile } from '@/shared/lib/use-mobile';
 import styles from './service-info-modal.module.scss';
 
 export const ServiceInfoModal: FC<ServiceInfoModalProps> = ({ opened, onClose }) => {
-  const { isMobile, isDesktop } = useMobile();
+  const { isMobile } = useMobile();
 
   const items = serviceParamsMock.map((item) => (
     <Accordion.Item key={item.title} value={item.title}>
@@ -74,8 +74,8 @@ export const ServiceInfoModal: FC<ServiceInfoModalProps> = ({ opened, onClose })
 
       {isMobile && 
       <>
-        <ElipsisPink className={styles.elipsisTop} />
-        <ElipsisPurple className={styles.elipsisBottom} />
+        <EllipsisPink className={styles.ellipsisTop} />
+        <EllipsisPurple className={styles.ellipsisBottom} />
       </>}
 
     </Modal>

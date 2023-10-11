@@ -1,6 +1,6 @@
 import { ModalProps } from './modal.types';
 import styles from './modal.module.scss';
-import { CloseIcon, ElipsisPurple, ElipsisPink } from '@/shared/assets/svg';
+import { CloseIcon, EllipsisPurple, EllipsisPink } from '@/shared/assets/svg';
 import cn from 'classnames';
 
 const classSizes = {
@@ -43,8 +43,8 @@ export const Modal: React.FC<ModalProps> = ({
         <div className={cn(styles.modalContent, classNames?.content)}>{children}</div>
         {!disableBackgoundGradient && (
           <>
-            <ElipsisPink className={styles.elipsisTop} />
-            <ElipsisPurple className={styles.elipsisBottom} />
+            <EllipsisPink className={styles.ellipsisTop} />
+            <EllipsisPurple className={styles.ellipsisBottom} />
           </>
         )}
       </div>

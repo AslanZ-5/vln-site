@@ -1,12 +1,12 @@
-import React, { FC, useState } from "react";
-import { Modal, Link } from "@/shared/ui-kit";
-import { LOCATION_LIST, CITY_LIST } from "./constants";
-import { LocationProps } from "./location.types";
-import styles from "./location.module.scss";
-import { SearchInput } from "@/shared/ui-kit/search-input/search-input";
+import React, { FC, useState } from 'react';
+import { Modal, Link } from '@/shared/ui-kit';
+import { LOCATION_LIST, CITY_LIST } from './constants';
+import { LocationProps } from './location.types';
+import styles from './location.module.scss';
+import { SearchInput } from '@/shared/ui-kit/search-input/search-input';
 
 export const Location: FC<LocationProps> = ({ opened, onClose }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
 
   const onClick = (value: string) => {
     setValue(value);

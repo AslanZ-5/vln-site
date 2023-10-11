@@ -1,5 +1,5 @@
-import { serviceParamsType } from "./service-info-modal.types";
-import { ButtonLoop, VkColor, OkColor, YaMapsColor, YaNavigatorColor, GisColor, ViberColor, SkypeColor, WAColor, TelegramColor } from "@/shared/assets/svg";
+import { serviceParamsType } from './service-info-modal.types';
+import { ButtonLoop, VkColor, OkColor, YaMapsColor, YaNavigatorColor, GisColor, ViberColor, SkypeColor, WAColor, TelegramColor } from '@/shared/assets/svg';
 
 export const serviceParamsMock: serviceParamsType[] = [
   {

@@ -40,4 +40,7 @@ export const Path = {
     newUser: '/faq/new-user',
     dials: '/faq/dials',
   },
+  replenishment: {
+    root: '/replenishment',
+  },
 };

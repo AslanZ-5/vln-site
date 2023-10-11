@@ -1,0 +1,134 @@
+@import 'global.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.breadcrumbs {
+  margin: $gap-mobile 0;
+
+  @include tablet {
+    margin: $corner-radius-large 0;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-mobile;
+
+  @include tablet {
+    gap: $gap-horizontal;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    @include heading-h2;
+  }
+  &__search {
+    width: 375px;
+    padding: 0 $gap-horizontal;
+
+    @include tablet {
+      display: grid;
+      gap: $corner-radius-small;
+      grid-template-columns: 232px 310px;
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  @include tablet {
+    height: 72px;
+    align-items: flex-end;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(11, 152px);
+  gap: $gap-horizontal;
+  margin-bottom: $gap-mobile;
+
+  @include tablet {
+    margin-bottom: $gap-tablet;
+    grid-template-columns: repeat(3, minmax(230px, auto));
+    grid-template-rows: repeat(4, 152px);
+  }
+
+  @include desktop-max {
+    margin-bottom: $gap-desktop;
+    grid-template-columns: repeat(6, minmax(200px, auto));
+    grid-template-rows: repeat(2, 152px);
+  }
+}
+
+.tabs {
+  &__list {
+    overflow: scroll;
+    flex-wrap: nowrap;
+    height: 34px;
+    border: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__tab {
+    height: 34px;
+    border-bottom: 1px solid $color-base-400;
+    padding: 10px $corner-radius-small;
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &[data-active] {
+      border-bottom: 3px solid $color-primary-500;
+
+      span {
+        color: $color-base-900;
+      }
+    }
+  }
+  &__label {
+    color: $color-base-700;
+  }
+}
+
+.pills {
+  width: 100%;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  align-self: stretch;
+
+  &__input {
+    width: 100%;
+  }
+}
+.button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  width: 24px;
+  height: 24px;
+}

@@ -1,24 +1,25 @@
 import React from 'react';
-import styles from './services-page.module.scss';
+import styles from '@/modules/pages/services/styles/services-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import { Services } from '@/widgets/services/services';
+import { ServicesCards } from '@/modules/pages/services/first-view/cards';
+import { Path, PathLabels } from '@/shared/constants/links';
 
-const list = [
-  { title: 'Главная', href: '/' },
-  { title: 'Услуги', href: '/services' },
+export const List = [
+  { title: PathLabels.main, href: Path.main },
+  { title: PathLabels.services.root, href: Path.services.root },
 ];
 
 function ServicesPage() {
   return (
     <div className={styles.wrapper}>
       <div>
-        <Breadcrumbs list={list} />
+        <Breadcrumbs list={List} />
       </div>
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.header__title}>Услуги</div>
         </div>
-        <Services />
+        <ServicesCards />
       </div>
     </div>
   );

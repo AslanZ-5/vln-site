@@ -1,17 +1,12 @@
 @import 'global.scss';
 
-.mobile {
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    height: 28px;
-  }
-
-  &__link {
-    @include heading-h6;
-    color: $color-base-700;
-  }
+.mobile_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  @include heading-h6;
+  color: $color-base-700;
 }
 
 .link {

@@ -34,8 +34,7 @@ export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode, mask, 
       <div className={styles.form}>
         <PhoneInput
           darkBackground={!lightMode}
-          changeHandler={(a, b) => phoneHandler(b)}
-          clearHandler={() => setPhone('')}
+          onChange={(val) => phoneHandler(val)}
           className={styles.form__phone}
           mask={mask}
           placeholder={placeholder}
@@ -61,7 +60,8 @@ export const ReplenishmentContent: FC<ReplenishmentProps> = ({ lightMode, mask, 
           classNames={{
             root: styles.button__root,
           }}
-          disabled={(mask ? phone.length !== 7 : phone.length !== 10) || !currency}>
+          disabled={(mask ? phone.length !== 7 : phone.length !== 10) || !currency}
+        >
           {REPLENISHMENT_CONSTANTS.BUTTON}
         </Button>
       </div>

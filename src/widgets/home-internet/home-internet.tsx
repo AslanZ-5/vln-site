@@ -59,21 +59,13 @@ export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ..
               {HOME_INTERNET__CONSTANTS.ADDRESS_DESCRIPTION_PART2}
             </div>
 
-            <PhoneInput
-              darkBackground
-              changeHandler={(a, b) => onPhoneChange(b)}
-              clearHandler={() => setPhone('')}
-            />
+            <PhoneInput darkBackground onChange={(b) => onPhoneChange(b)} />
           </>
         )}
         {address && possible && (
           <>
             <div className={styles.description}>{HOME_INTERNET__CONSTANTS.POSSIBLE__LABEL}</div>
-            <PhoneInput
-              darkBackground
-              changeHandler={(a, b) => onPhoneChange(b)}
-              clearHandler={() => setPhone('')}
-            />
+            <PhoneInput darkBackground onChange={(b) => onPhoneChange(b)} />
           </>
         )}
       </div>
@@ -82,7 +74,8 @@ export const HomeInternet: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ..
           disabled={address === '' || phone.length !== 10}
           classNames={{
             root: styles.button__root,
-          }}>
+          }}
+        >
           {possible
             ? HOME_INTERNET__CONSTANTS.BUTTON_POSSIBLE
             : HOME_INTERNET__CONSTANTS.BUTTON_IMPOSSIBLE}

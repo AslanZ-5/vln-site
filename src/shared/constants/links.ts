@@ -12,8 +12,21 @@ export enum LINKS {
   RU_STORE = 'https://redirect.appmetrica.yandex.com/serve/1180923242865509178',
 }
 
+export const PathLabels = {
+  main: 'Главная',
+  services: { root: 'Услуги', all: 'Все услуги' },
+};
+
 export const Path = {
-  services: 'services',
+  main: '/',
+  services: {
+    root: 'services',
+    popular: '/services/popular',
+    mobile: '/services/mobile',
+    internet: '/services/internet',
+    fast: '/services/fast',
+    special: '/services/special',
+  },
   search: 'search',
   news: 'news',
   tariffServices: 'tariff-services/activation',
@@ -25,6 +38,6 @@ export const Path = {
     user: '/faq/user',
     payment: '/faq/payment',
     newUser: '/faq/new-user',
-    dials: '/faq/dials'
-  }
+    dials: '/faq/dials',
+  },
 };

@@ -1,0 +1,78 @@
+@import 'global.scss';
+
+.card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: $corner-radius-small 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: $corner-radius-large;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    left: -20px;
+    content: '';
+    width: 370px;
+    height: 370px;
+    border-radius: 370px;
+    background: rgba(254, 254, 254, 0.1);
+  }
+
+  &__0 {
+    background: linear-gradient(90deg, #1a02ba 0%, #b90e9e 333.42%, #1a02ba 646.62%);
+  }
+  &__1 {
+    background: linear-gradient(90deg, #1a02ba -108.09%, #b90e9e 224.34%, #1a02ba 536.62%);
+  }
+  &__2 {
+    background: linear-gradient(90deg, #1a02ba -215.84%, #b90e9e 116.01%, #1a02ba 427.75%);
+  }
+  &__3 {
+    background: linear-gradient(90deg, #1a02ba -324.72%, #b90e9e 5.39%, #1a02ba 315.5%);
+  }
+  &__4 {
+    background: linear-gradient(90deg, #1a02ba -435.84%, #b90e9e -105.15%, #1a02ba 205.5%);
+  }
+  &__5 {
+    background: linear-gradient(90deg, #1a02ba -547.02%, #b90e9e -213.4%, #1a02ba 100%);
+  }
+}
+
+.title {
+  color: $color-base-0;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &__title {
+    color: #e1e3e6;
+    @include label-l6;
+  }
+  &__value {
+    display: flex;
+    align-items: center;
+  }
+  &__number {
+    color: $color-base-0;
+    @include label-l2;
+  }
+  &__term {
+    color: $color-base-0;
+    @include label-l6;
+  }
+}

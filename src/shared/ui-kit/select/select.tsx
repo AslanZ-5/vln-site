@@ -5,18 +5,16 @@ import { Select as MantineSelect, SelectProps as MantineSelectProps } from '@man
 import { volnaTheme as theme } from '@/shared/constants/theme';
 import cn from 'classnames';
 
-export interface SelectProps extends Partial<MantineSelectProps> {
-  data: string[];
+export interface SelectProps extends MantineSelectProps {
   className?: string;
   light?: boolean;
 }
 
-export const Select: FC<SelectProps> = ({ data, className, disabled, light, ...props }) => {
+export const Select: FC<SelectProps> = ({ className, disabled, light, ...props }) => {
   const [opened, setOpened] = useState(false);
 
   return (
     <MantineSelect
-      data={data}
       disabled={disabled}
       limit={6}
       {...props}
@@ -49,39 +47,3 @@ export const Select: FC<SelectProps> = ({ data, className, disabled, light, ...p
     />
   );
 };
-
-/* <Container $containerWidth={containerWidth}>
-        {label && (
-          <Label $disabled={disabled} htmlFor={inputId || id}>
-            {label}
-          </Label>
-        )}
-        <InputWrapper
-          $withBorder={withBorder}
-          $backgroundColor={backgroundColor}
-          onClick={() => !disabled && setOpen((t) => !t)}
-        >
-          <Input
-            id={inputId || id}
-            placeholder={placeholder}
-            value={inputValue}
-            autoComplete='off'
-            type='text'
-            name={name}
-            $disabled={disabled}
-          />
-          <img
-            src={(disabled && disabledArrow) || ((open || isOpen) && arrowUp) || arrowDown}
-            alt='arrowIcon'
-          />
-        </InputWrapper>
-        {(isOpen || open) && (
-          <List $withBorder={withBorder} $backgroundColor={backgroundColor}>
-            {data?.map((item, index) => (
-              <Item key={index} onClick={() => selectHandler(item)}>
-                {item}
-              </Item>
-            ))}
-          </List>
-        )}
-      </Container> */

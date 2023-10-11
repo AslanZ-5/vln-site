@@ -1,36 +1,32 @@
-import {
-  Breadcrumbs as MantineBreadcrumbs,
-  BreadcrumbsProps as MantineBreadcrumbsProps,
-} from '@mantine/core';
+import { Breadcrumbs as MantineBreadcrumbs, BreadcrumbsProps as MantineBreadcrumbsProps } from '@mantine/core';
 import React, { FC } from 'react';
 import { ArrowLeft, Separator } from '@/shared/assets/svg';
 import styles from './breadcrumbs.module.scss';
 import Link from 'next/link';
 import cn from 'classnames';
-import { useMediaQuery } from '@mantine/hooks';
-import { onlyMobile } from '@/shared/constants/media-queries';
+import { useMobile } from '@/shared/lib/use-mobile';
 
 export interface BreadcrumbsProps extends Partial<MantineBreadcrumbsProps> {
-  list: {
-    title: string;
-    href: string;
-    id?: string;
-  }[];
+  list: BreadcrumbsList;
 }
 
+export type BreadcrumbsList = {
+  title: string;
+  href: string;
+  id?: string;
+}[];
+
 export const Breadcrumbs: FC<BreadcrumbsProps> = ({ list }) => {
-  const isMobile = useMediaQuery(onlyMobile);
+  const { isMobile } = useMobile();
 
   if (isMobile) {
-    const item = list[list.length - 2];
+    const item = list.length === 1 ? list[list.length - 1] : list[list.length - 2];
 
     return (
-      <div className={styles.mobile__wrapper}>
+      <Link className={styles.mobile_link} href={item.href}>
         <ArrowLeft />
-        <Link className={styles.mobile__link} href={item.href}>
-          {item.title}
-        </Link>
-      </div>
+        {item.title}
+      </Link>
     );
   }
 

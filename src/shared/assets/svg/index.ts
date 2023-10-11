@@ -62,3 +62,4 @@ export { default as YaNavigatorColor } from './ya-navigator-color.svg';
 export { default as GisColor } from './2-gis-color.svg';
 export { default as WAColor } from './wApp-color.svg';
 export { default as TelegramColor } from './telegram-color.svg';
+export { default as FilterIcon } from './filter-icon.svg';

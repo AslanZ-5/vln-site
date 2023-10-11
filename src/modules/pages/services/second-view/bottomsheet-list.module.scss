@@ -1,0 +1,22 @@
+@import 'global.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.item {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  padding-left: $corner-radius-small;
+}
+
+.active {
+  background: #e8edff;
+  border-left: 2px solid $color-primary-500;
+}

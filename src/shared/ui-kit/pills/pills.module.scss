@@ -1,0 +1,30 @@
+@import 'global.scss';
+
+.root {
+  padding: 0;
+  background: transparent;
+  gap: 8px;
+}
+
+.control {
+  padding: 0;
+  border: none !important;
+  outline: none !important;
+}
+
+.label {
+  padding: 10px $corner-radius-small;
+  color: $color-black;
+  @include label-l4;
+
+  &[data-active] {
+    color: $color-base-0 !important;
+  }
+}
+
+.indicator {
+  top: 4px;
+  left: 4px;
+  background-color: $color-primary-500;
+  border-radius: 8px;
+}

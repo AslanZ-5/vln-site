@@ -2,18 +2,18 @@ import { useRouter } from 'next/router';
 import { useMobile } from '@/shared/lib/use-mobile';
 import { Select } from '@/shared/ui-kit/select/select';
 import { useEffect, useState } from 'react';
-import { PILLS, SERVICES_CONSTANTS } from '@/modules/pages/services/constants';
+import { PILLS, SERVICES_CONSTANTS } from '@/modules/services/constants';
 import { Tabs } from '@mantine/core';
 import { Breadcrumbs, Pills } from '@/shared/ui-kit';
 import { List } from '.';
 import { Path, PathLabels } from '@/shared/constants/links';
-import styles from '@/modules/pages/services/styles/slug-page.module.scss';
+import styles from '@/modules/services/styles/slug-page.module.scss';
 import { mockData, servicesCardsMock } from '@/shared/constants/mock';
-import { Card } from '@/modules/pages/services/second-view/card';
+import { Card } from '@/modules/services/second-view/card';
 import { SearchInput } from '@/shared/ui-kit';
 import { FilterIcon } from '@/shared/assets/svg';
 import { BottomSheet } from 'react-spring-bottom-sheet';
-import { BottomSheetList } from '@/modules/pages/services/second-view/bottomsheet-list';
+import { BottomSheetList } from '@/modules/services/second-view/bottomsheet-list';
 
 function Services() {
   const [activeTab, setActiveTab] = useState<string | undefined>();

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Select } from '@/shared/ui-kit/select/select';
-import { SERVICES_CONSTANTS } from '@/modules/pages/services/constants';
+import { SERVICES_CONSTANTS } from '@/modules/services/constants';
 import { ServiceInfoModal } from '@/widgets/service-info-modal/service-info-modal';
 import { BalanceCheck } from '@/widgets/balance-check/balance-check';
 

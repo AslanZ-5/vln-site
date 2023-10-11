@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '@/modules/pages/services/styles/services-page.module.scss';
+import styles from '@/modules/services/styles/services-page.module.scss';
 import { Breadcrumbs } from '@/shared/ui-kit';
-import { ServicesCards } from '@/modules/pages/services/first-view/cards';
+import { ServicesCards } from '@/modules/services/first-view/cards';
 import { Path, PathLabels } from '@/shared/constants/links';
 
 export const List = [

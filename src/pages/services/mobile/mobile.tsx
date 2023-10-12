@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Select } from '@/shared/ui-kit/select/select';
 import { SERVICES_CONSTANTS } from '@/modules/services/constants';
-import { ServiceInfoModal } from '@/widgets/service-info-modal/service-info-modal';
-import { BalanceCheck } from '@/widgets/balance-check/balance-check';
+import { ServiceInfoModal } from '@/modules/services/service-info-modal/service-info-modal';
+import { BalanceCheck } from '@/modules/services/balance-check/balance-check';
 
 const Mobile = () => {
   const [showBalanceCheckModal, setShowBalanceCheckModal] = useState(false);

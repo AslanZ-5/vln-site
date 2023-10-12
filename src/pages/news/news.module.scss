@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsText {
+  max-width: 850px;
+  width: 100%;
+
+  p {
+    margin-bottom: 20px;
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}

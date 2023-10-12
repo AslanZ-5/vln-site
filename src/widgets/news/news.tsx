@@ -1,10 +1,10 @@
-import { NewsCard } from "./news-card/news-card";
-import styles from "./news.module.scss";
-import { NewsHeader } from "./news-header/news-header";
-import { Carousel as MantineCarousel } from "@mantine/carousel";
-import { useMobile } from "@/shared/lib/use-mobile";
-import { imgCards } from "./news-card/img-cards";
-import { ChevronRight } from "@/shared/assets/svg";
+import { NewsCard } from './news-card/news-card';
+import styles from './news.module.scss';
+import { NewsHeader } from './news-header/news-header';
+import { Carousel as MantineCarousel } from '@mantine/carousel';
+import { useMobile } from '@/shared/lib/use-mobile';
+import { imgCards } from './news-card/img-cards';
+import { ChevronRight } from '@/shared/assets/svg';
 
 export function News() {
   const { isMobile, isTablet } = useMobile();
@@ -13,15 +13,15 @@ export function News() {
 
   const prop = [
     {
-      size: "75%",
+      size: '75%',
       scroll: 1,
     },
     {
-      size: "35%",
+      size: '35%',
       scroll: 2,
     },
     {
-      size: "25%",
+      size: '25%',
       scroll: 4,
     },
   ];
@@ -31,23 +31,23 @@ export function News() {
       {!isMobile && <NewsHeader />}
       <MantineCarousel
         withIndicators
-        align="start"
+        align='start'
         slideSize={prop[deviceType].size}
         slidesToScroll={prop[deviceType].scroll}
-        slideGap={"20px"}
+        slideGap={'20px'}
         classNames={{ control: styles.carouselControl }}
         withControls={!isMobile}
-        w={"100%"}
+        w={'100%'}
         styles={{
           indicator: {
-            width: "12px",
-            height: "4px",
-            backgroundColor: "#184BFF",
-            marginTop: "12px",
-            transition: "width 250ms ease",
-            "&[data-active]": {
-              width: "40px",
-              height: "4px",
+            width: '12px',
+            height: '4px',
+            backgroundColor: '#184BFF',
+            marginTop: '12px',
+            transition: 'width 250ms ease',
+            '&[data-active]': {
+              width: '40px',
+              height: '4px',
             },
           },
         }}
@@ -55,13 +55,7 @@ export function News() {
         {imgCards.map((item) => {
           return (
             <MantineCarousel.Slide className={styles.img} key={item.id}>
-              <NewsCard
-                src={item.src}
-                title={item.title}
-                date={item.date}
-                id={0}
-                category={item.category}
-              />
+              <NewsCard src={item.src} title={item.title} date={item.date} id={0} category={item.category} />
             </MantineCarousel.Slide>
           );
         })}

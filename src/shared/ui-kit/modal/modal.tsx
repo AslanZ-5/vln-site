@@ -42,10 +42,10 @@ export const Modal: React.FC<ModalProps> = ({
 
         <div className={cn(styles.modalContent, classNames?.content)}>{children}</div>
         {!disableBackgoundGradient && (
-          <>
+          <div className={styles.ellipsisOverlay}>
             <EllipsisPink className={styles.ellipsisTop} />
             <EllipsisPurple className={styles.ellipsisBottom} />
-          </>
+          </div>
         )}
       </div>
     </div>

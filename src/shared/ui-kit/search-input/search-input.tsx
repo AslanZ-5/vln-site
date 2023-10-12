@@ -27,17 +27,29 @@ export const SearchInput: FC<SearchInputProps<string>> = ({
   onInput,
 }) => {
   const [value_, setValue] = useState<string | undefined>(value || '');
+  const [showCloseButton, setShowCloseButton] = useState<boolean>(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const handleChange = (value: string) => {
     setValue(value);
     onChange?.(value);
+    value !== '' ? setShowCloseButton(true) : setShowCloseButton(false);
   };
 
   const handleInput: React.FormEventHandler<HTMLInputElement> = (event) => {
     const eTarget = event.target as HTMLInputElement;
     setValue(eTarget.value);
     onInput?.(eTarget.value);
+  };
+
+  const handleMouseEnter = () => {
+    if (value_) {
+      setShowCloseButton(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setShowCloseButton(false);
   };
 
   const onClear = () => {
@@ -52,20 +64,29 @@ export const SearchInput: FC<SearchInputProps<string>> = ({
 
   useEffect(() => {
     if (value !== value_) {
-      setValue(value);
+      if (value !== '' && value_ === '') {
+        setValue('');
+        setShowCloseButton(false);
+      } else {
+        setValue(value);
+      }
     }
   }, [value, value_]);
 
   return (
-    <div ref={wrapperRef} className={className}>
+    <div ref={wrapperRef} className={className} 
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Autocomplete
         classNames={{
           root: styles.input__root,
           input: cn(styles.input__input),
           label: styles.input__label,
-          wrapper: styles.input__wrapper,
+          wrapper: styles.input__wrapper
         }}
         rightSection={
+          showCloseButton && 
           <CloseButton className={styles.closeIcon} onClick={onClear} />
         }
         icon={<SearchIcon />}

@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -9,8 +11,13 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 13.5px;
+  gap: 13px;
+  @include only-mobile {
+    overflow: hidden;
+    max-height: 28px;
+  }
 }
 
 .searchInputWrapper {

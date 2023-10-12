@@ -32,7 +32,7 @@ export const sidebarItems: SideBarOption[] = [
     Title: 'Услуги',
     children: null,
     id: 2,
-    src: Path.services,
+    src: Path.services.root,
   },
   {
     Icon: Dialpad,

@@ -1,0 +1,57 @@
+@import 'global.scss';
+
+.tabButton {
+  padding: 0.625rem 0.7rem;
+}
+
+.title {
+  color: #122b3d;
+  font-family: 'TT Norms Pro';
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.32px;
+}
+
+.tab1,
+.tab2,
+.tab3,
+.tab4,
+.tab5 {
+  color: $color-base-700;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+}
+
+.tabActive {
+  border-bottom: 3px solid #184bff;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+}
+
+.root {
+  width: 100%;
+  border-bottom: 0.1px solid $color-base-500;
+
+  :global(.mantine-Carousel-controls) {
+    left: -27px;
+    right: -27px;
+  }
+}
+
+.container {
+  padding: 0;
+
+  :global(.mantine-Carousel-slide) {
+    padding-right: 1.1rem;
+  }
+}

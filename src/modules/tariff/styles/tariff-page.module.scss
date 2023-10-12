@@ -1,0 +1,19 @@
+@import 'global.scss';
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 32px 0;
+
+  @include tablet {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+
+  @include desktop-max {
+    margin-bottom: 64px;
+  }
+}

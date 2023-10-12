@@ -62,15 +62,6 @@
   margin-bottom: 24px;
 }
 
-.foregroundGradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 295px;
-  height: 112px;
-  //background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.40) 25%, #000 50%, rgba(255, 255, 255, 0.40) 75%, rgba(0, 0, 0, 0.00) 50%);
-}
-
 .description {
   color: $color-base-0;
   font-family: Roboto;
@@ -94,6 +85,14 @@
   color: $color-base-0;
 }
 
+.phoneNumber {
+  span {
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+  }
+}
+
 .prefix {
   color: $color-base-0;
 }
@@ -103,11 +102,9 @@
   user-select: none;
   cursor: pointer;
   text-align: right;
-  //color: $color-base-0;
   text-shadow: 0px 4px 4px rgba(47, 14, 63, 0.25);
 
-  font-family: Courier;
-  //font-family: 'TT Norms Pro';
+  font-family: 'TT Norms Pro';
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -127,7 +124,7 @@
 .prefix {
   position: absolute;
   top: 45px;
-  left: 0;
+  left: 12px;
 }
 
 .button {
@@ -155,10 +152,6 @@
     &[data-disabled] {
       background-color: $color-base-200;
       color: $color-base-500;
-    }
-
-    @include tablet {
-      width: 233px;
     }
 
     @include desktop-max {

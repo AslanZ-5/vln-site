@@ -27,7 +27,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
           if (prev < 1) {
             return 9;
           }
-          
+
           return prev - 1;
         });
       }, 10);
@@ -48,6 +48,17 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
     };
   };
 
+  const getNumberContent = (num: string) => {
+    const result = [];
+    for (let i = 0; i < num.length; i++) {
+      result.push(
+        <span>{num[i]}</span>
+      );
+    }
+
+    return result;
+  };
+
   useEffect(() => {
     setRandomNumbers(getRandomNumbers());
   }, []);
@@ -55,24 +66,16 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
   return (
     <Card className={cn(styles.card, className && className)} padding={'24px 20px'} radius={24}>
       <Link href={LINKS.BEAUTIFUL_NUMBERS} className={styles.link}>
-        {/* нужно будет добавить ссылку на страницу домашнего интернета*/}
         <span className={styles.link__text}>Красивые номера</span>
         <ChevronRight className={styles.link__chevron} color={theme.other.colors.base[0]} />
       </Link>
       <div className={styles.content}>
-        <div className={styles.foregroundGradient} />
-        <div className={styles.description}>
-          Эксклюзивные престижные номера для личных и деловых целей
-        </div>
+        <div className={styles.description}>Эксклюзивные престижные номера для личных и деловых целей</div>
         <div className={styles.numbers}>
           {randomNumbers.map((n, i) => {
             return (
-              <div
-                key={i}
-                className={styles.phoneNumber}
-                style={getNumberStyle(i)}
-                onClick={handleClick}>
-                {n}
+              <div key={i} className={styles.phoneNumber} style={getNumberStyle(i)} onClick={handleClick}>
+                {getNumberContent(n)}
               </div>
             );
           })}
@@ -83,7 +86,8 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
         <Button
           classNames={{
             root: styles.button__root,
-          }}>
+          }}
+        >
           Купить от 500 руб.
         </Button>
       </Link>

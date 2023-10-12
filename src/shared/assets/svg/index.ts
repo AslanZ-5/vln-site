@@ -22,6 +22,8 @@ export { default as MenuIcon } from './menu.svg';
 export { default as VkIcon } from './vk.svg';
 export { default as TelegramIcon } from './telegram.svg';
 export { default as YouTubeIcon } from './youtube.svg';
+export { default as VkIconMini } from './vkIconMini.svg';
+export { default as YouTubeIconMini } from './youtubeIconMini.svg';
 export { default as DzenIcon } from './dzen.svg';
 export { default as QRCode } from './qrCode.svg';
 export { default as AppStore } from './appStore.svg';

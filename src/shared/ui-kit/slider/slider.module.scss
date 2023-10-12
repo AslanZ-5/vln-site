@@ -1,0 +1,77 @@
+@import 'global.scss';
+
+.container {
+  display: flex;
+  padding: 12px 16px;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: $corner-radius-small;
+  background: $color-base-100;
+}
+.labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+
+  &__left {
+    @include label-l4;
+    color: $color-base-700;
+  }
+
+  &__right {
+    @include label-l4-m;
+    color: $color-base-700;
+  }
+}
+
+.root {
+  height: 52px;
+}
+
+.track {
+  background-color: $color-base-300;
+  height: 4px;
+  margin: 0 14px;
+
+  &::before {
+    background-color: $color-base-300;
+    right: -14px;
+    left: -14px;
+  }
+  &__container {
+    height: 28px;
+  }
+}
+
+.bar {
+  background-color: $color-primary-500;
+  left: -14px;
+}
+
+.mark {
+  display: none;
+
+  &__label {
+    @include label-l5;
+    color: $color-base-900;
+  }
+  &__wrapper {
+    top: 36px;
+  }
+}
+
+.thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 8px 0px rgba(40, 45, 60, 0.2);
+  border: 3px solid $color-primary-500;
+  background-color: $color-base-0;
+}
+
+.label {
+  display: none;
+}

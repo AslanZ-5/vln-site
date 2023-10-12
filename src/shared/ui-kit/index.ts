@@ -7,3 +7,4 @@ export { Breadcrumbs } from './breadcrumbs/breadcrumbs';
 export { Link } from './link/link';
 export { Pills } from './pills/pills';
 export { Search } from './search/search';
+export { Slider } from './slider/slider';

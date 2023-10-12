@@ -1,0 +1,29 @@
+.newsBlock {
+  display: flex;
+  max-width: 418px;
+  width: 100%;
+  padding: var(--gaps-gap-mobile, 32px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 24px;
+  background: #f4f6fb;
+  margin-top: 75px;
+}
+
+.titleBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #515b73;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.listNews {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

@@ -18,8 +18,8 @@ const htmlText = `
   </p>
   <p>
     Прямую трансляцию денежного розыгрыша смотрите в официальном сообществе Волны во
-    <a href="#"> ВКонтакте</a> , а также на канале
-    <a href="#"> YouTube</a>.
+    <a href="https://vk.com/volnamobile"> ВКонтакте</a> , а также на канале
+    <a href="https://www.youtube.com/channel/UCBE0ytesPsF1BAbiRqMYTJw"> YouTube</a>.
   </p>
   <p>Следите за новостями!</p>
 `;

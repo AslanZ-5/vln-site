@@ -22,6 +22,8 @@
 .newsArticle {
   display: flex;
   flex-direction: column;
+  max-width: 858px;
+  width: 100%;
   margin-top: 32px;
   gap: 20px;
 }
@@ -50,12 +52,22 @@
   margin-bottom: 60px;
 }
 
+
+
 .article {
   color: #000;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+
+  a{
+      color:#184BFF;
+ font-family: 'Roboto';
+font-size: 14px;
+font-weight: 700;
+line-height: 20px;
+  }
 }
 
 .pillTag {
@@ -65,7 +77,6 @@
   gap: 10px;
   border-radius: 12px;
   background: #f4f6fb;
-
   color: #282d3c;
   text-align: center;
   font-family: 'Roboto';
@@ -73,3 +84,75 @@
   font-weight: 500;
   line-height: 12px;
 }
+
+.newsContent{
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+
+
+.points{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pointsHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+.pointsTitle{
+  color:#122B3D;
+font-family: 'TT Norms Pro';
+font-size: 32px;
+font-weight: 600;
+line-height: 36px; 
+letter-spacing: -0.32px;
+}
+
+.namePoints{
+  display: flex;
+  padding: var(--corner-radii-radius-small, 16px) var(--corner-radii-radius-small, 16px) var(--corner-radii-radius-large, 24px) var(--corner-radii-radius-small, 16px);
+  align-items: flex-start;
+  gap: 40px;
+  border-radius: 16px;
+  background:#FFF;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+.search{
+  margin-bottom: 32px;
+}
+
+.tab1,
+.tab2 {
+  color:black;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px; 
+  letter-spacing: -0.14px;
+}
+
+.tabActive {
+  padding: 10px 16px;
+  border-radius: 8px;
+background:#184BFF;
+  gap: 10px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+}
+

@@ -1,0 +1,33 @@
+.root{
+  display: flex;;
+  gap:20px;
+}
+
+.list{
+margin-top: -10px;
+}
+
+.title{
+  color:#282D3C;
+  font-family: 'TT Norms Pro';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+.listAdvertising{
+  margin-left: -10px;
+
+  li{
+    width: 300px;
+    color: #282D3C;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+ 
+}

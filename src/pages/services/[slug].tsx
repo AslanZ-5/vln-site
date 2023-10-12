@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useMobile } from '@/shared/lib/use-mobile';
 import { Select } from '@/shared/ui-kit/select/select';
 import { useEffect, useState } from 'react';
-import { PILLS, SERVICES_CONSTANTS } from '@/modules/services/constants';
+import { PILLS, SERVICES_CONSTANTS, SERVICES_NAME } from '@/modules/services/constants';
 import { Tabs } from '@mantine/core';
 import { Breadcrumbs, Pills } from '@/shared/ui-kit';
 import { List } from '.';
@@ -16,10 +16,11 @@ import { BottomSheet } from 'react-spring-bottom-sheet';
 import { BottomSheetList } from '@/modules/services/second-view/bottomsheet-list';
 
 function Services() {
-  const [activeTab, setActiveTab] = useState<string | undefined>();
   const [activeTariff, setActiveTariff] = useState<string>(mockData.tariffs[0]);
+  const [activeTab, setActiveTab] = useState<string>(SERVICES_NAME[0]);
+  const [activeFilter, setActiveFilter] = useState<string>(Object.values(PILLS)[0]);
   const [bottomSheetOpen, setBottomSheetOpen] = useState(false);
-  const { isMobile, isDesktop } = useMobile();
+  const { isMobile } = useMobile();
   const router = useRouter();
   const { slug } = router.query;
 
@@ -27,17 +28,16 @@ function Services() {
     if (Array.isArray(slug)) {
       setActiveTab(slug[0]);
     } else {
-      setActiveTab(slug);
+      slug && setActiveTab(slug);
     }
   }, [slug]);
 
-  const onSelect = (val?: string | null) => {
-    val && setActiveTab(val);
-    val &&
-      router.push({
-        pathname: '/services/[slug]',
-        query: { slug: val },
-      });
+  const onSelect = (val: string) => {
+    setActiveTab(val);
+    router.push({
+      pathname: '/services/[slug]',
+      query: { slug: val },
+    });
   };
 
   let tabs = (
@@ -109,13 +109,17 @@ function Services() {
           {tabs}
         </Tabs>
         <div className={styles.pills}>
-          <Pills data={Object.values(PILLS)} />
+          <Pills data={Object.values(PILLS)} value={activeFilter} onChange={(v) => setActiveFilter(v)} />
         </div>
         {isMobile && searchSection}
         <div className={styles.cards}>
-          {servicesCardsMock.map(({ price, title }, index) => (
-            <Card price={price} title={title} id={index} key={index} />
-          ))}
+          {servicesCardsMock
+            .filter((item) => (activeTariff === mockData.tariffs[0] ? true : item.tariff.includes(activeTariff)))
+            .filter((item) => item.tab.includes(activeTab))
+            .filter((item) => item.filter.includes(activeFilter))
+            .map(({ price, title, per }, index) => (
+              <Card price={price} title={title} id={index} key={index} per={per} />
+            ))}
         </div>
       </div>
     </div>

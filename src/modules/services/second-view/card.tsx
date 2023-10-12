@@ -36,7 +36,7 @@ export const Card: FC<CardProps> = ({ title, price, per, id, onClick }) => {
       <div className={styles.price} onClick={openBCModal}>
         <span className={styles.price__title}>Абонплата</span>
         <div className={styles.price__value}>
-          <span className={styles.price__number}>{price}</span>
+          <span className={styles.price__number}>{price + ' ₽'}</span>
           <span className={styles.price__term}>{per || '/мес.'}</span>
         </div>
       </div>

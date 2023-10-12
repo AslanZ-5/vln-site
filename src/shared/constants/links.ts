@@ -30,7 +30,7 @@ export const PathLabels = {
 export const Path = {
   main: '/',
   services: {
-    root: 'services',
+    root: '/services',
     popular: '/services/popular',
     mobile: '/services/mobile',
     internet: '/services/internet',

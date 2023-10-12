@@ -2,7 +2,7 @@ import { SegmentedControl, SegmentedControlProps } from '@mantine/core';
 import styles from './pills.module.scss';
 import { FC } from 'react';
 
-export const Pills: FC<SegmentedControlProps> = ({ data }) => {
+export const Pills: FC<SegmentedControlProps> = ({ data, ...props }) => {
   return (
     <SegmentedControl
       data={data}
@@ -12,6 +12,7 @@ export const Pills: FC<SegmentedControlProps> = ({ data }) => {
         control: styles.control,
         indicator: styles.indicator,
       }}
+      {...props}
     />
   );
 };

@@ -27,8 +27,7 @@ const SERVICES_LABELS = {
 const SERVICES_DESCRIPTION = {
   [SERVICES.POPULAR]: 'Выбирайте самые популярные услуги и экономьте по-максимуму!',
   [SERVICES.MOBILE]: 'Безлимитные звонки по Крыму и Краснодару, до 100 Гб трафика!',
-  [SERVICES.INTERNET]:
-    'Проверьте возможность подключения и наслаждайтесь скоростью и стабильностью!',
+  [SERVICES.INTERNET]: 'Проверьте возможность подключения и наслаждайтесь скоростью и стабильностью!',
   [SERVICES.FAST]: 'Используйте USSD запросы для активации наиболее популярных опций!',
   [SERVICES.SPECIAL]: 'Особые возможности для особенно дорогих людей!',
 } as const;
@@ -89,6 +88,15 @@ const PILLS = {
   TECHNICAL: 'Технические',
 };
 
+const TARIFFS = {
+  All: 'Все тарифы',
+  AFFORD: 'Могу себе позволить',
+  FLY: 'Летай',
+  START: 'Стартуй',
+  YOURSELF: 'Сделай сам!',
+  WIND: 'Ветер',
+};
+
 export {
   SERVICES,
   SERVICES_PATHNAME,
@@ -97,4 +105,5 @@ export {
   SERVICES_NAME,
   SERVICES_CONSTANTS,
   PILLS,
+  TARIFFS,
 };

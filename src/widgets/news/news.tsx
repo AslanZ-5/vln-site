@@ -5,9 +5,16 @@ import { Carousel as MantineCarousel } from '@mantine/carousel';
 import { useMobile } from '@/shared/lib/use-mobile';
 import { imgCards } from './news-card/img-cards';
 import { ChevronRight } from '@/shared/assets/svg';
+import { useRouter } from 'next/router';
 
 export function News() {
   const { isMobile, isTablet } = useMobile();
+  const router = useRouter();
+
+  const handleClick: React.MouseEventHandler = (e) => {
+    e.preventDefault();
+    router.push('/news');
+  };
 
   const deviceType = isMobile ? 0 : isTablet ? 1 : 2;
 
@@ -60,7 +67,7 @@ export function News() {
           );
         })}
 
-        <MantineCarousel.Slide className={styles.img}>
+        <MantineCarousel.Slide className={styles.img} onClick={handleClick}>
           <div className={styles.cardMoreNews}>
             <div className={styles.chevronRight}>
               <ChevronRight />

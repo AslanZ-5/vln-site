@@ -1,0 +1,29 @@
+@import 'global.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: end;
+  height: 36px;
+
+  &__title {
+    @include heading-h3;
+    color: $color-base-900;
+  }
+
+  @include tablet {
+    height: 72px;
+    &__title {
+      @include heading-h2;
+    }
+  }
+}
+
+.beautifulNumbers {
+  max-width: 100%;
+}

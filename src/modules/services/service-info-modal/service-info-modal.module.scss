@@ -14,17 +14,6 @@
     }
   }
 
-  &__content {
-    max-height: 420px;
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    @include tablet {
-      max-height: 500px;
-      height: 90%;
-    }
-  }
-
   &__title {
     font-size: 32px;
     line-height: 36px;

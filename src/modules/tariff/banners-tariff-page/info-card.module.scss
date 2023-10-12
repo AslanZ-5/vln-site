@@ -1,0 +1,158 @@
+@import 'global.scss';
+
+.container {
+  padding: $corner-radius-large;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: $corner-radius-large;
+  border: 1px solid rgba(0, 0, 182, 0.00);
+  background: rgba(255, 255, 255, 0.80);
+  box-shadow: 0px 20px 35px 0px rgba(52, 86, 251, 0.12);
+  backdrop-filter: blur(25px);
+  pointer-events: none;
+
+  @include tablet {
+    width: 352px;
+  }
+
+  @include desktop-max {
+    width: 420px;
+  }
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+
+  &__title {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      @include heading-h3;
+      color: $color-base-900;
+    }
+  }
+
+  &__desc {
+    @include paragraph-p4;
+    color: $color-base-900;
+  }
+
+  @include tablet {
+
+    &__title {
+      @include heading-h2;
+    }
+  }
+}
+
+.params {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 4px
+  }
+
+  &__value {
+    @include label-l1;
+  }
+
+  &__desc {
+    @include label-l5
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.price {
+  &__row {
+    width: 153px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__value {
+    color: $color-black;
+    font-family: Manrope;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  &__month {
+    @include label-l5;
+  }
+
+}
+
+.button {
+  &__root {
+    margin-top: auto;
+    height: 48px;
+    width: 154px;
+    border-radius: 12px;
+    background-color: #EF2389;
+    color: $color-base-0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    outline: none;
+
+    &:hover {
+      background-color: $color-primary-400;
+    }
+
+    &:active {
+      background-color: #EF2389;
+    }
+
+    &[data-disabled] {
+      background-color: $color-primary-200;
+      color: $color-base-500;
+    }
+
+    @include desktop-max {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}

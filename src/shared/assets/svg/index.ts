@@ -65,3 +65,8 @@ export { default as GisColor } from './2-gis-color.svg';
 export { default as WAColor } from './whatsapp-color.svg';
 export { default as TelegramColor } from './telegram-color.svg';
 export { default as FilterIcon } from './filter-icon.svg';
+export { default as MessangerIcon } from './messanger.svg';
+export { default as GlobeColorIcon } from './globe-color.svg';
+export { default as PhoneColorIcon } from './phone-color.svg';
+export { default as VectorBanner } from './vector-banner.svg';
+export { default as VectorBanner2 } from './vector-banner2.svg';

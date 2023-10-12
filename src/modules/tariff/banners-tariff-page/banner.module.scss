@@ -1,0 +1,39 @@
+@import 'global.scss';
+
+.container {
+  margin-bottom: $gap-mobile;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  gap: $gap-mobile;
+
+  @include tablet {
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+}
+
+.banner {
+  position: relative;
+
+  @include tablet {
+    position: absolute;
+  }
+
+  @include desktop-max {
+    &__vector1 {
+      top: 121px;
+      right: 315px;
+      position: relative;
+    }
+
+    &__vector2 {
+      top: 84px;
+      right: -176px;
+      position: relative;
+    }
+  }
+}

@@ -1,13 +1,21 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import styles from './news-block.module.scss';
 
 import { ArrowRightGray } from '@/shared/assets/svg/index';
 import { NewsBlockItems } from '../news-block-items/news-block-items';
 
 export const NewsBlock = () => {
+  const router = useRouter();
+
+  const handleClick: React.MouseEventHandler = (e) => {
+    e.preventDefault();
+    router.push('/news');
+  };
+
   return (
     <div className={styles.newsBlock}>
-      <span className={styles.titleBlock}>
+      <span className={styles.titleBlock} onClick={handleClick}>
         Новости <ArrowRightGray />
       </span>
       <div className={styles.listNews}>

@@ -20,6 +20,10 @@
   :global(.mantine-Carousel-controls) {
     z-index: $z-index-slider-controls;
 
+    &:hover {
+      z-index: $z-index-sidebar-controls-hover;
+    }
+
     @include desktop-max {
       left: -30px;
       right: -30px;

@@ -48,11 +48,11 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
     };
   };
 
-  const getNumberContent = (num: string) => {
+  const getNumberContent = (num: string, index: number) => {
     const result = [];
     for (let i = 0; i < num.length; i++) {
       result.push(
-        <span>{num[i]}</span>
+        <span key={`${index}-${i}`}>{num[i]}</span>
       );
     }
 
@@ -75,7 +75,7 @@ function BeautifulNumbers({ className }: BeautifulNumbersProps) {
           {randomNumbers.map((n, i) => {
             return (
               <div key={i} className={styles.phoneNumber} style={getNumberStyle(i)} onClick={handleClick}>
-                {getNumberContent(n)}
+                {getNumberContent(n, i)}
               </div>
             );
           })}

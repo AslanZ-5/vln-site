@@ -3,17 +3,16 @@ import { ServiceInfoModal } from '@/modules/services/service-info-modal/service-
 import { BalanceCheck } from '@/modules/services/balance-check/balance-check';
 import styles from './card.module.scss';
 import cn from 'classnames';
+import { ServicesCardsMockItem } from '@/shared/constants/mock';
 
-interface CardProps {
-  title: string;
-  price: string;
-  per?: string;
+interface CardProps extends Partial<ServicesCardsMockItem> {
   id: number;
   onClick?: (id: number) => void;
+  shortGradient?: boolean;
 }
 
-export const Card: FC<CardProps> = ({ title, price, per, id, onClick }) => {
-  const idx = 'card__' + String(id % 6);
+export const Card: FC<CardProps> = ({ title, price, period, priceTitle, id, onClick, shortGradient }) => {
+  const idx = 'card__' + String(id % (shortGradient ? 4 : 6));
   const [showBalanceCheckModal, setShowBalanceCheckModal] = useState(false);
   const [showServiceInfoModal, setShowServiceInfoModal] = useState(false);
 
@@ -31,13 +30,15 @@ export const Card: FC<CardProps> = ({ title, price, per, id, onClick }) => {
   };
 
   return (
-    <div className={cn(styles.card, styles[idx])} onClick={() => onClick && onClick(id)}>
-      <div className={styles.title} onClick={openSIModal}>{title}</div>
+    <div className={cn(styles.card, styles[idx], shortGradient && styles.short)} onClick={() => onClick && onClick(id)}>
+      <div className={styles.title} onClick={openSIModal}>
+        {title}
+      </div>
       <div className={styles.price} onClick={openBCModal}>
-        <span className={styles.price__title}>Абонплата</span>
+        <span className={styles.price__title}>{priceTitle}</span>
         <div className={styles.price__value}>
           <span className={styles.price__number}>{price + ' ₽'}</span>
-          <span className={styles.price__term}>{per || '/мес.'}</span>
+          {period && <span className={styles.price__term}>{period}</span>}
         </div>
       </div>
       <ServiceInfoModal opened={showServiceInfoModal} onClose={handleCloseServiceInfoModal} />

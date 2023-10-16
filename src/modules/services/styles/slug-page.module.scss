@@ -54,20 +54,17 @@
 .cards {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(11, 152px);
   gap: $gap-horizontal;
   margin-bottom: $gap-mobile;
 
   @include tablet {
     margin-bottom: $gap-tablet;
     grid-template-columns: repeat(3, minmax(230px, auto));
-    grid-template-rows: repeat(4, 152px);
   }
 
   @include desktop-max {
     margin-bottom: $gap-desktop;
     grid-template-columns: repeat(6, minmax(200px, auto));
-    grid-template-rows: repeat(2, 152px);
   }
 }
 

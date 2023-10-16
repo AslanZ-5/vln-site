@@ -10,10 +10,16 @@ export const mockData = {
   tariffs: Object.values(TARIFFS),
 };
 
-interface ServicesCardsMockItem {
+enum PRICE_TITLE {
+  SUBSCRIPTION = 'Абонплата',
+  CONNECTION = 'Стоимость подключения',
+}
+
+export interface ServicesCardsMockItem {
   title: string;
   price: string;
-  per?: string;
+  period: string | undefined;
+  priceTitle: PRICE_TITLE;
   tariff: string[];
   tab: string[];
   filter: string[];
@@ -21,25 +27,28 @@ interface ServicesCardsMockItem {
 
 export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
-    title: 'Дополнительный пакет интернета 5 Гб',
+    title: 'Дополнительный пакет интернета 5\u00A0Гб',
     price: '55',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Дополнительный пакет интернета 15 Гб',
+    title: 'Дополнительный пакет интернета 15\u00A0Гб',
     price: '80',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Дополнительный пакет интернета 25 Гб',
+    title: 'Дополнительный пакет интернета 25\u00A0Гб',
     price: '125',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET],
@@ -47,6 +56,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Безлимитные мессенджеры в поездках по России',
     price: '250',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET, PILLS.UNLIMITED],
@@ -54,6 +65,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Безлимитный YouTube',
     price: '130',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START, TARIFFS.YOURSELF, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET, PILLS.UNLIMITED],
@@ -61,23 +74,26 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Безлимитный интернет на день с раздачей',
     price: '40',
-    per: '/сут.',
+    period: '/сут.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET, PILLS.UNLIMITED],
   },
   {
-    title: 'Пакет 200 мин. по Крыму и Краснодарскому краю',
+    title: 'Пакет 200\u00A0мин. по Крыму и Краснодарскому краю',
     price: '90',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.MINUTS],
   },
   {
-    title: 'Пакет 400 мин. по Крыму и Краснодарскому краю',
+    title: 'Пакет 400\u00A0мин. по Крыму и Краснодарскому краю',
     price: '130',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.MINUTS],
@@ -85,7 +101,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Безлимитные звонки по Крыму и Краснодарскому краю',
     price: '4',
-    per: '/сут.',
+    period: '/сут.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.MINUTS, PILLS.UNLIMITED],
@@ -93,6 +110,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Умная ТВ-приставка SberBox',
     price: '150',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.INTERNET]],
     filter: [PILLS.SERVICE],
@@ -100,6 +119,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Усилитель Wi-Fi сигнала',
     price: '150',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.INTERNET]],
     filter: [PILLS.SERVICE],
@@ -107,6 +128,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Статический IP',
     price: '150',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.INTERNET]],
     filter: [PILLS.SERVICE],
@@ -114,70 +137,80 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Viju',
     price: '180',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.AFFORD, TARIFFS.FLY, TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.INTERNET]],
     filter: [PILLS.SERVICE],
   },
   {
-    title: 'Пакет интернета 1 Гб',
+    title: 'Пакет интернета 1\u00A0Гб',
     price: '50',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Пакет интернета 2 Гб',
+    title: 'Пакет интернета 2\u00A0Гб',
     price: '100',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Пакет интернета 5 Гб',
+    title: 'Пакет интернета 5\u00A0Гб',
     price: '200',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Пакет интернета 10 Гб',
+    title: 'Пакет интернета 10\u00A0Гб',
     price: '300',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Автопродление пакета интернета 1 Гб',
+    title: 'Автопродление пакета интернета 1\u00A0Гб',
     price: '55',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Автопродление пакета интернета 2 Гб',
+    title: 'Автопродление пакета интернета 2\u00A0Гб',
     price: '100',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Автопродление пакета интернета 5 Гб',
+    title: 'Автопродление пакета интернета 5\u00A0Гб',
     price: '200',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET],
   },
   {
-    title: 'Автопродление пакета интернета 10 Гб',
+    title: 'Автопродление пакета интернета 10\u00A0Гб',
     price: '300',
-    per: ' ',
+    period: undefined,
+    priceTitle: PRICE_TITLE.CONNECTION,
     tariff: [TARIFFS.START, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET],
@@ -185,6 +218,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: '3 в 1',
     price: '75',
+    period: '/мес.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.START],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
     filter: [PILLS.INTERNET, PILLS.UNLIMITED],
@@ -192,7 +227,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
   {
     title: 'Безлимитный интернет на день',
     price: '30',
-    per: '/сут.',
+    period: '/сут.',
+    priceTitle: PRICE_TITLE.SUBSCRIPTION,
     tariff: [TARIFFS.START, TARIFFS.YOURSELF, TARIFFS.WIND],
     tab: [SERVICES_NAME[SERVICES.MOBILE], SERVICES_NAME[SERVICES.POPULAR]],
     filter: [PILLS.INTERNET, PILLS.UNLIMITED],

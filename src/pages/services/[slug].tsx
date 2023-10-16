@@ -117,8 +117,8 @@ function Services() {
             .filter((item) => (activeTariff === mockData.tariffs[0] ? true : item.tariff.includes(activeTariff)))
             .filter((item) => item.tab.includes(activeTab))
             .filter((item) => item.filter.includes(activeFilter))
-            .map(({ price, title, per }, index) => (
-              <Card price={price} title={title} id={index} key={index} per={per} />
+            .map(({ price, title, period, priceTitle }, index) => (
+              <Card price={price} title={title} id={index} key={index} period={period} priceTitle={priceTitle} />
             ))}
         </div>
       </div>

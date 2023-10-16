@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.scss";
-import { Sidebar } from "@/widgets/sidebar/sidebar";
 import { NAVIGATION_MENU_LIST } from "./constans";
 import { LogoIcon, SearchIcon, PackIcon, UserIcon } from "@/shared/assets/svg";
 import { LINKS } from "@/shared/constants/links";
@@ -10,7 +9,7 @@ import { useMobile } from "@/shared/lib/use-mobile";
 import cn from "classnames";
 import { mockData } from "@/shared/constants/mock";
 
-export function Header() {
+export function Header({children}: {children: ReactNode }) {
   const [openInput, setOpenInput] = useState(false);
 
   const onSearchInputFocus = () => {
@@ -26,7 +25,7 @@ export function Header() {
 
   return (
     <div className={styles.wrapper}>
-      <Sidebar />
+      {children}
       <div className={styles.logo}>
         <Link href={'/'}>
           <LogoIcon />

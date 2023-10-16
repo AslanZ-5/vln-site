@@ -1,13 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { SideBarOption, sidebarItems } from "./constants";
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { SideBarOption, sidebarItems } from './constants';
 
 interface PrevOptions {
   name: string;
   options: SideBarOption[];
 }
 
-export const useSidebar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+interface UseSidebarProps {
+  isOpen: boolean;
+  onClose(): void;
+  onOpen(): void;
+}
+
+export const useSidebar = ({ isOpen, onOpen, onClose }: UseSidebarProps) => {
   const [activeCategory, setActiveCategory] = useState(0);
 
   const [sidebarOptions, setSidebarOptions] = useState(sidebarItems);
@@ -18,23 +23,29 @@ export const useSidebar = () => {
     (ind: number) => () => {
       setActiveCategory(ind);
     },
-    []
+    [],
   );
 
-  const handleToggleSidebar = useCallback(() => {
-    setSidebarOpen((val) => !val);
-  }, []);
+  const handleOpenSideBar = useCallback(() => {
+    onOpen();
+  }, [isOpen]);
 
-  const handleCloseSideBar = useCallback((e?: React.SyntheticEvent) => {
-    e?.stopPropagation();
-    setSidebarOpen(false);
-  }, []);
+  const handleCloseSideBar = useCallback(
+    (e?: React.SyntheticEvent) => {
+      e?.stopPropagation();
+      onClose();
+    },
+    [isOpen],
+  );
 
-  const handleCloseByKeyboard = useCallback((e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      setSidebarOpen(false);
-    }
-  }, []);
+  const handleCloseByKeyboard = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    },
+    [isOpen],
+  );
 
   const handleGoInto = useCallback(
     (name: string, children: SideBarOption[] | null, id: number) => () => {
@@ -44,7 +55,7 @@ export const useSidebar = () => {
       }
       setActibeItem(id);
     },
-    [prevSidebarState.current, sidebarOptions]
+    [prevSidebarState.current, sidebarOptions],
   );
 
   const handleBackPrevState = useCallback(() => {
@@ -55,29 +66,28 @@ export const useSidebar = () => {
   }, [prevSidebarState.current]);
 
   useEffect(() => {
-    window.addEventListener("keydown", handleCloseByKeyboard);
+    window.addEventListener('keydown', handleCloseByKeyboard);
 
     return () => {
-      window.removeEventListener("keydown", handleCloseByKeyboard);
+      window.removeEventListener('keydown', handleCloseByKeyboard);
     };
   }, []);
 
   useEffect(() => {
-    if (!sidebarOpen && prevSidebarState.current) {
+    if (!isOpen && prevSidebarState.current) {
       setSidebarOptions(sidebarItems);
       prevSidebarState.current = [];
     }
-  }, [sidebarOpen, prevSidebarState.current]);
+  }, [isOpen, prevSidebarState.current]);
 
   return {
-    sidebarOpen,
     activeItem,
     activeCategory,
     prevSidebarState,
     sidebarOptions,
-    isFullSidebar: sidebarOpen && !prevSidebarState.current.length,
+    isFullSidebar: isOpen && !prevSidebarState.current.length,
     handleCloseSideBar,
-    handleToggleSidebar,
+    handleOpenSideBar,
     handleChangeCategory,
     handleBackPrevState,
     handleGoInto,

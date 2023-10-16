@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 99999999;
+  z-index: 3;
 }
 
 .logoIcon {
@@ -24,16 +24,10 @@
   box-shadow: 25px 25px 40px 0px rgba(26, 2, 186, 0.15);
 }
 
-.closed {
-  //padding-top: 13px;
-}
-
 .openBackground {
   top: 0;
-  left: 0;
   bottom: 0;
-  right: 0;
-  z-index: 3;
+  z-index: 200;
   position: absolute;
 }
 

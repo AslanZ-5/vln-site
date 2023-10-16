@@ -1,0 +1,48 @@
+stages:
+  - image-build
+  - image-push
+  - dev-k8s-deploy
+  - stage-notification
+
+1.image-build:
+  stage: image-build
+  tags:
+    - docer-helm-10.78.115.50
+  script:
+    - make hostname
+    - make docker-build
+  only:
+    - dev
+  except:
+    changes:
+      - .gitlab-ci.yml
+      - makefile
+
+2.image-push:
+  stage: image-push
+  tags:
+    - docer-helm-10.78.115.50
+  script:
+    - make hostname
+    - make docker-push
+  only:
+    - dev
+  when: on_success
+  except:
+    changes:
+      - .gitlab-ci.yml
+      - makefile
+
+3.dev-k8s-deploy:
+  stage: dev-k8s-deploy
+  tags:
+    - docer-helm-10.78.115.50
+  script:
+      - make pod-deploy
+  only:
+    - dev
+  when: on_success
+  except:
+    changes:
+      - .gitlab-ci.yml
+      - makefile

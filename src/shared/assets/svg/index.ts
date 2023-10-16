@@ -73,3 +73,4 @@ export { default as GlobeColorIcon } from './globe-color.svg';
 export { default as PhoneColorIcon } from './phone-color.svg';
 export { default as VectorBanner } from './vector-banner.svg';
 export { default as VectorBanner2 } from './vector-banner2.svg';
+export { default as VectorBanner3 } from './vector-banner3.svg';

@@ -17,6 +17,7 @@
   pointer-events: none;
 
   @include tablet {
+    margin: -1px;
     width: 352px;
   }
 

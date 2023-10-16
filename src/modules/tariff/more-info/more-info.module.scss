@@ -12,7 +12,7 @@
   height: 36px;
 
   &__title {
-    @include heading-h3;
+    @include heading-h4;
     color: $color-base-900;
   }
 

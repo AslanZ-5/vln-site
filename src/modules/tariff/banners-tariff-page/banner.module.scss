@@ -18,22 +18,30 @@
 
 .banner {
   position: relative;
+  border-radius: 24px;
 
   @include tablet {
     position: absolute;
+    width: inherit;
   }
 
   @include desktop-max {
     &__vector1 {
-      top: 121px;
-      right: 315px;
-      position: relative;
+      top: 264px;
+      left: 0px;
+      position: absolute;
     }
 
     &__vector2 {
-      top: 84px;
-      right: -176px;
-      position: relative;
+      top: 188px;
+      right: 298px;
+      position: absolute;
+    }
+
+    &__vector3 {
+      top: 22px;
+      right: 0;
+      position: absolute;
     }
   }
 }

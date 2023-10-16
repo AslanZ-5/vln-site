@@ -3,6 +3,7 @@
 .modal {
   &__root {
     margin-top: -20px;
+    overflow: hidden;
 
     @include tablet {
       margin-top: 50px;

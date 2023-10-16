@@ -11,6 +11,7 @@ import { StartTariffBanner } from '@/modules/tariff/banners-tariff-page/banner';
 import { MoreInfo } from '@/modules/tariff/more-info/more-info';
 import { AddToTariff } from '@/modules/tariff/add-to-tariff/add-to-tariff';
 import { Services } from '@/modules/tariff/services/services';
+import { ArchiveList } from '@/modules/tariff/archive/archive-list';
 import styles from '@/modules/tariff/styles/slug-page.module.scss';
 
 function Tariff() {
@@ -112,6 +113,10 @@ function Tariff() {
         </div>
       </>
       }
+
+      {activeTab === 'archive' && <>
+        <ArchiveList />
+      </>}
     </div>
   );
 }

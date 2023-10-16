@@ -2,7 +2,7 @@
 
 .card {
   position: relative;
-  width: 100%;
+  height: 162px;
   display: flex;
   padding: $corner-radius-small 20px;
   flex-direction: column;
@@ -27,15 +27,27 @@
 
   &__0 {
     background: linear-gradient(90deg, #1a02ba 0%, #b90e9e 333.42%, #1a02ba 646.62%);
+    &.short {
+      background: linear-gradient(90deg, #1a02ba 0%, #b90e9e 222.23%, #1a02ba 431%);
+    }
   }
   &__1 {
     background: linear-gradient(90deg, #1a02ba -108.09%, #b90e9e 224.34%, #1a02ba 536.62%);
+    &.short {
+      background: linear-gradient(90deg, #1a02ba -103%, #b90e9e 121.63%, #1a02ba 332.65%);
+    }
   }
   &__2 {
     background: linear-gradient(90deg, #1a02ba -215.84%, #b90e9e 116.01%, #1a02ba 427.75%);
+    &.short {
+      background: linear-gradient(90deg, #1a02ba -217%, #b90e9e 1.62%, #1a02ba 207%);
+    }
   }
   &__3 {
     background: linear-gradient(90deg, #1a02ba -324.72%, #b90e9e 5.39%, #1a02ba 315.5%);
+    &.short {
+      background: linear-gradient(90deg, #1a02ba -327%, #b90e9e -106.83%, #1a02ba 100%);
+    }
   }
   &__4 {
     background: linear-gradient(90deg, #1a02ba -435.84%, #b90e9e -105.15%, #1a02ba 205.5%);
@@ -48,10 +60,10 @@
 .title {
   color: $color-base-0;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: -0.2px;
 }
 

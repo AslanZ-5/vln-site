@@ -3,15 +3,14 @@ import { useMobile } from '@/shared/lib/use-mobile';
 import { Select } from '@/shared/ui-kit/select/select';
 import { useEffect, useState } from 'react';
 import { PILLS, SERVICES_CONSTANTS, SERVICES_NAME } from '@/modules/services/constants';
-import { Tabs } from '@mantine/core';
+import { Tabs, Input } from '@mantine/core';
 import { Breadcrumbs, Pills } from '@/shared/ui-kit';
 import { List } from '.';
 import { Path, PathLabels } from '@/shared/constants/links';
 import styles from '@/modules/services/styles/slug-page.module.scss';
 import { mockData, servicesCardsMock } from '@/shared/constants/mock';
 import { Card } from '@/modules/services/second-view/card';
-import { SearchInput } from '@/shared/ui-kit';
-import { FilterIcon } from '@/shared/assets/svg';
+import { FilterIcon, SearchIcon } from '@/shared/assets/svg';
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import { BottomSheetList } from '@/modules/services/second-view/bottomsheet-list';
 
@@ -19,6 +18,7 @@ function Services() {
   const [activeTariff, setActiveTariff] = useState<string>(mockData.tariffs[0]);
   const [activeTab, setActiveTab] = useState<string>(SERVICES_NAME[0]);
   const [activeFilter, setActiveFilter] = useState<string>(Object.values(PILLS)[0]);
+  const [searchValue, setSearchValue] = useState<string>('');
   const [bottomSheetOpen, setBottomSheetOpen] = useState(false);
   const { isMobile } = useMobile();
   const router = useRouter();
@@ -65,7 +65,14 @@ function Services() {
 
   const searchSection = (
     <div className={styles.search}>
-      <SearchInput data={['']} className={styles.search__input} placeholder='Поиск услуги' />
+      <Input
+        classNames={{ input: styles.search__input }}
+        placeholder='Поиск услуги'
+        icon={<SearchIcon />}
+        iconWidth={60}
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.target.value)}
+      />
       {isMobile && (
         <button type='button' className={styles.button} onClick={() => setBottomSheetOpen(true)}>
           <FilterIcon />
@@ -117,6 +124,7 @@ function Services() {
             .filter((item) => (activeTariff === mockData.tariffs[0] ? true : item.tariff.includes(activeTariff)))
             .filter((item) => item.tab.includes(activeTab))
             .filter((item) => item.filter.includes(activeFilter))
+            .filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
             .map(({ price, title, period, priceTitle }, index) => (
               <Card price={price} title={title} id={index} key={index} period={period} priceTitle={priceTitle} />
             ))}

@@ -111,14 +111,35 @@
 }
 
 .search {
-  display: flex;
-  gap: 10px;
   width: 100%;
+  display: grid;
+  grid-template-columns: auto 24px;
+  gap: 10px;
   align-items: center;
-  align-self: stretch;
+
+  @include tablet {
+    display: block;
+  }
 
   &__input {
     width: 100%;
+    height: 48px;
+    border-radius: $other-input;
+    border: 1px solid $color-base-200;
+    color: $color-base-900;
+    @include label-l4-m;
+    background-color: $color-base-100;
+
+    &::placeholder {
+      color: $color-base-700;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid $color-base-300;
+    }
   }
 }
 .button {

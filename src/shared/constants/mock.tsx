@@ -1189,6 +1189,11 @@ export const tariffCardsMock = {
       backgroundImage: '/assets/img/tariff-banners/banner-5.png',
       title: 'Сделай сам',
       newPrice: 'от 400',
+      additionalInfo: {
+        title: 'Домашний интернет',
+        subtitle: 'До 1 Гбит/с',
+        discount: 30
+      },  
       options: [
         {
           icon: <PhoneMiniIcon
@@ -1220,6 +1225,11 @@ export const tariffCardsMock = {
       backgroundImage: '/assets/img/tariff-banners/banner-2.png',
       title: 'Загорай',
       newPrice: 650,
+      additionalInfo: {
+        title: 'Домашний интернет',
+        subtitle: 'До 1 Гбит/с',
+        discount: 30
+      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1243,6 +1253,11 @@ export const tariffCardsMock = {
       backgroundImage: '/assets/img/tariff-banners/banner-3.png',
       title: 'Стартуй',
       newPrice: 300,
+      additionalInfo: {
+        title: 'Домашний интернет',
+        subtitle: 'До 1 Гбит/с',
+        discount: 30
+      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1281,6 +1296,11 @@ export const tariffCardsMock = {
       backgroundImage: '/assets/img/tariff-banners/banner-4.png',
       title: 'Могу себе позволить',
       newPrice: 1000,
+      additionalInfo: {
+        title: 'Домашний интернет',
+        subtitle: 'До 1 Гбит/с',
+        discount: 30
+      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1304,12 +1324,30 @@ export const tariffCardsMock = {
       backgroundImage: '/assets/img/tariff-banners/banner-3.png',
       title: 'Ветер',
       newPrice: 300,
+      additionalInfo: {
+        title: 'Домашний интернет',
+        subtitle: 'До 1 Гбит/с',
+        discount: 30
+      },  
       options: [
+        {
+          icon: <PhoneMiniIcon
+            className={tariffCarouselStyles.phoneIcon}
+            style={{ overflow: 'visible' }}
+          />,
+          value: <span style={{ whiteSpace: 'nowrap' }}>от 3 руб./мин.</span>,
+          text: 'по Крыму / России',
+        },
         {
           icon: <GlobeIcon />,
           value: '20 - ∞',
           text: 'Гб',
         },
+        {
+          icon: <EmailIcon />,
+          value: '3 руб./SMS',
+          text: 'по России',
+        }
       ],
     },
     {
@@ -1317,6 +1355,11 @@ export const tariffCardsMock = {
       backgroundImage: '/assets/img/tariff-banners/banner-3.png',
       title: 'Летай',
       newPrice: 500,
+      additionalInfo: {
+        title: 'Домашний интернет',
+        subtitle: 'До 1 Гбит/с',
+        discount: 30
+      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1353,11 +1396,6 @@ export const tariffCardsMock = {
       title: 'Лето',
       oldPrice: 650,
       newPrice: 150,
-      additionalInfo: {
-        title: 'Домашний интернет',
-        subtitle: '200 Мбит/с',
-        discount: 76
-      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1382,11 +1420,6 @@ export const tariffCardsMock = {
       title: 'Больше лета',
       oldPrice: 950,
       newPrice: 150,
-      additionalInfo: {
-        title: 'Домашний интернет',
-        subtitle: '500 Мбит/с',
-        discount: 84
-      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1411,11 +1444,6 @@ export const tariffCardsMock = {
       title: 'Лето круглый год',
       oldPrice: 1450,
       newPrice: 150,
-      additionalInfo: {
-        title: 'Домашний интернет',
-        subtitle: '1 Гбит/с',
-        discount: 90
-      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1440,11 +1468,6 @@ export const tariffCardsMock = {
       title: 'Лето',
       oldPrice: 650,
       newPrice: 150,
-      additionalInfo: {
-        title: 'Домашний интернет',
-        subtitle: '200 Мбит/с',
-        discount: 76
-      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1469,11 +1492,6 @@ export const tariffCardsMock = {
       title: 'Больше лета',
       oldPrice: 950,
       newPrice: 150,
-      additionalInfo: {
-        title: 'Домашний интернет',
-        subtitle: '500 Мбит/с',
-        discount: 84
-      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1498,11 +1516,6 @@ export const tariffCardsMock = {
       title: 'Лето круглый год',
       oldPrice: 1450,
       newPrice: 150,
-      additionalInfo: {
-        title: 'Домашний интернет',
-        subtitle: '1 Гбит/с',
-        discount: 90
-      },  
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,

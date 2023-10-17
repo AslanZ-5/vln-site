@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, HTMLAttributes, useEffect, useState } from 'react';
+import { FC, HTMLAttributes, useEffect, useState } from 'react';
 import styles from './home-internet.module.scss';
 import cn from 'classnames';
 import { TextInput, useMantineTheme, Button } from '@mantine/core';

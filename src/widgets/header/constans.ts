@@ -9,18 +9,18 @@ enum NAVIGATION_MAIN {
 }
 
 const NAVIGATION_PATHNAME = {
-  [NAVIGATION_MAIN.MAIN]: "/",
-  [NAVIGATION_MAIN.MOBILE]: "/tariff/start",
-  [NAVIGATION_MAIN.HOME_INTERNET]: "/homeInternet",
+  [NAVIGATION_MAIN.MAIN]: '/',
+  [NAVIGATION_MAIN.MOBILE]: '/tariff/start',
+  [NAVIGATION_MAIN.HOME_INTERNET]: '/homeInternet',
   [NAVIGATION_MAIN.VOLNA_SALE]: LINKS.VOLNA_SALE,
   [NAVIGATION_MAIN.ESIM]: LINKS.ESIM,
 } as const;
 
 const NAVIGATION_LABELS = {
-  [NAVIGATION_MAIN.MOBILE]: "Мобильная связь",
-  [NAVIGATION_MAIN.HOME_INTERNET]: "Домашний интернет",
-  [NAVIGATION_MAIN.VOLNA_SALE]: "Волна Sale",
-  [NAVIGATION_MAIN.ESIM]: "eSim",
+  [NAVIGATION_MAIN.MOBILE]: 'Мобильная связь',
+  [NAVIGATION_MAIN.HOME_INTERNET]: 'Домашний интернет',
+  [NAVIGATION_MAIN.VOLNA_SALE]: 'Волна Sale',
+  [NAVIGATION_MAIN.ESIM]: 'eSim',
 } as const;
 
 const NAVIGATION_MENU_LIST = [

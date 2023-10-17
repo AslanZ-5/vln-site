@@ -1,19 +1,19 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 
 export const useLocation = () => {
-  const [ locationModalOpened, setLocationModalOpened ] = useState(false)
+  const [ locationModalOpened, setLocationModalOpened ] = useState(false);
   const [ location, setLocation ] = useState('Симферополь');
 
   const handleLocationModalOpen = useCallback(() => { 
-    setLocationModalOpened(true) 
+    setLocationModalOpened(true); 
   }, []);
 
   const handleLocationModalClose = useCallback(() => { 
-    setLocationModalOpened(false) 
+    setLocationModalOpened(false); 
   }, []);
   
   const handleSetLocation = useCallback((location: string) => {
-    setLocation(location)
+    setLocation(location);
   }, []);
 
   return {
@@ -22,5 +22,5 @@ export const useLocation = () => {
     handleLocationModalOpen,
     handleLocationModalClose,
     handleSetLocation
-  }
-}
+  };
+};

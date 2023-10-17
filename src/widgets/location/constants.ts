@@ -119,4 +119,4 @@ export const LOCATION_LIST = [
   'Советское',
   'Форос',
   'Ялта'
-]
+];

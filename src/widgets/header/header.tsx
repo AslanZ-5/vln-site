@@ -1,15 +1,15 @@
-import { ReactNode, useState } from "react";
-import Link from "next/link";
-import styles from "./header.module.scss";
-import { NAVIGATION_MENU_LIST } from "./constans";
-import { LogoIcon, SearchIcon, PackIcon, UserIcon } from "@/shared/assets/svg";
-import { LINKS } from "@/shared/constants/links";
-import { SearchInput } from "@/shared/ui-kit/search-input/search-input";
-import { useMobile } from "@/shared/lib/use-mobile";
-import cn from "classnames";
-import { mockData } from "@/shared/constants/mock";
+import { ReactNode, useState } from 'react';
+import Link from 'next/link';
+import styles from './header.module.scss';
+import { NAVIGATION_MENU_LIST } from './constans';
+import { LogoIcon, SearchIcon, PackIcon, UserIcon } from '@/shared/assets/svg';
+import { LINKS } from '@/shared/constants/links';
+import { SearchInput } from '@/shared/ui-kit/search-input/search-input';
+import { useMobile } from '@/shared/lib/use-mobile';
+import cn from 'classnames';
+import { mockData } from '@/shared/constants/mock';
 
-export function Header({children}: {children: ReactNode }) {
+export function Header({ children }: {children: ReactNode }) {
   const [openInput, setOpenInput] = useState(false);
 
   const onSearchInputFocus = () => {
@@ -20,8 +20,7 @@ export function Header({children}: {children: ReactNode }) {
     setOpenInput(false);
   };
 
-  const { isMobile, isTablet } = useMobile();
-  const inputSize = isMobile ? "S" : isTablet ? "M" : "XL";
+  const { isMobile } = useMobile();
 
   return (
     <div className={styles.wrapper}>

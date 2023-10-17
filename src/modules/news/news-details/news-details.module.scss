@@ -24,12 +24,6 @@
     line-height: 48px;
     letter-spacing: -0.4px;
   }
-
-  @include desktop {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.4px;
-  }
 }
 
 .headerNews {
@@ -95,10 +89,6 @@
   @include desktop-max {
     display: none;
   }
-
-  @include desktop {
-    display: none;
-  }
 }
 
 .icons {
@@ -156,11 +146,6 @@
     display: flex;
     flex-direction: unset;
   }
-
-  @include desktop {
-    display: flex;
-    flex-direction: unset;
-  }
 }
 
 .points {
@@ -202,10 +187,6 @@
   }
 
   @include desktop-max {
-    flex-wrap: nowrap;
-  }
-
-  @include desktop {
     flex-wrap: nowrap;
   }
 }

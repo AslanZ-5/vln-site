@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .root {
   .titleInfo {
     color: #122b3d;
@@ -6,7 +8,12 @@
     font-weight: 700;
     line-height: 36px;
     letter-spacing: -0.32px;
+
+    @include only-mobile {
+      font-size: 24px;
+    }
   }
+
   .info {
     margin-left: -20px;
     color: #000;
@@ -15,7 +22,20 @@
     font-weight: 400;
     line-height: 20px;
   }
+
   .infoText {
-    height: 15px;
+    @include only-mobile {
+      font-size: 24px;
+      height: 120px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+      height: 35px;
+    }
+
+    @include desktop-max {
+      height: 15px;
+    }
   }
 }

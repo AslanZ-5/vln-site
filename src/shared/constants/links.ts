@@ -14,16 +14,16 @@ export enum LINKS {
 
 export const PathLabels = {
   main: 'Главная',
-  services: { root: 'Услуги', all: 'Все услуги' },
-  tariff: { 
-    root: 'Мобильная связь', 
-    all: 'Все тарифы', 
-    doIt: 'Сделай сам',  
-    sunbathe: 'Загорай',  
-    start: 'Стартуй',  
-    fly: 'Летай',  
-    can: 'Могу себе позволить',  
-    archive: 'Архив', 
+  services: { root: 'Услуги', all: 'Все услуги', mobile: 'Мобильная связь' },
+  tariff: {
+    root: 'Мобильная связь',
+    all: 'Все тарифы',
+    doIt: 'Сделай сам',
+    sunbathe: 'Загорай',
+    start: 'Стартуй',
+    fly: 'Летай',
+    can: 'Могу себе позволить',
+    archive: 'Архив',
   },
 };
 
@@ -44,7 +44,7 @@ export const Path = {
     start: '/tariff/start',
     fly: '/tariff/fly',
     can: '/tariff/can',
-    archive: '/tariff/archive'
+    archive: '/tariff/archive',
   },
   search: 'search',
   news: 'news',

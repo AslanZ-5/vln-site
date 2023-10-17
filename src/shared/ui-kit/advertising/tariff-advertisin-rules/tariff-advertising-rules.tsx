@@ -2,13 +2,7 @@ import React from 'react';
 import { TariffAdvertisingRulesProps } from './tariff-advertising-rules.types';
 import styles from './tariff-advertising-rules.module.scss';
 
-function TariffAdvertisingRules({
-  title,
-  name,
-  rules,
-  icon,
-  children,
-}: TariffAdvertisingRulesProps) {
+function TariffAdvertisingRules({ title, name, rules, icon, children }: TariffAdvertisingRulesProps) {
   return (
     <div className={styles.root}>
       <ul className={styles.rules}>

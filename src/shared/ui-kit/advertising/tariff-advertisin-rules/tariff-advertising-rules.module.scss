@@ -1,15 +1,21 @@
+@import 'global.scss';
+
 .root {
   display: flex;
   margin-top: -30px;
-  .icon {
-    margin-left: -70px;
+
+  @include tablet-only {
+    margin-left: -180px;
+    margin-top: 0px;
   }
+
   .listRules {
     list-style-type: none;
     margin-bottom: -40px;
     max-width: 640px;
     width: 100%;
   }
+
   .rulesTitle {
     margin-bottom: 40px;
     color: #122b3d;
@@ -18,12 +24,18 @@
     font-weight: 800;
     line-height: 0px;
     letter-spacing: -0.32px;
+
+    @include only-mobile {
+      font-size: 24px;
+    }
   }
+
   .rulesNamesIcon {
     display: flex;
     align-items: center;
     gap: 12px;
   }
+
   .rulesIcon {
     display: flex;
     width: 32px;
@@ -31,10 +43,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     border-radius: 12px 12px 12px 0px;
     background: #d0dfff;
   }
+
   .rulesName {
     color: #000;
     font-family: 'TT Norms Pro';
@@ -42,7 +55,12 @@
     font-weight: 700;
     line-height: 0px;
     letter-spacing: -0.2px;
+
+    @include only-mobile {
+      font-size: 20px;
+    }
   }
+
   .rulesText {
     color: #414961;
     font-family: 'Roboto';

@@ -1,42 +1,44 @@
 @import 'global.scss';
 
-.advertisingHeader {
+.root {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 108px 0px 15px;
-  margin-bottom: 44px;
-  height: 356px;
-  width: 100%;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 32px;
+}
+
+.phoneText {
+  font-size: 14px;
+}
+
+.phoneFree {
+  font-size: 32px;
+  color: #000;
+  font-weight: 420;
+}
+
+.phoneAdversting {
+  display: flex;
+  padding: var(--corner-radii-radius-large, 24px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--corner-radii-radius-large, 24px);
   border-radius: 24px;
-  background: linear-gradient(84deg, #1a1186 0.83%, #245eb5 71.29%);
+  border: 1px solid rgba(0, 0, 182, 0);
+  background: #fff;
+  box-shadow: 0px 25px 45px 0px rgba(52, 86, 251, 0.2);
 
-  .icon {
-    border-radius: 170px 300px 0px 180px;
+  @include tablet {
+    display: none;
   }
 
-  .circleCenter {
-    position: absolute;
-    top: 200px;
-    left: 700px;
-    right: 0;
-    bottom: 0;
-  }
-
-  .circleRight {
-    position: absolute;
-    top: 283px;
-    left: 1197px;
-    right: 0;
-    bottom: 0;
-  }
-
-  .circleLeft {
-    position: absolute;
-    top: 342px;
-    left: 70px;
-    right: 0;
-    bottom: 0;
+  @include desktop-max {
+    display: none;
   }
 }
 
@@ -44,10 +46,30 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  position: absolute;
-  padding-left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 20px;
+  width: 100%;
+  background-image: url('/assets/img/tariff-banners/tariff-banner-2.jpg');
+
+  @include only-mobile {
+    background: black;
+    position: relative;
+    width: 112%;
+    margin-left: -20px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  @include tablet {
+    border-radius: 24px;
+    background-position: 70% 50%;
+    background-size: cover;
+  }
+
+  @include desktop-max {
+    border-radius: 0px;
+  }
 }
 
 .titleAbonent {
@@ -66,7 +88,12 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.14px;
+
+  @include tablet {
+    border-radius: 10px;
+  }
 }
+
 .qrCode {
   position: absolute;
   bottom: -220px;
@@ -74,9 +101,12 @@
 }
 
 .footerAdvertising {
-  margin-top: 63px;
   position: relative;
   margin-bottom: 40px;
+
+  @include only-mobile {
+    margin-bottom: 0px;
+  }
 }
 
 .banner {
@@ -88,10 +118,41 @@
   align-items: flex-start;
   gap: 10px;
 }
+
 .word {
   color: $color-magenta-100;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: $color-base-700;
+  font-family: 'TT Norms Pro';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  padding-top: 32px;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop-max {
+    display: none;
+  }
+}
+
+.breadcrumbs {
+  margin-top: 24px;
+
+  @include only-mobile {
+    display: none;
+  }
 }

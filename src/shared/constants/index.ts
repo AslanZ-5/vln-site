@@ -10,8 +10,10 @@ export const theme: MantineThemeOverride = {
         control: {
           '&:last-of-type': {
             '&[data-accordion-control]': {
-              borderBottomLeftRadius: 0,
-              borderBottomRightRadius: 0
+              '&[data-active]': {
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0
+              }
             }
           }
         }

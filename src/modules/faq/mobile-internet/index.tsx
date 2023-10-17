@@ -1,8 +1,8 @@
 import Section from '../section';
-import { CONTENTS } from './constants';
+import { mockData } from '@/shared/constants/mock';
 
 const FaqMobileInternet = () => {
-  return Section(CONTENTS);
+  return Section(mockData.faqData);
 };
 
 export default FaqMobileInternet;

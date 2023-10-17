@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState, useEffect } from 'react';
+import React, { FC, useRef, useState, useEffect, KeyboardEvent } from 'react';
 import { SearchIcon } from "@/shared/assets/svg";
 import styles from "./search-input.module.scss";
 import { Autocomplete, CloseButton } from "@mantine/core";
@@ -14,6 +14,7 @@ interface SearchInputProps<Item> {
   value?: string;
   onChange?(value: Item): void;
   onInput?(value: Item): void;
+  onEnterPress?(): void;
 }
 
 export const SearchInput: FC<SearchInputProps<string>> = ({
@@ -25,6 +26,7 @@ export const SearchInput: FC<SearchInputProps<string>> = ({
   value,
   onChange,
   onInput,
+  onEnterPress
 }) => {
   const [value_, setValue] = useState<string | undefined>(value || '');
   const [showCloseButton, setShowCloseButton] = useState<boolean>(false);
@@ -51,6 +53,12 @@ export const SearchInput: FC<SearchInputProps<string>> = ({
   const handleMouseLeave = () => {
     setShowCloseButton(false);
   };
+
+  const handleKeyUp = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && onEnterPress) { 
+      onEnterPress();
+    }
+  }
 
   const onClear = () => {
     setValue('');
@@ -95,6 +103,7 @@ export const SearchInput: FC<SearchInputProps<string>> = ({
         placeholder={placeholder}
         onInput={handleInput}
         onChange={handleChange}
+        onKeyUp={handleKeyUp}
       />
     </div>
   );

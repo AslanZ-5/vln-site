@@ -1,9 +1,18 @@
-@import '@/styles/global.scss';
+@import 'global.scss';
 
 .modal {
   &__root {
-    margin-top: -20px;
     overflow: hidden;
+
+    :global(.mantine-u44hg1) {
+      overflow: hidden;
+      margin-top: 1rem;
+     
+
+      @include tablet {
+        height: fit-content;
+      }
+    }
 
     @include tablet {
       margin-top: 50px;
@@ -16,14 +25,17 @@
   }
 
   &__title {
-    font-size: 32px;
-    line-height: 36px;
-    letter-spacing: -0.32px;
+    width: 80%;
+    @include heading-h5;
 
     @include tablet {
-      font-size: 40px;
-      line-height: 48px;
-      letter-spacing: -0.4px;
+      width: 90%;
+      @include heading-h4;
+    }
+
+    @include desktop-max {
+      width: 90%;
+      @include heading-h3;
     }
   }
 }
@@ -66,6 +78,7 @@
   min-height: 70px;
   height: fit-content;
   display: flex;
+  gap: 8px;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -113,6 +126,7 @@
 }
 
 .optionInfoPrice {
+  min-width: fit-content;
   color: $color-black;
   font-size: 16px;
   font-family: Roboto;
@@ -130,6 +144,14 @@
   letter-spacing: -0.14px;
 }
 
+.startCodeRow {
+  padding-right: 6px;
+}
+
+.endCodeRow {
+  padding-left: 6px;
+}
+
 .connectDisconectCode {
   padding: 0 8px;
   color: $color-base-0;
@@ -139,6 +161,8 @@
   font-family: Roboto;
   font-weight: 400;
   line-height: 20px;
+  letter-spacing: 2px;
+  
 }
 
 .tariffs {
@@ -205,6 +229,6 @@
   flex-shrink: 0;
   position: fixed;
   left: -20%;
-  top: 38%;
+  top: 58%;
   pointer-events: none;
 }

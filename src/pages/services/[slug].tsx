@@ -125,8 +125,9 @@ function Services() {
             .filter((item) => item.tab.includes(activeTab))
             .filter((item) => item.filter.includes(activeFilter))
             .filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
-            .map(({ price, title, period, priceTitle }, index) => (
-              <Card price={price} title={title} id={index} key={index} period={period} priceTitle={priceTitle} />
+            .map(({ price, title, period, priceTitle, area, connectCode, disconnectCode, tariffs, optionInformation }, index) => (
+              <Card price={price} title={title} id={index} key={index} period={period} priceTitle={priceTitle} 
+                area={area} connectCode={connectCode} disconnectCode={disconnectCode} tariffs={tariffs} optionInformation={optionInformation}/>
             ))}
         </div>
       </div>

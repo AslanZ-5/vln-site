@@ -2,21 +2,21 @@ import { FC } from 'react';
 import { Modal } from '@/shared/ui-kit';
 import { ServiceInfoModalProps } from './service-info-modal.types';
 import { Accordion, ScrollArea } from '@mantine/core';
-import { serviceParamsMock } from './service-info-modal.mock';
 import Link from 'next/link';
 import { EllipsisPurple, EllipsisPink } from '@/shared/assets/svg';
 import { useMobile } from '@/shared/lib/use-mobile';
 import styles from './service-info-modal.module.scss';
 
-export const ServiceInfoModal: FC<ServiceInfoModalProps> = ({ opened, onClose }) => {
+export const ServiceInfoModal: FC<ServiceInfoModalProps> = ({ opened, onClose, title, area, connectCode,
+  disconnectCode, tariffs, optionInformation }) => {
   const { isMobile } = useMobile();
 
-  const items = serviceParamsMock.map((item) => (
-    <Accordion.Item key={item.title} value={item.title}>
-      <Accordion.Control>{item.title}</Accordion.Control>
-      <Accordion.Panel key={item.title}>
-        <>
-          {item.optionInformation?.map((item) =>
+  const items = (
+    <>
+      <Accordion.Item value={'info'}>
+        <Accordion.Control>Информация об опции</Accordion.Control>
+        <Accordion.Panel>
+          {optionInformation?.map((item) =>
             <div className={styles.optionInfoRow} key={item.id}>
               <div className={styles.optionInfoCol}>
                 <div className={styles.optionInfoTitle}>{item.label}</div>
@@ -33,50 +33,74 @@ export const ServiceInfoModal: FC<ServiceInfoModalProps> = ({ opened, onClose })
               <div className={styles.optionInfoPrice}>{item.prise}</div>
             </div>
           )}
-          {item.connectDisconnect?.map((item) =>
-            <div className={styles.connectDisconectRow} key={item.id}>
-              {item.startInfo}
-              <span className={styles.connectDisconectCode}>{item.code}</span>
-              {item.endInfo}
-            </div>
-          )}
+        </Accordion.Panel>
+      </Accordion.Item>
+
+      {connectCode && <Accordion.Item value={'code'} >
+        <Accordion.Control>Как подключить или отключить</Accordion.Control>
+        <Accordion.Panel>
+          <div className={styles.connectDisconectRow} >
+            <span className={styles.startCodeRow}> Для подключения введите команду на телефоне</span>
+            <span className={styles.connectDisconectCode}>{connectCode}</span>
+            <span className={styles.endCodeRow}>либо через Мобильное приложение</span>
+          </div>
+          <div className={styles.connectDisconectRow} >
+            <span className={styles.startCodeRow}>Для отключения введите команду на телефоне</span>
+            <span className={styles.connectDisconectCode}>{disconnectCode}</span>
+            <span className={styles.endCodeRow}>либо через Мобильное приложение</span>
+          </div>
+        </Accordion.Panel>
+      </Accordion.Item>}
+
+      <Accordion.Item value={'tariff'}>
+        <Accordion.Control>Доступна на тарифах</Accordion.Control>
+        <Accordion.Panel>
           <div className={styles.tariffs}>
-            {item.tariffs?.map((item) =>
+            {tariffs?.map((item) =>
               <div className={styles.tariffsRow} key={item.id}>
-                <Link href={''} className={styles.tariffsLink}>{item.tariff}</Link>
+                <Link href={`/tariff/${item.path}`} className={styles.tariffsLink}>{item.tariff}</Link>
               </div>
             )}</div>
-          {item.area?.map((item) =>
-            <div className={styles.areaRow} >
-              <div key={item.id}>
-                {item.area}</div>
-            </div>
-          )}
-        </>
-      </Accordion.Panel>
-    </Accordion.Item>
-  ));
+        </Accordion.Panel>
+      </Accordion.Item>
+
+      <Accordion.Item value={'area'}>
+        <Accordion.Control>Зона действия опции</Accordion.Control>
+        <Accordion.Panel>
+          <div className={styles.areaRow} >
+            <div >
+              {area}</div>
+          </div>
+        </Accordion.Panel>
+      </Accordion.Item>
+    </>
+  );
 
   return (
-    <Modal size="m" title="3-в-1" opened={opened} onClose={onClose} disableBackgoundGradient={isMobile ? true : false}
-      classNames={{ root: styles.modal__root, content: styles.modal__content, title: styles.modal__title }}>
+    <Modal size="m" title={title ? title : ''} opened={opened} onClose={onClose} disableBackgoundGradient={isMobile ? true : false}
+      classNames={{
+        root: styles.modal__root,
+        title: styles.modal__title
+      }}>
       <ScrollArea h={420} type="auto" mt="md" classNames={{ scrollbar: styles.scroll }}>
         <Accordion transitionDuration={700} multiple variant="contained" radius="lg"
+          defaultValue={['info']}
           classNames={{
             item: styles.accordion__item,
             control: styles.accordion__control,
             chevron: styles.accordion__chevron,
             content: styles.accordion__content
-          }}>
+          }}
+        >
           {items}
         </Accordion>
       </ScrollArea>
 
-      {isMobile && 
-      <>
-        <EllipsisPink className={styles.ellipsisTop} />
-        <EllipsisPurple className={styles.ellipsisBottom} />
-      </>}
+      {isMobile &&
+        <>
+          <EllipsisPink className={styles.ellipsisTop} />
+          <EllipsisPurple className={styles.ellipsisBottom} />
+        </>}
 
     </Modal>
   );

@@ -1,5 +1,7 @@
+@import '@/styles/variables.scss';
+
 .title {
-  color: #282d3c;
+  color: $color-base-900;
   font-family: 'TT Norms Pro';
   font-size: 20px;
   font-weight: 600;
@@ -8,7 +10,7 @@
 }
 
 .date {
-  color: #8c94a8;
+  color: $color-base-500;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
@@ -17,7 +19,7 @@
 }
 
 .text {
-  color: #414961;
+  color: $color-base-800;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;

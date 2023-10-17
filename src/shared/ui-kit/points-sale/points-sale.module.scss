@@ -14,20 +14,12 @@
   @include desktop-max {
     display: block;
   }
-
-  @include desktop {
-    display: block;
-  }
 }
 
 .list {
   margin-top: -10px;
 
   @include desktop-max {
-    width: 350px;
-  }
-
-  @include desktop {
     width: 350px;
   }
 }
@@ -46,10 +38,6 @@
   }
 
   @include desktop-max {
-    width: 100%;
-  }
-
-  @include desktop {
     width: 100%;
   }
 }

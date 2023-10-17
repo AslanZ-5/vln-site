@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
 
-import { NewsDetails } from '@/modules/news/news-details/news-details';
-
 import styles from './news.module.scss';
-
+import { NewsDetails } from '@/widgets/news-details/news-details';
 
 const htmlText = `
   <p>Дорогие друзья! </p>
@@ -30,10 +28,10 @@ const NewsPage: FC = () => {
   return (
     <div className={styles.root}>
       <NewsDetails
-        title="Выбираем июльского победителя акции «Миллион за Домашний интернет»"
-        date="31.07.2023"
-        tag="Связь"
-        imageUrl="/assets/img/news-image/News_9.png"
+        title='Выбираем июльского победителя акции «Миллион за Домашний интернет»'
+        date='31.07.2023'
+        tag='Связь'
+        imageUrl='/assets/img/news-image/News_9.png'
         text={htmlText}
       />
     </div>

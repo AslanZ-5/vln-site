@@ -8,12 +8,10 @@
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 142px);
+    grid-template-rows: 284px 213px 142px;
     grid-template-areas:
       'popular popular'
-      'popular popular'
-      'mobile mobile'
-      'internet internet'
+      'mobile internet'
       'fast special';
   }
 
@@ -32,15 +30,13 @@
   color: $color-base-0;
   text-align: center;
   transition: all 0.3s ease-in-out;
-
-  @include tablet {
-    @include heading-h2;
-  }
+  margin-top: auto;
 
   @include desktop-max {
     color: $color-base-900;
     text-align: left;
     transition: all 0.3s ease-in-out;
+    margin: 0;
   }
 }
 
@@ -55,14 +51,6 @@
   transition: border-radius 0.3s ease-in-out;
 }
 
-.label {
-  display: none;
-  @include short-text-t4;
-  color: $color-base-0;
-  transition: all 0.3s ease-in-out;
-  margin-top: 16px;
-}
-
 .card {
   position: relative;
   border-radius: $corner-radius-large;
@@ -70,8 +58,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 16px 20px;
-  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
   background-blend-mode: overlay;
   background-size: cover;
   cursor: pointer;
@@ -79,9 +67,6 @@
   &:active,
   &:hover {
     .heading {
-      transform: translateY(5px);
-      transition: all 0.3s ease-in-out;
-
       @include desktop-max {
         z-index: 1;
         color: $color-base-0;
@@ -91,10 +76,10 @@
 
   .image {
     transition: all 0.3s ease-in-out;
-    background-blend-mode: normal, color-burn, normal;
   }
 
   @include desktop-max {
+    padding: 16px 20px;
     transition: all 0.3s ease-in-out;
 
     .heading {
@@ -111,43 +96,39 @@
         transition: all 0.3s ease-in-out;
         border-radius: 24px 24px 24px 0px;
       }
-
-      .label {
-        display: block;
-        z-index: 1;
-        transition: all 0.3s ease-in-out;
-      }
     }
   }
 }
 
 .popular {
+  background: rgba(0, 0, 0, 0.3);
   background-image: url('/assets/img/services-banners/popular.png');
-  background-position-y: 30%;
+  background-position-y: 35%;
+  background-size: 110%;
 
   .image {
-    background: radial-gradient(
-        81.75% 78.66% at 23.33% 20.05%,
-        #fd770d 0%,
-        rgba(253, 119, 13, 0) 100%
-      ),
-      linear-gradient(56deg, #fe7b14 4.88%, #fd470d 48.94%, #fe3d0e 93.92%),
-      no-repeat url('/assets/img/services-banners/popular.png'),
-      lightgray -2px -0.582px / 133.333% 137.767% no-repeat;
-
-    background-size: 140%;
-    background-position-y: 30%;
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 65.09%, rgba(0, 0, 0, 0.3) 100%),
+      url('/assets/img/services-banners/popular.png'),
+      lightgray -149.267px 0px / 188.019% 109.901% no-repeat;
+    background-size: cover;
+    background-position: 40%;
   }
 
   @include tablet {
     grid-area: popular;
+    .heading {
+      @include heading-h2;
+    }
   }
 
   @include desktop-max {
-    border: 1px solid rgba(253, 119, 13, 0.2);
-    background: rgba(253, 119, 13, 0.1);
+    border: 1px solid rgba(185, 73, 13, 0.2);
+    background: #fbdfd0;
 
     .heading {
+      @include heading-h2;
       &::first-line {
         @include heading-h1;
       }
@@ -155,14 +136,9 @@
 
     &:hover,
     &:active {
-      box-shadow: 0px 25px 45px 0px rgba(253, 119, 13, 0.24);
-
+      box-shadow: 0px 25px 45px 0px rgba(251, 223, 208, 0.75);
       .heading {
-        transform: translateY(-105px);
-      }
-
-      .label {
-        width: 270px;
+        transform: translateY(140px);
       }
     }
   }
@@ -170,30 +146,29 @@
 
 .mobile {
   background-image: url('/assets/img/services-banners/mobile.png');
-  background-position-y: 15%;
+  background-position-y: 30%;
 
   .image {
-    background: radial-gradient(
-        81.75% 78.66% at 23.33% 20.05%,
-        #70d0f4 0%,
-        rgba(112, 208, 244, 0) 100%
-      ),
-      linear-gradient(56deg, #70d0f4 4.88%, #70bdf4 48.94%, #70f4ec 93.92%),
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
       url('/assets/img/services-banners/mobile.png'),
-      lightgray 0px -29.699px / 137.736% 252.228% no-repeat;
-    background-size: 150%;
-    background-position: 18% 8%;
+      lightgray 50% / cover no-repeat;
+    background-size: cover;
   }
 
   @include tablet {
     grid-area: mobile;
+    .heading {
+      @include heading-h3;
+    }
   }
 
   @include desktop-max {
-    border: 1px solid rgba(112, 208, 244, 0.3);
-    background: rgba(112, 208, 244, 0.2);
+    border: 1px solid rgba(53, 148, 116, 0.3);
+    background: #d8ede6;
 
     .heading {
+      @include heading-h2;
       width: 400px;
       &::first-line {
         @include heading-h1;
@@ -202,14 +177,9 @@
 
     &:hover,
     &:active {
-      box-shadow: 0px 25px 45px 0px rgba(112, 208, 244, 0.24);
-
+      box-shadow: 0px 25px 45px 0px rgba(216, 237, 230, 0.75);
       .heading {
-        transform: translateY(-54px);
-      }
-
-      .label {
-        width: 270px;
+        transform: translateY(88px);
       }
     }
   }
@@ -217,40 +187,38 @@
 
 .internet {
   background-image: url('/assets/img/services-banners/internet.png');
-  background-position-y: 50%;
+  background-position-y: 25%;
+  background-position-x: 100%;
 
   .image {
-    background: radial-gradient(
-        89.71% 78.92% at 30.32% 45.45%,
-        #b6d20d 0%,
-        rgba(182, 210, 13, 0) 100%
-      ),
-      linear-gradient(56deg, #b6d20d 4.88%, #87d20d 48.94%, #d2b20d 93.92%),
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
       url('/assets/img/services-banners/internet.png'),
-      lightgray -0.848px -41.239px / 105.758% 134.81% no-repeat;
-    background-blend-mode: normal, soft-light, normal;
-    background-size: 100%;
-    background-position: 18% 8%;
+      lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-position-x: 65%;
   }
 
   @include tablet {
     grid-area: internet;
+    .heading {
+      @include heading-h3;
+    }
   }
 
   @include desktop-max {
-    border: 1px solid rgba(182, 210, 13, 0.3);
-    background: rgba(182, 210, 13, 0.2);
+    border: 1px solid rgba(6, 123, 217, 0.3);
+    background: #cbe4f8;
+
+    .heading {
+      @include heading-h2;
+    }
 
     &:hover,
     &:active {
-      box-shadow: 0px 25px 45px 0px rgba(182, 210, 13, 0.24);
-
+      box-shadow: 0px 25px 45px 0px rgba(203, 228, 248, 0.75);
       .heading {
-        transform: translateY(-29px);
-      }
-
-      .label {
-        width: 270px;
+        transform: translateY(67px);
       }
     }
   }
@@ -258,24 +226,20 @@
 
 .fast {
   background-image: url('/assets/img/services-banners/fast.png');
-  background-position-y: 50%;
+  background-position-y: 30%;
+  background-size: 110%;
 
   .image {
-    background: radial-gradient(
-        75.48% 70.85% at 25.97% 29.23%,
-        #d867a1 0%,
-        rgba(255, 152, 205, 0) 100%
-      ),
-      linear-gradient(56deg, #e75ca3 4.88%, #d64380 48.94%, #e75cc0 93.92%),
-      url('/assets/img/services-banners/fast.png'), lightgray 50% / cover no-repeat;
-
-    background-size: 100%;
-    background-position-y: 50%;
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+      url('/assets/img/services-banners/fast.png'),
+      lightgray 0px -23.247px / 110.738% 161.188% no-repeat;
+    background-size: 110%;
+    background-position-y: 25%;
   }
 
   @include tablet {
     grid-area: fast;
-
     .heading {
       @include heading-h4;
     }
@@ -283,7 +247,7 @@
 
   @include desktop-max {
     border: 1px solid rgba(231, 92, 163, 0.3);
-    background: rgba(231, 92, 163, 0.2);
+    background: #fbc9f9;
 
     .heading {
       @include heading-h3;
@@ -291,14 +255,9 @@
 
     &:hover,
     &:active {
-      box-shadow: 0px 25px 45px 0px rgba(231, 92, 163, 0.24);
-
+      box-shadow: 0px 25px 45px 0px rgba(251, 201, 249, 0.75);
       .heading {
-        transform: translateY(-3px);
-      }
-
-      .label {
-        width: 270px;
+        transform: translateY(37px);
       }
     }
   }
@@ -307,24 +266,16 @@
 .special {
   background-image: url('/assets/img/services-banners/special.png');
   background-position-y: 30%;
+  background-size: 130%;
+  background-position-x: 30%;
 
   .image {
-    background: radial-gradient(
-        81.75% 78.66% at 23.33% 20.05%,
-        #4f08e8 0%,
-        rgba(79, 8, 232, 0) 100%
-      ),
-      linear-gradient(
-        56deg,
-        rgba(118, 54, 255, 0.71) 4.88%,
-        rgba(159, 84, 255, 0.79) 48.94%,
-        rgba(123, 120, 255, 0.54) 93.92%
-      ),
+    background:
       url('/assets/img/services-banners/special.png'),
-      lightgray 0px -241.719px / 100% 545.725% no-repeat;
-
-    background-size: 100%;
-    background-position-y: 57%;
+      linear-gradient(93deg, #0235a1 2.11%, #014cb6 33.74%),
+      lightgrey 125px -76.489px / 100% 355.767% no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
   }
 
   @include tablet {
@@ -336,19 +287,15 @@
   }
 
   @include desktop-max {
-    border: 1px solid rgba(79, 8, 232, 0.2);
-    background: rgba(79, 8, 232, 0.1);
+    border: 1px solid rgba(186, 175, 53, 0.2);
+    background: #fffbd0;
 
     &:hover,
     &:active {
-      box-shadow: 0px 25px 45px 0px rgba(79, 8, 232, 0.24);
+      box-shadow: 0px 25px 45px 0px rgba(255, 251, 208, 0.75);
 
       .heading {
-        transform: translateY(-2px);
-      }
-
-      .label {
-        width: 405px;
+        transform: translateY(18px);
       }
     }
   }

@@ -30,6 +30,7 @@
   }
 
   @include desktop {
+    margin: 0;
     width: 100%;
     max-height: 414px;
     border-radius: $corner-radius-large;

@@ -10,7 +10,6 @@ import TariffCardOption from './tariff-card-option/tariff-card-option';
 import TariffCardAdditionalOption from './tariff-card-additional-option/tariff-card-additional-option';
 
 const TariffCard: FC<React.PropsWithChildren<TariffCardProps>> = ({
-  id,
   backgroundImage,
   title,
   newPrice,
@@ -30,9 +29,12 @@ const TariffCard: FC<React.PropsWithChildren<TariffCardProps>> = ({
     router.push('/tariffs');
   };
 
+  const newPriceValue = typeof newPrice === 'string' ?
+    parseInt(newPrice) : newPrice;
+
   const priceWithDiscount = !additionalInfo
     ? newPrice
-    : newPrice - (newPrice / 100) * additionalInfo?.discount;
+    : newPriceValue - (newPriceValue / 100) * additionalInfo?.discount;
 
   return (
     <div className={styles.root}>

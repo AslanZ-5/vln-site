@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { FC, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { ButtonProps } from './button.types';
@@ -71,8 +70,12 @@ export const Button: FC<ButtonProps> = ({
       type === 'inverted' ? buttonColorsInverted[state] : buttonColors[purpose]?.[state];
     const textColor =
       type === 'inverted' ? buttonTextColorsInverted[state] : buttonTextColors[purpose]?.[state];
-    color && setColor(theme.colors[color[0]][color[1]]);
-    textColor && setTextColor(theme.colors[textColor[0]][textColor[1]]);
+    const colorPurpose = color ? color[0] as keyof typeof theme.colors : 'primary';
+    const colorValue = color ? color[1] as keyof typeof theme.colors[typeof colorPurpose] : '0';
+    color && setColor(theme.colors[color[0] as keyof typeof theme.colors][colorValue as keyof typeof theme.colors[typeof colorPurpose]]);
+    const textColorPurpose = textColor ? textColor[0] as keyof typeof theme.colors : 'primary';
+    const textColorValue = textColor ? textColor[1] as keyof typeof theme.colors[typeof textColorPurpose] : '0';
+    textColor && setTextColor(theme.colors[textColorPurpose][textColorValue as keyof typeof theme.colors[typeof textColorPurpose]]);
   }, [type, purpose, state]);
 
   return (

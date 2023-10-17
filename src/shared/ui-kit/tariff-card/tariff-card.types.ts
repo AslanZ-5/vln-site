@@ -4,7 +4,7 @@ export type TariffCardProps = {
   id: number;
   backgroundImage: string;
   title: string;
-  newPrice: number;
+  newPrice: number | string;
   oldPrice?: number;
   additionalInfo?: {
     title: string;

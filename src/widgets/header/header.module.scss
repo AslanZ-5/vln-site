@@ -7,10 +7,9 @@
   background-color: $color-base-0;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 32px;
 
   @include tablet {
-    height: 84px;
+    height: 80px;
     align-items: center;
   }
 }
@@ -19,8 +18,7 @@
   display: none;
 
   @include tablet {
-    margin-top: 20px;
-    margin-left: 48px;
+    margin-left: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +39,6 @@
 }
 
 .rightSide {
-  margin-top: 14px;
   display: flex;
   align-items: center;
   gap: 32px;

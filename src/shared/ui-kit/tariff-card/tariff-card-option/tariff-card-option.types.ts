@@ -1,5 +1,5 @@
 export type TariffCardOptionProps = {
   icon: React.ReactNode;
-  value: number;
+  value: number | string | JSX.Element;
   text: string;
 };

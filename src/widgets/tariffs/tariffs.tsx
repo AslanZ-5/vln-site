@@ -34,7 +34,7 @@ export const Tariffs = () => {
           </Button>
         </div>
       </div>
-      <TariffsCarousel />
+      <TariffsCarousel activeTab={activeTab} />
     </>
   );
 };

@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from '@/modules/faq/faq-page.module.scss';
-import { Breadcrumbs, Search } from '@/shared/ui-kit';
+import { Breadcrumbs } from '@/shared/ui-kit';
 import Cards from '@/modules/faq/cards';
 import { Path } from '@/shared/constants/links';
+import { SearchInput } from '@/shared/ui-kit/search-input/search-input';
+import { mockData } from '@/shared/constants/mock';
+import { useRouter } from 'next/router'
 
 const list = [
   { title: 'Главная', href: '/' },
@@ -10,6 +13,12 @@ const list = [
 ];
 
 function FaqPage() {
+  const router = useRouter();
+
+  const handleEnterPress = () => {
+    router.push(Path.search);
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -19,7 +28,11 @@ function FaqPage() {
         <Breadcrumbs list={list} />
       </div>
       <div className={styles.container}>
-        <Search placeholder='Ваш запрос' />
+        <SearchInput
+          data={mockData.globalSearchData}
+          placeholder='Ваш запрос' 
+          onEnterPress={handleEnterPress} 
+        />
         <div className={styles.grid}>
           <Cards />
         </div>

@@ -2,11 +2,19 @@
 
 .wrapper {
   width: 100%;
-  height: 100%;
+  max-height: 272px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 0;
+
+  @include tablet {
+    max-height: 209px;
+  }
+
+  @include desktop-max {
+    max-height: 414px;
+  }
 
   :global(.mantine-Carousel-controls svg) {
     height: 32px !important;
@@ -31,8 +39,28 @@
   }
 
   :global(.mantine-Carousel-viewport) {
+    max-height: 272px;
+
+    @include tablet {
+      max-height: 209px;
+    }
+
     @include desktop-max {
       border-radius: $corner-radius-large;
+      max-height: 414px;
+    }
+  }
+
+  :global(.mantine-Carousel-container) {
+    max-height: 272px;
+
+    @include tablet {
+      max-height: 209px;
+    }
+
+    @include desktop-max {
+      border-radius: $corner-radius-large;
+      max-height: 414px;
     }
   }
 }

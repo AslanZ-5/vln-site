@@ -1,33 +1,73 @@
-.root{
-  display: flex;;
-  gap:20px;
+@import 'global.scss';
+
+.root {
+  display: flex;
+  gap: 20px;
 }
 
-.list{
-margin-top: -10px;
+.icon {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop-max {
+    display: block;
+  }
+
+  @include desktop {
+    display: block;
+  }
 }
 
-.title{
-  color:#282D3C;
+.list {
+  margin-top: -10px;
+
+  @include desktop-max {
+    width: 350px;
+  }
+
+  @include desktop {
+    width: 350px;
+  }
+}
+
+.title {
+  color: $color-primary-900;
   font-family: 'TT Norms Pro';
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.2px;
-  white-space: nowrap;
+  width: 300px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop-max {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
-.listAdvertising{
+.listAdvertising {
   margin-left: -10px;
 
-  li{
+  li {
     width: 300px;
-    color: #282D3C;
+    color: $color-primary-900;
     font-family: 'Roboto';
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.16px;
+
+    @include tablet {
+      width: 220px;
+    }
   }
- 
 }

@@ -17,6 +17,7 @@ $borderRadius: 24px;
   height: 375px;
   overflow: hidden;
   cursor: pointer;
+
   @include only-mobile {
     max-width: 290px;
   }
@@ -140,7 +141,7 @@ $borderRadius: 24px;
   align-items: center;
   border-radius: 12px;
   background: $color-base-0;
-  color: #282d3c;
+  color: $color-primary-900;
   text-align: center;
   font-family: Roboto;
   font-size: 14px;

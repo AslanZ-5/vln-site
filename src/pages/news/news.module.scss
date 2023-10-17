@@ -1,6 +1,19 @@
+@import 'global.scss';
+
 .root {
   display: flex;
   flex-direction: column;
+  gap: $gap-mobile;
+  margin-bottom: $gap-mobile;
+  width: 100%;
+  @include tablet {
+    gap: $gap-tablet;
+    margin-bottom: $gap-tablet;
+  }
+  @include desktop-max {
+    gap: $gap-desktop;
+    margin-bottom: $gap-desktop;
+  }
 }
 
 .newsText {
@@ -9,7 +22,7 @@
 
   p {
     margin-bottom: 20px;
-    color: #000;
+    color: $color-black;
     font-family: 'Roboto';
     font-size: 14px;
     font-weight: 400;

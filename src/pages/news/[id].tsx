@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
-import styles from './news.module.scss';
 
 import { NewsDetails } from '@/modules/news/news-details/news-details';
+
+import styles from './news.module.scss';
+
 
 const htmlText = `
   <p>Дорогие друзья! </p>

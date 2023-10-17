@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 .root {
   display: flex;
   flex-direction: column;
@@ -6,10 +8,28 @@
 .title {
   color: #282d3c;
   font-family: 'TT Norms Pro';
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -0.4px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+  }
+
+  @include desktop-max {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+  }
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+  }
 }
 
 .headerNews {
@@ -19,13 +39,27 @@
   gap: 24px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 .newsArticle {
   display: flex;
   flex-direction: column;
   max-width: 858px;
   width: 100%;
   margin-top: 32px;
-  gap: 20px;
+  gap: 32px;
+
+  @include desktop-max {
+    gap: 64px;
+  }
+
+  @include desktop {
+    gap: 64px;
+  }
 }
 
 .dataTag {
@@ -34,12 +68,36 @@
   gap: 12px;
 
   span {
-    color: #515b73;
+    color: $color-base-700;
     font-family: 'Roboto';
     font-size: 14px;
     font-weight: 400;
-
     letter-spacing: -0.14px;
+  }
+}
+
+.backPage {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 32px 0px;
+  color: #515b73;
+  font-family: 'TT Norms Pro';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop-max {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
 
@@ -49,24 +107,21 @@
   align-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 60px;
 }
 
-
-
 .article {
-  color: #000;
+  color: $color-black;
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 
-  a{
-      color:#184BFF;
- font-family: 'Roboto';
-font-size: 14px;
-font-weight: 700;
-line-height: 20px;
+  a {
+    color: $color-link;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
   }
 }
 
@@ -77,7 +132,7 @@ line-height: 20px;
   gap: 10px;
   border-radius: 12px;
   background: #f4f6fb;
-  color: #282d3c;
+  color: $color-primary-900;
   text-align: center;
   font-family: 'Roboto';
   font-size: 11px;
@@ -85,74 +140,96 @@ line-height: 20px;
   line-height: 12px;
 }
 
-.newsContent{
+.newsContent {
   display: flex;
-  align-items: flex-start;
-  gap: 24px;
+  flex-direction: column;
+  gap: $gap-mobile;
+  margin-bottom: $gap-mobile;
+  width: 100%;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include desktop-max {
+    display: flex;
+    flex-direction: unset;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: unset;
+  }
 }
 
-
-
-.points{
+.points {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.pointsHeader{
+.pointsHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-
-
-
-.pointsTitle{
-  color:#122B3D;
-font-family: 'TT Norms Pro';
-font-size: 32px;
-font-weight: 600;
-line-height: 36px; 
-letter-spacing: -0.32px;
+.pointsTitle {
+  color: $color-neutral-gray;
+  font-family: 'TT Norms Pro';
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.32px;
 }
 
-.namePoints{
+.namePoints {
   display: flex;
-  padding: var(--corner-radii-radius-small, 16px) var(--corner-radii-radius-small, 16px) var(--corner-radii-radius-large, 24px) var(--corner-radii-radius-small, 16px);
+  flex-wrap: wrap;
+  padding: 16px 16px 24px 16px;
   align-items: flex-start;
-  gap: 40px;
   border-radius: 16px;
-  background:#FFF;
+  background: #fff;
+  gap: 20px;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
-}
 
+  @include tablet {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 
-.search{
-  margin-bottom: 32px;
+  @include desktop-max {
+    flex-wrap: nowrap;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .tab1,
 .tab2 {
-  color:black;
+  color: $color-black;
   text-align: center;
   font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px; 
-  letter-spacing: -0.14px;
-}
-
-.tabActive {
-  padding: 10px 16px;
-  border-radius: 8px;
-background:#184BFF;
-  gap: 10px;
-  color: white;
-  text-align: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   letter-spacing: -0.14px;
 }
 
+.tabActive {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: $color-link;
+  gap: 10px;
+  color: $color-primary-0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.14px;
+}

@@ -1,46 +1,33 @@
 export type ServiceInfoModalProps = {
   opened: boolean,
-  onClose: () => void
+  onClose: () => void,
+  title?: string,
+  area?: string,
+  connectCode?: string;
+  disconnectCode?: string;
+  tariffs?: TariffsTypes[];
+  optionInformation?: OptionInformationTypes[];
 }
 
-export interface serviceParamsType {
-  title: string;
-  optionInformation: optionInformationTypes[];
-  connectDisconnect: connectDisconnectTypes[];
-  tariffs: tariffsTypes[];
-  area: areaTypes[]
+export interface TariffsTypes {
+  id: number,
+  tariff: string,
+  path: string
 }
 
-export interface optionInformationTypes {
+export interface OptionInformationTypes {
   id: number,
   label: string,
-  description:  optionDescTypes[],
+  description:  OptionDescTypes[],
   prise: any,
 }
 
-export interface optionDescTypes {
+export interface OptionDescTypes {
   apps: string,
-  icons: otionIconTypes[]
+  icons: OpionIconTypes[]
 }
 
-export interface otionIconTypes {
+export interface OpionIconTypes {
   id: number,
   icon: any
-}
-
-export interface connectDisconnectTypes {
-  id: number,
-  startInfo: string,
-  endInfo: string,
-  code: string,
-}
-
-export interface tariffsTypes {
-  id: number,
-  tariff: string,
-}
-
-export interface areaTypes {
-  id: number,
-  area: string
 }

@@ -4,11 +4,10 @@
   &__root {
     overflow: hidden;
 
-    :global(.mantine-u44hg1) {
+    :global(.mantine-ScrollArea-root) {
       overflow: hidden;
       margin-top: 1rem;
-     
-
+      
       @include tablet {
         height: fit-content;
       }

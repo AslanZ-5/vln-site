@@ -84,8 +84,19 @@
     border-bottom: 1px solid $color-base-400;
     padding: 10px $corner-radius-small;
 
-    &:active {
+    &:active,
+    &:focus {
       background-color: transparent;
+      border-bottom: 3px solid $color-primary-500;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-bottom: 1px solid $color-base-400;
+      span {
+        color: $color-base-900;
+      }
     }
 
     &[data-active] {
@@ -93,6 +104,24 @@
 
       span {
         color: $color-base-900;
+      }
+      &:hover {
+        border-bottom: 3px solid $color-primary-500;
+      }
+    }
+
+    &.disabled {
+      border-bottom: 1px solid $color-base-400;
+      cursor: default;
+
+      span {
+        color: $color-base-400;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 1px solid $color-base-400;
       }
     }
   }
@@ -139,6 +168,21 @@
     &:active {
       outline: none;
       border: 1px solid $color-base-300;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    height: 24px;
+    width: 24px;
+    opacity: 1;
+
+    &.hidden {
+      opacity: 0;
     }
   }
 }

@@ -1,7 +1,7 @@
 import { TARIFFS, SERVICES_NAME, SERVICES, PILLS } from '@/modules/services/constants';
 import tariffCarouselStyles from '@/widgets/tariffs/tariffs-carousel/tariffs-carousel.module.scss';
 import { EmailIcon, GlobeIcon, PhoneMiniIcon } from '../assets/svg';
-import {ICONS} from '@/modules/services/service-info-modal/service-info-modal.mock';
+import { ICONS } from '@/modules/services/service-info-modal/service-info-modal.mock';
 
 export const mockData = {
   globalSearchData: [
@@ -60,26 +60,26 @@ export interface ServicesCardsMockItem {
 }
 
 export interface TariffsTypes {
-  id: number,
-  tariff: string,
-  path: string,
+  id: number;
+  tariff: string;
+  path: string;
 }
 
 export interface OptionInformationTypes {
-  id: number,
-  label: string,
-  description:  OptionDescTypes[],
-  prise: any,
+  id: number;
+  label: string;
+  description: OptionDescTypes[];
+  prise: any;
 }
 
 export interface OptionDescTypes {
-  apps: string,
-  icons: OpionIconTypes[]
+  apps: string;
+  icons: OpionIconTypes[];
 }
 
 export interface OpionIconTypes {
-  id: number,
-  icon: any
+  id: number;
+  icon: any;
 }
 
 export const servicesCardsMock: ServicesCardsMockItem[] = [
@@ -98,12 +98,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -119,7 +119,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '55 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Дополнительный пакет интернета 15\u00A0Гб',
@@ -136,12 +136,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -157,7 +157,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '80 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Дополнительный пакет интернета 25\u00A0Гб',
@@ -174,17 +174,17 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 2,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 3,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -200,7 +200,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '125 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Безлимитные мессенджеры в поездках по России',
@@ -217,27 +217,27 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Сделай сам',
-        path: 'doIt'
+        path: 'doIt',
       },
       {
         id: 3,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 4,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 5,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -248,12 +248,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
           {
             apps: '',
             icons: [
-              { id: 1, icon: ICONS.SKYPE},
-              { id: 2, icon: ICONS.TELEGRAM},
+              { id: 1, icon: ICONS.SKYPE },
+              { id: 2, icon: ICONS.TELEGRAM },
               { id: 3, icon: ICONS.VIBER },
-              { id: 4, icon: ICONS.WA}
-            ]
-          }
+              { id: 4, icon: ICONS.WA },
+            ],
+          },
         ],
         prise: ICONS.LOOP,
       },
@@ -263,7 +263,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '250 ₽ в месяц',
       },
-    ]
+    ],
   },
   {
     title: 'Безлимитный YouTube',
@@ -280,27 +280,27 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Сделай сам',
-        path: 'doIt'
+        path: 'doIt',
       },
       {
         id: 3,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 4,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 5,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -310,14 +310,15 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [
           {
             apps: '',
-            icons: []
+            icons: [],
           },
         ],
         prise: ICONS.LOOP,
       },
       {
         id: 4,
-        label: 'Безлимитный доступ на видеохостинг предоставляется при соблюдении следующих условий: с момента списание абонентской платы прошло не более 30 дней, с момента списания ежесуточной платы опции «Жара» (тариф «Солнце») прошло не более 24 часов.',
+        label:
+          'Безлимитный доступ на видеохостинг предоставляется при соблюдении следующих условий: с момента списание абонентской платы прошло не более 30 дней, с момента списания ежесуточной платы опции «Жара» (тариф «Солнце») прошло не более 24 часов.',
         description: [],
         prise: '',
       },
@@ -333,7 +334,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Безлимитный интернет на день с раздачей',
@@ -350,17 +351,17 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 2,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 3,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -370,7 +371,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [
           {
             apps: 'Услуга действует постоянно после подключения и до момента пока абонент ее не отключит.',
-            icons: []
+            icons: [],
           },
         ],
         prise: ICONS.LOOP,
@@ -381,7 +382,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '40 ₽ в сутки',
       },
-    ]
+    ],
   },
   {
     title: 'Пакет 200\u00A0мин. по Крыму и Краснодарскому краю',
@@ -398,17 +399,17 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 2,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 3,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -418,14 +419,15 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [
           {
             apps: 'На номера операторов Республики Крым, г. Севастополь и Краснодарского края.',
-            icons: []
-          }
+            icons: [],
+          },
         ],
         prise: '200 мин.',
       },
       {
         id: 4,
-        label: 'Звонки на номера операторов Республики Крым, г. Севастополь и Краснодарского края не тарифицируется, ежемесячный/ежесуточный пакет минут при звонках по указанным направлениям не расходуется.',
+        label:
+          'Звонки на номера операторов Республики Крым, г. Севастополь и Краснодарского края не тарифицируется, ежемесячный/ежесуточный пакет минут при звонках по указанным направлениям не расходуется.',
         description: [],
         prise: '',
       },
@@ -441,7 +443,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Пакет 400\u00A0мин. по Крыму и Краснодарскому краю',
@@ -458,17 +460,17 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 2,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 3,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -478,14 +480,15 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [
           {
             apps: 'На номера операторов Республики Крым, г. Севастополь и Краснодарского края.',
-            icons: []
-          }
+            icons: [],
+          },
         ],
         prise: '400 мин.',
       },
       {
         id: 4,
-        label: 'Звонки на номера операторов Республики Крым, г. Севастополь и Краснодарского края не тарифицируется, ежемесячный/ежесуточный пакет минут при звонках по указанным направлениям не расходуется.',
+        label:
+          'Звонки на номера операторов Республики Крым, г. Севастополь и Краснодарского края не тарифицируется, ежемесячный/ежесуточный пакет минут при звонках по указанным направлениям не расходуется.',
         description: [],
         prise: '',
       },
@@ -501,7 +504,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Безлимитные звонки по Крыму и Краснодарскому краю',
@@ -518,27 +521,28 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 2,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 3,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
       {
         id: 1,
-        label: 'Возможность осуществлять звонки на номера операторов Республики Крым, г. Севастополя и Краснодарского края без ограничений по количеству.',
+        label:
+          'Возможность осуществлять звонки на номера операторов Республики Крым, г. Севастополя и Краснодарского края без ограничений по количеству.',
         description: [
           {
             apps: 'Ежемесячный/ежесуточный пакет минут, предоставляемый согласно условиям, используемого абонентом тарифного плана, при звонках по указанным направлениям не расходуется.',
-            icons: []
+            icons: [],
           },
         ],
         prise: ICONS.LOOP,
@@ -555,7 +559,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Умная ТВ-приставка SberBox',
@@ -567,7 +571,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
     filter: [PILLS.SERVICE],
     area: 'По всей России',
     connectCode: '',
-    disconnectCode: '',  
+    disconnectCode: '',
     tariffs: [],
     optionInformation: [
       {
@@ -582,7 +586,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Усилитель Wi-Fi сигнала',
@@ -609,7 +613,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Статический IP',
@@ -636,7 +640,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Viju',
@@ -653,17 +657,17 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 2,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 3,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -673,7 +677,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [
           {
             apps: 'Громкие премьеры и эксклюзивы ведущих мировых киностудий, а также любимые телеканалы TV1000, ViP Premiere, Viasat Sport, Viasat History и другие.',
-            icons: [ ]
+            icons: [],
           },
         ],
         prise: ICONS.LOOP,
@@ -690,7 +694,8 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]},
+    ],
+  },
   {
     title: 'Пакет интернета 1\u00A0Гб',
     price: '50',
@@ -706,12 +711,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
@@ -727,7 +732,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '50 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Пакет интернета 2\u00A0Гб',
@@ -744,12 +749,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
@@ -765,7 +770,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '100 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Пакет интернета 5\u00A0Гб',
@@ -782,12 +787,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
@@ -803,7 +808,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '200 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Пакет интернета 10\u00A0Гб',
@@ -820,12 +825,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
@@ -841,7 +846,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '300 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Автопродление пакета интернета 1\u00A0Гб',
@@ -858,22 +863,24 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
-     optionInformation: [
+    optionInformation: [
       {
         id: 1,
         label: 'Дополнительный пакет интернета',
-        description: [{
-          apps: 'При исчерпании ежемесячного пакета интернет-трафика',
-          icons: []
-        }],
+        description: [
+          {
+            apps: 'При исчерпании ежемесячного пакета интернет-трафика',
+            icons: [],
+          },
+        ],
         prise: '1 Гб',
       },
       {
@@ -882,7 +889,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '55 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Автопродление пакета интернета 2\u00A0Гб',
@@ -899,22 +906,24 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
       {
         id: 1,
         label: 'Дополнительный пакет интернета',
-        description: [{
-          apps: 'Ппри исчерпании ежемесячного пакета интернет-трафика',
-          icons: []
-        }],
+        description: [
+          {
+            apps: 'Ппри исчерпании ежемесячного пакета интернет-трафика',
+            icons: [],
+          },
+        ],
         prise: '2 Гб',
       },
       {
@@ -923,7 +932,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '100 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Автопродление пакета интернета 5\u00A0Гб',
@@ -940,22 +949,24 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
       {
         id: 1,
         label: 'Дополнительный пакет интернета',
-        description: [{
-          apps: 'При исчерпании ежемесячного пакета интернет-трафика',
-          icons: []
-        }],
+        description: [
+          {
+            apps: 'При исчерпании ежемесячного пакета интернет-трафика',
+            icons: [],
+          },
+        ],
         prise: '5 Гб',
       },
       {
@@ -964,7 +975,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '200 ₽',
       },
-    ]
+    ],
   },
   {
     title: 'Автопродление пакета интернета 10\u00A0Гб',
@@ -981,22 +992,24 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
     ],
     optionInformation: [
       {
         id: 1,
         label: 'Дополнительный пакет интернета',
-        description: [{
-          apps: 'При исчерпании ежемесячного пакета интернет-трафика',
-          icons: []
-        }],
+        description: [
+          {
+            apps: 'При исчерпании ежемесячного пакета интернет-трафика',
+            icons: [],
+          },
+        ],
         prise: '10 Гб',
       },
       {
@@ -1005,7 +1018,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: '300 ₽',
       },
-    ]
+    ],
   },
   {
     title: '3 в 1',
@@ -1034,26 +1047,26 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
             apps: 'социальные сети',
             icons: [
               { id: 1, icon: ICONS.VK },
-              { id: 2, icon: ICONS.OK }
-            ]
+              { id: 2, icon: ICONS.OK },
+            ],
           },
           {
             apps: 'карты',
             icons: [
               { id: 1, icon: ICONS.MAPS },
               { id: 2, icon: ICONS.NAVIGATOR },
-              { id: 3, icon: ICONS.GIS}
-            ]
+              { id: 3, icon: ICONS.GIS },
+            ],
           },
           {
             apps: 'мессенджеры',
             icons: [
-              { id: 1, icon: ICONS.SKYPE},
-              { id: 2, icon: ICONS.TELEGRAM},
+              { id: 1, icon: ICONS.SKYPE },
+              { id: 2, icon: ICONS.TELEGRAM },
               { id: 3, icon: ICONS.VIBER },
-              { id: 4, icon: ICONS.WA}
-            ]
-          }
+              { id: 4, icon: ICONS.WA },
+            ],
+          },
         ],
         prise: ICONS.LOOP,
       },
@@ -1069,7 +1082,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'Безлимитный интернет на день',
@@ -1086,27 +1099,27 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
       {
         id: 1,
         tariff: 'Ветер',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 2,
         tariff: 'Сделай сам',
-        path: 'doIt'
+        path: 'doIt',
       },
       {
         id: 3,
         tariff: 'Стартуй',
-        path: 'start'
+        path: 'start',
       },
       {
         id: 4,
         tariff: 'Летай',
-        path: 'fly'
+        path: 'fly',
       },
       {
         id: 5,
         tariff: 'Могу себе позволить',
-        path: 'can'
+        path: 'can',
       },
     ],
     optionInformation: [
@@ -1116,7 +1129,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [
           {
             apps: 'На время действия опции «Безлимитный интернет на день» неизрасходованный интернет-трафик по тарифу либо интернет-опции также не доступен для раздачи.',
-            icons: []
+            icons: [],
           },
         ],
         prise: ICONS.LOOP,
@@ -1133,7 +1146,7 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
         description: [],
         prise: 'Бесплатно',
       },
-    ]
+    ],
   },
   {
     title: 'SIM-карта с онлайн-активацией',
@@ -1141,12 +1154,12 @@ export const servicesCardsMock: ServicesCardsMockItem[] = [
     period: undefined,
     tariff: [TARIFFS.All],
     tab: [SERVICES_NAME[SERVICES.MOBILE]],
-    filter: [PILLS.ROAMING, PILLS.TECHNICAL, PILLS.SPECIAL, PILLS.SERVICE],
+    filter: [PILLS.ROAMING, PILLS.SERVICE],
     area: '',
     connectCode: '',
     disconnectCode: '',
     tariffs: [],
-    optionInformation: []
+    optionInformation: [],
   },
 ];
 
@@ -1160,14 +1173,11 @@ export const tariffCardsMock = {
       additionalInfo: {
         title: 'Домашний интернет',
         subtitle: 'До 1 Гбит/с',
-        discount: 30
-      },  
+        discount: 30,
+      },
       options: [
         {
-          icon: <PhoneMiniIcon
-            className={tariffCarouselStyles.phoneIcon}
-            style={{ overflow: 'visible' }}
-          />,
+          icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} style={{ overflow: 'visible' }} />,
           value: <span style={{ whiteSpace: 'nowrap' }}>0 – ∞</span>,
           text: 'мин по Крыму и Краснодарскому краю',
         },
@@ -1196,8 +1206,8 @@ export const tariffCardsMock = {
       additionalInfo: {
         title: 'Домашний интернет',
         subtitle: 'До 1 Гбит/с',
-        discount: 30
-      },  
+        discount: 30,
+      },
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1224,8 +1234,8 @@ export const tariffCardsMock = {
       additionalInfo: {
         title: 'Домашний интернет',
         subtitle: 'До 1 Гбит/с',
-        discount: 30
-      },  
+        discount: 30,
+      },
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1238,22 +1248,17 @@ export const tariffCardsMock = {
           text: 'Гб',
         },
         {
-          icon: <EmailIcon/>,
+          icon: <EmailIcon />,
           value: '∞',
           text: 'SMS внутри сети',
         },
         {
-          icon: <PhoneMiniIcon
-            className={tariffCarouselStyles.phoneIcon}
-            style={{ overflow: 'visible' }}
-          />,
+          icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} style={{ overflow: 'visible' }} />,
           value: <span style={{ whiteSpace: 'nowrap' }}>300</span>,
           text: 'мин на операторов Крыма и Краснодарского края',
         },
         {
-          icon: <EmailIcon
-            style={{ overflow: 'visible' }}
-          />,
+          icon: <EmailIcon style={{ overflow: 'visible' }} />,
           value: <span style={{ whiteSpace: 'nowrap' }}>150</span>,
           text: 'SMS на операторов Крыма и Краснодарского края',
         },
@@ -1267,8 +1272,8 @@ export const tariffCardsMock = {
       additionalInfo: {
         title: 'Домашний интернет',
         subtitle: 'До 1 Гбит/с',
-        discount: 30
-      },  
+        discount: 30,
+      },
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1295,14 +1300,11 @@ export const tariffCardsMock = {
       additionalInfo: {
         title: 'Домашний интернет',
         subtitle: 'До 1 Гбит/с',
-        discount: 30
-      },  
+        discount: 30,
+      },
       options: [
         {
-          icon: <PhoneMiniIcon
-            className={tariffCarouselStyles.phoneIcon}
-            style={{ overflow: 'visible' }}
-          />,
+          icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} style={{ overflow: 'visible' }} />,
           value: <span style={{ whiteSpace: 'nowrap' }}>от 3 руб./мин.</span>,
           text: 'по Крыму / России',
         },
@@ -1315,7 +1317,7 @@ export const tariffCardsMock = {
           icon: <EmailIcon />,
           value: '3 руб./SMS',
           text: 'по России',
-        }
+        },
       ],
     },
     {
@@ -1326,8 +1328,8 @@ export const tariffCardsMock = {
       additionalInfo: {
         title: 'Домашний интернет',
         subtitle: 'До 1 Гбит/с',
-        discount: 30
-      },  
+        discount: 30,
+      },
       options: [
         {
           icon: <PhoneMiniIcon className={tariffCarouselStyles.phoneIcon} />,
@@ -1355,7 +1357,7 @@ export const tariffCardsMock = {
           text: 'SMS для материковых операторов',
         },
       ],
-    }
+    },
   ],
   homeInternetTariffs: [
     {
@@ -1501,6 +1503,6 @@ export const tariffCardsMock = {
           text: 'SMS',
         },
       ],
-    }
+    },
   ],
 };

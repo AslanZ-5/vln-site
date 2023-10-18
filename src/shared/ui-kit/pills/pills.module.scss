@@ -28,3 +28,12 @@
   background-color: $color-primary-500;
   border-radius: 8px;
 }
+
+.disabled {
+  .indicator {
+    display: none;
+  }
+  .label {
+    color: $color-base-400 !important;
+  }
+}

@@ -71,8 +71,6 @@ const PILLS = {
   UNLIMITED: 'Безлимиты',
   ROAMING: 'Роуминг',
   SERVICE: 'Сервисные',
-  SPECIAL: 'Специальные',
-  TECHNICAL: 'Технические',
 };
 
 const TARIFFS = {

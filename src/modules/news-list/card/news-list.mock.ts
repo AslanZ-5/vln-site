@@ -1,4 +1,4 @@
-import { PILLS } from "../constants";
+import { PILLS } from '../constants';
 
 export interface CardProps {
   id: number;
@@ -443,7 +443,6 @@ export const newListData: CardProps[] = [
     filter: [PILLS.INTERNET],
   },
   {
-    
     id: 55,
     title: 'Домашний кинотеатр VIJU',
     date: '13.03.23',
@@ -685,7 +684,8 @@ export const newListData: CardProps[] = [
   },
   {
     id: 85,
-    title: 'Пользователи могут управлять своими услугами, контролировать баланс и подключать новые опции в режиме реального времени',
+    title:
+      'Пользователи могут управлять своими услугами, контролировать баланс и подключать новые опции в режиме реального времени',
     date: '11.04.23',
     image: '/assets/img/news-image/News_8.png',
     category: 'Акции',

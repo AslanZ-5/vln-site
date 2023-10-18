@@ -102,7 +102,7 @@ function Services() {
   return (
     <div className={styles.wrapper}>
       {isMobile && (
-        <BottomSheet open={bottomSheetOpen} blocking={false} onDismiss={() => setBottomSheetOpen(false)}>
+        <BottomSheet open={bottomSheetOpen} onDismiss={() => setBottomSheetOpen(false)}>
           <BottomSheetList list={mockData.tariffs} handler={setActiveTariff} active={activeTariff} />
         </BottomSheet>
       )}
